@@ -52,3 +52,6 @@ El enfoque combina **inteligencia de negocio**, **diseño de experiencia de usua
 ---
 
 ## 📁 Estructura del Repositorio
+## 🇬🇧 English Version
+
+[Click here for the English version of this README](./README_en.md) ✅
