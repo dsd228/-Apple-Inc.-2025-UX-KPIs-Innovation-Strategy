@@ -49,13 +49,22 @@ Este proyecto combina visualización avanzada, benchmarking UX, análisis financ
 
 ---
 
-## 📍 Visualizaciones Incluidas
+## 🖼️ Visuales Clave
 
-- 📌 **Sankey Diagram**: Flujo de ingresos por categoría  
-- 📌 **Radar UX**: Comparativo Apple vs Samsung vs Google  
-- 📌 **Heatmap de Ventas**: Mapa global con intensidad por región  
-- 📌 **Timeline ESG**: Estrategia de sostenibilidad Apple 2030  
-- 📌 **Carrusel Visual**: Adaptado para LinkedIn y TikTok  
+### 📌 Sankey Diagram  
+![Sankey Diagram](Presentation/Sankey-Revenue.png)
+
+### 📌 Radar UX Comparativo  
+![Radar UX](Presentation/UX-Radar.png)
+
+### 📌 Heatmap Global de Ventas  
+![Heatmap Ventas](Presentation/Sales-Heatmap.png)
+
+### 📌 Timeline ESG  
+![Sustainability Timeline](Presentation/Sustainability-Timeline.png)
+
+### 📌 Banner Profesional  
+![Banner Apple 2025](Presentation/Banner-Apple-2025.png)
 
 ---
 
@@ -71,65 +80,10 @@ Este proyecto combina visualización avanzada, benchmarking UX, análisis financ
 
 ---
 
-## 📁 Estructura del Repositorio
 ## 🌱 Apple 2030 · Estrategia Sostenible
 
 - ✅ Reducción de emisiones: **-60% desde 2015**  
 - ♻️ 99% de materiales reciclados en baterías y componentes  
 - 🌊 14B galones de agua ahorrados en 2024  
-- 🚢 50% de productos enviados por transporte
-- # 🍏 Apple Inc. 2025 · UX · KPIs · Innovation Strategy
+- 🚢 50% de productos enviados por transporte marítimo
 
-**Interdisciplinary Project: UX Design, Data Science & Business Strategy**  
-Visual Benchmark · Storytelling · Sustainability · Professional Portfolio  
-
----
-
-## 👤 Author
-
-**David Sebastián Díaz**  
-Certified UX, Data & Marketing Analyst  
-**Professional Certifications:**  
-- Google UX Design  
-- Google Digital Marketing  
-- Business Intelligence  
-- Marketing Analytics  
-
----
-
-## 🧠 Project Purpose
-
-This project combines advanced data visualization, UX benchmarking, financial analysis, and sustainability strategy to study Apple Inc.’s performance in FY2024–2025. It is a core piece of my professional portfolio, showcasing real-world integration between design, analytics, and strategic communication.
-
----
-
-## 🎯 Strategic Objectives
-
-- 📈 Analyze Apple’s key FY2024 financial and operational KPIs  
-- 🧭 Benchmark user experience against key competitors (Samsung, Google)  
-- 🌐 Map global revenue and sales through geographic visualizations  
-- 🤖 Explore technological innovation, AI, and chip evolution  
-- 🌱 Communicate Apple’s environmental and sustainability strategies  
-- 🧩 Integrate storytelling across GitHub, LinkedIn, and Kaggle  
-
----
-
-## 📊 Analytical Content
-
-| Section | Description |
-|--------|-------------|
-| 1. Strategic Introduction | Market context, Vision 2025, interdisciplinary scope |
-| 2. Financial KPIs | FY2024 Revenue: $383B · Gross Margin: $170B · Market Cap: $3.1T |
-| 3. Sankey Diagram | Revenue flow by product: iPhone, Mac, iPad, Wearables, Services |
-| 4. UX Radar Chart | Apple vs Samsung vs Google: usability, accessibility, branding, engagement |
-| 5. Global Sales Heatmap | Regional performance: Americas, Europe, China, Japan, Asia-Pacific |
-| 6. Innovation Highlights | Apple Vision Pro, AI integration, M4 chip, liquid design, visionOS |
-| 7. Sustainability Strategy | Apple 2030: -60% emissions, 99% recycling, 14B gal. water saved |
-| 8. Professional Slides | Slide deck, QR code, PDF, LinkedIn/TikTok carousel visuals |
-
-## 🌱 Apple 2030 · Sustainability Strategy
-
-- ✅ Emissions reduction: **-60% since 2015**  
-- ♻️ 99% recycled materials in batteries and key components  
-- 🌊 14B gallons of water saved by 2024  
-- 🚢 50% of products shipped via maritime to
