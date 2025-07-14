@@ -51,11 +51,20 @@ This project combines advanced data visualization, UX benchmarking, financial an
 
 ## 📍 Visual Assets Included
 
-- 📌 Sankey Diagram: Revenue flow visualization  
-- 📌 UX Radar: Experience comparison across brands  
-- 📌 Sales Heatmap: Global sales intensity by region  
-- 📌 ESG Timeline: Sustainability milestones toward 2030  
-- 📌 Social Carousel: Optimized for LinkedIn and TikTok  
+### 📌 Sankey Diagram  
+![Sankey Diagram](Presentation/Sankey-Revenue.png)
+
+### 📌 UX Radar  
+![Radar UX](Presentation/UX-Radar.png)
+
+### 📌 Sales Heatmap  
+![Heatmap](Presentation/Sales-Heatmap.png)
+
+### 📌 ESG Timeline  
+![ESG Timeline](Presentation/Sustainability-Timeline.png)
+
+### 📌 Professional Banner  
+![Banner](Presentation/Banner-Apple-2025.png)
 
 ---
 
@@ -68,9 +77,6 @@ This project combines advanced data visualization, UX benchmarking, financial an
 | Visualization | Sankey · Radar · Heatmap · Timeline |
 | Documentation | Markdown · GitHub · Kaggle |
 | Branding | QR · Carousel · PDF · LinkedIn Slides |
-
----
-
 
 ---
 
@@ -91,5 +97,3 @@ This project combines advanced data visualization, UX benchmarking, financial an
 
 📢 Want the full carousel, PDF slide, or a QR to your GitHub portfolio?  
 Feel free to reach out or explore the `Portfolio/` folder for ready-to-use visuals.
-
-
