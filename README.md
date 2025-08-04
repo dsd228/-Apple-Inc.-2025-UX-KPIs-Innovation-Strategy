@@ -61,7 +61,7 @@ Este proyecto combina visualización avanzada, benchmarking UX, análisis financ
 ![Heatmap Ventas](pretentation/Sales-Heatmap.png)
 
 ### 📌 Timeline ESG  
-![Sustainability Timeline](Presentation/Sustainability-Timeline.png)
+![Sustainability Timeline](pretentation/Sustainability-Timeline.png)
 
 ### 📌 Banner Profesional  
 ![Banner Apple 2025](presentation/Banner-Apple-2025.png)
