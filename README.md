@@ -52,7 +52,7 @@ Este proyecto combina visualización avanzada, benchmarking UX, análisis financ
 ## 🖼️ Visuales Clave
 
 ### 📌 Sankey Diagram  
-![Sankey Diagram](presentation/Sankey-Revenue.png)
+![Sankey Diagram](pretentation/Sankey-Revenue.png)
 
 ### 📌 Radar UX Comparativo  
 ![Radar UX](presentation/UX-Radar.png)
