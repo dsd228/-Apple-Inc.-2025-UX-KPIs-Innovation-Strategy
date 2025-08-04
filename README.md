@@ -32,14 +32,19 @@ Este repositorio contiene un análisis exhaustivo de benchmarking corporativo de
 
 ---
 
-## 📊 Visual Analytics & Source Code
+##📊 Visual Analytics & Source Code
+Cada visualización se genera mediante scripts Python en la carpeta /code/, y los gráficos exportados se encuentran en /assets/visuals/. Para reproducir los gráficos, ejecuta el script correspondiente; puedes usar el script maestro para generar todos.
 
-| Analysis Area        | Description                                                          | Visual Asset                                                    | Code File                          |
-|---------------------|----------------------------------------------------------------------|----------------------------------------------------------------|-----------------------------------|
-| **Revenue Breakdown** | Sankey diagram illustrating revenue streams by product category for FY2025. | ![Sankey Revenue Breakdown](pretentation/Sankey-Revenue.png) | [code/Sankey.py](code/Sankey.py) |
-| **UX Benchmark**     | Radar chart comparing Apple's UX performance against key competitors (Samsung, Google). | ![UX Radar Benchmark](pretentation/UX-Radar.png)  | [code/RadarUX.py](code/RadarUX.py) |
-| **Global Sales**     | Treemap showcasing the relative weight of sales distribution across global regions. | ![Global Sales Treemap](pretentation/Sales-Heatmap.png)  | [code/Heatmap.py](code/Heatmap.py) |
-| **Sustainability Path** | Timeline tracking Apple's progress towards its 2030 carbon neutrality commitment. | ![Sustainability Timeline](pretentation/Sustainability-Timeline.png) | [code/ESG_Timeline.py](code/ESG_Timeline.py) |
+Área de Análisis	Descripción	Vista Previa	Script Generador
+Revenue Breakdown	Sankey diagram que ilustra los ingresos por categoría de producto FY2025.	![Sankey](./assets/visuals/kpi_sankey_revenue.png)	code/Sankey.py
+UX Benchmark	Radar chart comparando el desempeño UX de Apple vs Samsung y Google.	![Radar](./assets/visuals/ux_radar_benchmark.png)	code/RadarUX.py
+Global Sales	Treemap mostrando la distribución de ventas por región global.	![Treemap](./assets/visuals/global_sales_treemap.png)	code/Heatmap.py
+Sustainability Path	Timeline del avance hacia la neutralidad de carbono en 2030.	![Timeline](./assets/visuals/sustainability_timeline.png)	code/ESG_Timeline.py
+GitHub Banner	Banner personalizado para el README con el estilo visual de Apple.	![Banner](./assets/visuals/github_banner.png)	Incluido en: code/Sankey.py
+Regenerar todas las visualizaciones:
+
+bash
+python notebooks/apple_visuals_generator.py
 
 ---
 
