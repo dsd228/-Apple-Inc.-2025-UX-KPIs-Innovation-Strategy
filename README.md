@@ -91,7 +91,7 @@ El segmento de wearables supera por primera vez los $45B.
 
 ---
 
-##🧠 Profundidad del Análisis
+## 🧠 Profundidad del Análisis
 Metodología:
 Se analizaron KPIs financieros extraídos de reportes oficiales de Apple y fuentes sectoriales (Statista, Bloomberg).
 El benchmarking UX se realizó mediante encuestas y pruebas de usabilidad comparando Apple, Samsung y Google.
