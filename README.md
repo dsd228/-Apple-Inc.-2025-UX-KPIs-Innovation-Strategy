@@ -17,7 +17,7 @@ EN:
 ♻️ Sustainability focus aligned with the UN SDGs.
 👤 Perfil del Autor | Author Profile
 Información / Information	Certificaciones / Certifications
-![Foto](./assets/author.png)	Nombre / Name: [Tu Nombre / Your Name]<br>Rol / Role: Consultor Interdisciplinario / Interdisciplinary Consultant<br>Experiencia / Experience: Proyectos Fortune 500, Estrategia Global, Transformación Digital / Fortune 500 projects, Global Strategy, Digital Transformation<br>LinkedIn: linkedin.com/in/tuusuario	<ul><li>UX Certified (NN/g)</li><li>IBM Data Science Professional</li><li>Google Marketing Digital</li><li>PMI Project Management</li></ul>
+![Foto](./assets/author.png)<br>Nombre / Name: [Tu Nombre / Your Name]<br>Rol / Role: Consultor Interdisciplinario / Interdisciplinary Consultant<br>Experiencia / Experience: Proyectos Fortune 500, Estrategia Global, Transformación Digital / Fortune 500 projects, Global Strategy, Digital Transformation<br>LinkedIn: linkedin.com/in/tuusuario	- UX Certified (NN/g)<br>- IBM Data Science Professional<br>- Google Marketing Digital<br>- PMI Project Management
 🎯 Objetivos Estratégicos | Strategic Objectives
 📊 Optimizar KPIs financieros y operativos / Optimize financial and operational KPIs
 🧑‍💻 Elevar la experiencia UX/UI con frameworks internacionales / Elevate UX/UI using international frameworks
@@ -53,7 +53,7 @@ Verde Sostenible / Green:  #4CD964
 Azul Innovador / Blue:     #007AFF
 Dorado / Gold:             #FFD700
 🗂️ Estructura del Repositorio | Repository Structure
-Code
+txt
 /presentation    # Portfolio y presentaciones / Portfolio & presentations
 /scripts         # Scripts y notebooks / Scripts & notebooks
 /data            # Datasets originales / Original datasets
@@ -86,6 +86,7 @@ Connect on LinkedIn, download the portfolio from /presentation, and join the glo
 
 © 2025 | Proyecto profesional interdisciplinario | Apple Inc. | Benchmarking, Visual Storytelling & Consultoría Internacional
 © 2025 | Interdisciplinary Professional Project | Apple Inc. | Benchmarking, Visual Storytelling & International Consulting
+
 
 
 
