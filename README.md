@@ -58,7 +58,7 @@ Este proyecto combina visualización avanzada, benchmarking UX, análisis financ
 ![Radar UX](pretentation/UX-Radar.png)
 
 ### 📌 Heatmap Global de Ventas  
-![Heatmap Ventas](Presentation/Sales-Heatmap.png)
+![Heatmap Ventas](pretentation/Sales-Heatmap.png)
 
 ### 📌 Timeline ESG  
 ![Sustainability Timeline](Presentation/Sustainability-Timeline.png)
