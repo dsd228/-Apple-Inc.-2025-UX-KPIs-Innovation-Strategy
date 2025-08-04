@@ -64,7 +64,7 @@ Este proyecto combina visualización avanzada, benchmarking UX, análisis financ
 ![Sustainability Timeline](pretentation/Sustainability-Timeline.png)
 
 ### 📌 Banner Profesional  
-![Banner Apple 2025](presentation/Banner-Apple-2025.png)
+![Banner Apple 2025](pretentation/Banner-Apple-2025.png)
 
 ---
 
