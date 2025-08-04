@@ -1,156 +1,68 @@
-# 🍏 Apple Inc. 2025 · UX · KPIs · Innovation Strategy
-
-**Proyecto Interdisciplinario de UX, Data Science y Estrategia de Negocio**  
-Visual Benchmark · Storytelling · Sostenibilidad · Portfolio Profesional  
-
----
-
-## 👤 Autor
-
-**David Sebastián Díaz**  
-Analista Certificado en UX, Data Science y Marketing Digital  
-**Certificaciones:**  
-- Google UX Design  
-- Google Digital Marketing  
-- Business Intelligence  
-- Marketing Analytics  
-
----
-
-## 🧠 Propósito del Proyecto
-
-Este proyecto combina visualización avanzada, benchmarking UX, análisis financiero y estrategia sostenible para estudiar el rendimiento de Apple Inc. en el año fiscal 2024-2025. Forma parte central de mi portafolio profesional y refleja una integración real entre analítica, diseño y comunicación estratégica.
-
----
-
-## 🎯 Objetivos Estratégicos
-
-- 📈 Analizar KPIs financieros y operativos de Apple FY2024-2025  
-- 🧭 Evaluar la experiencia de usuario frente a competidores clave  
-- 🌐 Mapear ingresos y ventas globales con visualizaciones geográficas  
-- 🤖 Explorar innovación tecnológica, IA y expansión industrial  
-- 🌱 Comunicar estrategias de sostenibilidad y carbono neutral  
-- 🧩 Integrar storytelling técnico y visual en plataformas profesionales  
-
----
-
-## 📊 Contenido del Análisis
-
-| Sección | Descripción |
-|--------|-------------|
-| 1. Introducción Estratégica | Contexto de mercado, visión 2025 y enfoque interdisciplinario |
-| 2. KPIs Financieros | Ingresos FY2024: $391B · Margen bruto: $180B · Capitalización: $3.1T |
-| 3. Sankey Diagram | Flujo de ingresos por categoría: iPhone, Mac, iPad, Wearables, Servicios |
-| 4. Radar UX Comparativo | Apple vs Samsung vs Google: usabilidad, accesibilidad, branding, engagement |
-| 5. Heatmap Global de Ventas | Distribución geográfica: América, Europa, China, Asia-Pacífico, Japón |
-| 6. Innovación 2025 | Apple Vision Pro, IA integrada, chip M4, diseño líquido y visionOS 26 |
-| 7. Sostenibilidad | Estrategia Apple 2030: reducción de emisiones 60%, reciclaje de materiales 99% |
-| 8. Portfolio Profesional | Slide técnica, QR, versión PDF, carrusel para LinkedIn y TikTok |
-
----
-
-## 🖼️ Visuales Clave
-
-### 📌 Sankey Diagram 
-
-##“El siguiente diagrama Sankey muestra la distribución de ingresos de Apple en 2024 por categoría de producto. Permite identificar qué segmentos aportan mayor valor y detectar oportunidades de crecimiento.”
-
-![Sankey Diagram](pretentation/Sankey-Revenue.png)
-
-Interpretación:
-
-El iPhone representa el 52% de los ingresos totales.
-Los servicios digitales muestran el mayor crecimiento interanual (+18%).
-El segmento de wearables supera por primera vez los $45B.
-📌 Radar UX Comparativo
-
-
-
-### 📌 Radar UX Comparativo  
-
-## “El radar comparativo visualiza la experiencia de usuario frente a competidores clave, considerando usabilidad, accesibilidad, branding y engagement.”
-
-![Radar UX](pretentation/UX-Radar.png)
-
-### 📌 Heatmap Global de Ventas  
-
-## “El heatmap muestra la distribución geográfica de ventas, permitiendo identificar mercados estratégicos y áreas de expansión.”
-
-![Heatmap Ventas](pretentation/Sales-Heatmap.png)
-
-### 📌 Timeline ESG  
-
-## “La línea de tiempo ESG comunica los hitos clave de sostenibilidad y responsabilidad social de Apple hacia 2030.”
-
-![Sustainability Timeline](pretentation/Sustainability-Timeline.png)
-
-### 📌 Banner Profesional  
-
-## “Banner para LinkedIn y portafolio profesional, diseñado con identidad de marca y enfoque en innovación.”
-![Banner Apple 2025](pretentation/Banner-Apple-2025.png)
-
----
-
-## 🧠 Profundidad del Análisis
-Metodología:
-Se analizaron KPIs financieros extraídos de reportes oficiales de Apple y fuentes sectoriales (Statista, Bloomberg).
-El benchmarking UX se realizó mediante encuestas y pruebas de usabilidad comparando Apple, Samsung y Google.
-
-Limitaciones y próximos pasos:
-
-Los datos globales pueden variar por actualización trimestral.
-Siguiente etapa: análisis de percepción de marca en nuevos mercados.
-💻 Documentación del Código
-Para reproducir las visualizaciones, instala las dependencias con:
-
-sh
-pip install -r requirements.txt
-Luego ejecuta:
-
-sh
-python scripts/kpi_analysis.py
-El notebook principal se encuentra en /scripts/UX_vs_Competitors.ipynb.
-
-Ejemplo de docstring Python:
-
-Python
-def plot_sankey(data):
-    """
-    Genera un diagrama Sankey con los ingresos por categoría.
-    Args:
-        data (pd.DataFrame): Datos procesados de ventas.
-    Returns:
-        plotly.graph_objects.Figure
-    """
-🎨 Diseño Visual
-El proyecto utiliza la paleta oficial de Apple: blanco, gris espacial y verde ecológico. Los gráficos mantienen coherencia visual y legibilidad para presentaciones profesionales.
-
-Descarga de portfolio:
-Descarga la versión PDF o visualiza el carrusel en LinkedIn/TikTok para una experiencia interactiva.
-
+# 🚀 Apple Inc. 2025 | Interdisciplinario | Benchmarking | Visual Storytelling | UX, KPIs, Innovación, Sostenibilidad 📈🌍
+📝 Resumen Ejecutivo
+🔎 Proyecto interdisciplinario que fusiona UX, Data Science, KPIs financieros, innovación tecnológica y estrategia sostenible.
+🌐 Benchmarking global con datos reales y visualizaciones avanzadas.
+🎯 Visual storytelling para comunicar insights clave a nivel profesional.
+📊 Útil para consultores, reclutadores y equipos técnicos internacionales.
+♻️ Enfoque en sostenibilidad y alineación con los ODS de la ONU.
+👤 Perfil del Autor
+Información	Certificaciones
+![Foto](./assets/author.png)	Nombre: [Tu Nombre]<br>Rol: Consultor Interdisciplinario<br>Experiencia: Proyectos Fortune 500, Estrategia Digital, Transformación Sostenible<br>LinkedIn: linkedin.com/in/tuusuario	<ul><li>UX Certified (NN/g)</li><li>IBM Data Science Professional</li><li>Google Marketing Digital</li><li>PMI Project Management</li></ul>
+📦 Contenido Analítico
+Sección	Descripción	Visual Clave	Emoji
+KPIs	EBITDA, margen neto, NPS, ROIC	![KPIs Banner](./assets/kpi_banner.png)	📊
+Sankey Diagram	Flujo de capital, supply chain, R&D	![Sankey](./assets/sankey.png)	🔀
+Radar UX	Usabilidad, accesibilidad, retención	![Radar UX](./assets/radar_ux.png)	🕸️
+Heatmap	Innovación por región y segmento	![Heatmap](./assets/heatmap.png)	🌡️
+Innovación	IA, AR/VR, energía limpia	![Timeline](./assets/timeline.png)	🚀
+Sostenibilidad	Emisiones CO₂, % renovable, reciclaje	![Eco Banner](./assets/eco_banner.png)	🌱
+Portfolio	Presentación visual y descargable	![Portfolio](./assets/portfolio.png)	📁
+🧮 Metodología
+📑 Fuentes de datos:
+Apple Annual Reports (2024, 2023)
+Statista, Bloomberg, MSCI ESG Direct
+Benchmarks internacionales (ISO, NN/g, Gartner)
+🧠 Técnicas utilizadas:
+Análisis multivariado y clustering
+Visualización avanzada (Python, Plotly, Figma)
+Frameworks UX (ISO 9241)
+Modelado de KPIs financieros y ecológicos
+🎨 Paleta Visual Apple
+txt
+Gris Espacial:   #1D1D1F
+Blanco:          #FFFFFF
+Verde Sostenible:#4CD964
+Azul Innovador:  #007AFF
+Dorado:          #FFD700
 🗂️ Estructura del Repositorio
-Navegación del repositorio:
+Code
+/presentation    # Portfolio y presentaciones visuales
+/scripts         # Scripts y notebooks
+/data            # Datasets originales
+/docs            # Metodología y referencias
+/assets          # Imágenes y visualizaciones
+🛠️ Tecnologías y Herramientas
+Herramienta	Uso Principal
+Python	Análisis y visualización
+Figma	Prototipado UX
+Plotly	Gráficos interactivos
+Markdown	Documentación
+Canva	Banners e infografías
+Excel	Manipulación de datos
+GitHub	Colaboración y control de versiones
+Power BI	Dashboards ejecutivos
+🌱 Sostenibilidad Apple 2030
+🌳 Reducción de emisiones CO₂: objetivo 0 MT para 2030
+⚡ 100% energía renovable en cadena de suministro
+♻️ Materiales reciclados: +40% en nuevos productos
+🌱 20+ alianzas globales en reciclaje y energía limpia
+📊 KPIs ecológicos: emisiones, materiales reciclados, huella hídrica
+🚀 Llamado a la Acción
+¿Te interesa la intersección entre UX, Data Science, innovación y sostenibilidad tecnológica?
+Conecta en LinkedIn, descarga el portfolio en /presentation y sumá tu perspectiva al benchmarking global.
 
-/presentation: imágenes y gráficos clave
-/scripts: análisis en Python y notebooks
-/data: fuentes y datasets
-/docs: documentación adicional y versión PDF
-/assets: banners y mockups para redes
-🌍 Tecnologías y Herramientas
-Categoría	Herramientas
-Data Science	Python (Pandas, Plotly, Seaborn)
-UX & Diseño	Figma · Illustrator · Canva Pro
-Visualización	Sankey · Radar · Heatmap · Timeline
-Documentación	Markdown · GitHub · Kaggle
-Branding	QR · Carrusel · PDF · LinkedIn Slides
-🌱 Apple 2030 · Estrategia Sostenible
-✅ Reducción de emisiones: -60% desde 2015
-♻️ 99% de materiales reciclados en baterías y componentes
-🌊 14B galones de agua ahorrados en 2024
-🚢 50% de productos enviados por transporte marítimo
-🤝 Adaptación para LinkedIn
-¿Te gustaría colaborar o conocer más sobre mi trabajo?
-Conéctame en LinkedIn o descarga el portfolio completo aquí.
+© 2025 | Proyecto profesional interdisciplinario | Apple Inc. | Benchmarking, Visual Storytelling & Consultoría Internacional
+
 
 
 
