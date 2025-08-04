@@ -32,18 +32,27 @@ Este repositorio contiene un análisis exhaustivo de benchmarking corporativo de
 
 ---
 
-## 📊 Visual Analytics Dashboard | Panel de Análisis Visual
+## 📊 Visual Analytics & Source Code
 
-This section presents the core visual assets generated for this analysis, providing a high-level overview of key findings.
-
-| Analysis Area | Description | Visual Asset |
-| :--- | :--- | :--- |
-| **Revenue Breakdown** | Sankey diagram illustrating revenue streams by product category for FY2025. | ![Sankey Revenue Breakdown](code/Sankey.py) |
-| **UX Benchmark** | Radar chart comparing Apple's UX performance against key competitors (Samsung, Google). | ![UX Radar Benchmark](./assets/visuals/ux_radar_benchmark.png) |
-| **Global Sales** | Treemap showcasing the relative weight of sales distribution across global regions. | ![Global Sales Treemap](./assets/visuals/global_sales_treemap.png) |
-| **Sustainability Path** | Timeline tracking Apple's progress towards its 2030 carbon neutrality commitment. | ![Sustainability Timeline](./assets/visuals/sustainability_timeline.png) |
+| Analysis Area        | Description                                                          | Visual Asset                                                    | Code File                          |
+|---------------------|----------------------------------------------------------------------|----------------------------------------------------------------|-----------------------------------|
+| **Revenue Breakdown** | Sankey diagram illustrating revenue streams by product category for FY2025. | ![Sankey Revenue Breakdown](./assets/visuals/kpi_sankey_revenue.png) | [code/Sankey.py](code/Sankey.py) |
+| **UX Benchmark**     | Radar chart comparing Apple's UX performance against key competitors (Samsung, Google). | ![UX Radar Benchmark](./assets/visuals/ux_radar_benchmark.png)  | [code/RadarUX.py](code/RadarUX.py) |
+| **Global Sales**     | Treemap showcasing the relative weight of sales distribution across global regions. | ![Global Sales Treemap](./assets/visuals/global_sales_treemap.png)  | [code/Heatmap.py](code/Heatmap.py) |
+| **Sustainability Path** | Timeline tracking Apple's progress towards its 2030 carbon neutrality commitment. | ![Sustainability Timeline](./assets/visuals/sustainability_timeline.png) | [code/ESG_Timeline.py](code/ESG_Timeline.py) |
 
 ---
+
+### Cómo usar los códigos
+
+Cada script Python en la carpeta `code/` genera el gráfico correspondiente y lo exporta automáticamente a la carpeta `assets/visuals/`. Para reproducir o modificar, simplemente ejecuta el archivo `.py` correspondiente en tu entorno local.
+
+---
+
+¿Querés que te ayude a generar un índice detallado con ejemplos de código para cada archivo?  
+O si querés, puedo ayudarte a preparar documentación para cada script.  
+Solo decime.  
+
 
 ## 🛠️ Methodology | Metodología
 
