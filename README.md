@@ -1,67 +1,91 @@
 # 🚀 Apple Inc. 2025 | Interdisciplinario | Benchmarking | Visual Storytelling | UX, KPIs, Innovación, Sostenibilidad 📈🌍
-📝 Resumen Ejecutivo
-🔎 Proyecto interdisciplinario que fusiona UX, Data Science, KPIs financieros, innovación tecnológica y estrategia sostenible.
-🌐 Benchmarking global con datos reales y visualizaciones avanzadas.
-🎯 Visual storytelling para comunicar insights clave a nivel profesional.
-📊 Útil para consultores, reclutadores y equipos técnicos internacionales.
-♻️ Enfoque en sostenibilidad y alineación con los ODS de la ONU.
-👤 Perfil del Autor
-Información	Certificaciones
-![Foto](./assets/author.png)	Nombre: [Tu Nombre]<br>Rol: Consultor Interdisciplinario<br>Experiencia: Proyectos Fortune 500, Estrategia Digital, Transformación Sostenible<br>LinkedIn: linkedin.com/in/tuusuario	<ul><li>UX Certified (NN/g)</li><li>IBM Data Science Professional</li><li>Google Marketing Digital</li><li>PMI Project Management</li></ul>
-📦 Contenido Analítico
-Sección	Descripción	Visual Clave	Emoji
-KPIs	EBITDA, margen neto, NPS, ROIC	![KPIs Banner](./assets/kpi_banner.png)	📊
-Sankey Diagram	Flujo de capital, supply chain, R&D	![Sankey](./assets/sankey.png)	🔀
-Radar UX	Usabilidad, accesibilidad, retención	![Radar UX](./assets/radar_ux.png)	🕸️
-Heatmap	Innovación por región y segmento	![Heatmap](./assets/heatmap.png)	🌡️
-Innovación	IA, AR/VR, energía limpia	![Timeline](./assets/timeline.png)	🚀
-Sostenibilidad	Emisiones CO₂, % renovable, reciclaje	![Eco Banner](./assets/eco_banner.png)	🌱
-Portfolio	Presentación visual y descargable	![Portfolio](./assets/portfolio.png)	📁
-🧮 Metodología
-📑 Fuentes de datos:
+🚀 Apple Inc. 2025 | Interdisciplinary | Benchmarking | Visual Storytelling | UX, KPIs, Innovation, Sustainability 📈🌍
+📝 Resumen Ejecutivo | Executive Summary
+ES:
+
+🔬 Proyecto interdisciplinario que integra UX/UI, Data Science, KPIs financieros, innovación tecnológica y estrategia sostenible.
+🌍 Benchmarking global con datos reales de Apple FY2024-2025.
+🎨 Storytelling visual con visualizaciones avanzadas.
+🧩 Valor profesional para consultores, reclutadores y equipos técnicos internacionales.
+♻️ Enfoque sostenible alineado con los ODS de la ONU.
+EN:
+
+🔬 Interdisciplinary project integrating UX/UI, Data Science, financial KPIs, technological innovation, and sustainable strategy.
+🌍 Global benchmarking using real Apple FY2024-2025 data.
+🎨 Visual storytelling with advanced data visualizations.
+🧩 Professional value for consultants, recruiters, and international technical teams.
+♻️ Sustainability focus aligned with the UN SDGs.
+👤 Perfil del Autor | Author Profile
+Información / Information	Certificaciones / Certifications
+![Foto](./assets/author.png)	Nombre / Name: [Tu Nombre / Your Name]<br>Rol / Role: Consultor Interdisciplinario / Interdisciplinary Consultant<br>Experiencia / Experience: Proyectos Fortune 500, Estrategia Global, Transformación Digital / Fortune 500 projects, Global Strategy, Digital Transformation<br>LinkedIn: linkedin.com/in/tuusuario	<ul><li>UX Certified (NN/g)</li><li>IBM Data Science Professional</li><li>Google Marketing Digital</li><li>PMI Project Management</li></ul>
+🎯 Objetivos Estratégicos | Strategic Objectives
+📊 Optimizar KPIs financieros y operativos / Optimize financial and operational KPIs
+🧑‍💻 Elevar la experiencia UX/UI con frameworks internacionales / Elevate UX/UI using international frameworks
+🌱 Impulsar innovación sostenible alineada con los ODS / Drive sustainable innovation aligned with SDGs
+🌍 Analizar oportunidades globales usando analítica avanzada / Identify global opportunities using advanced analytics
+🏆 Generar insights accionables para equipos internacionales / Deliver actionable insights for global stakeholders
+📦 Contenido Analítico | Analytical Content
+Emoji	Sección / Section	Descripción / Description	Visual Clave / Key Visual
+📊	KPIs	EBITDA, margen neto, NPS, ROIC / EBITDA, Net Margin, NPS, ROIC	![KPIs Banner](./assets/kpi_banner.png)
+🔀	Diagrama Sankey / Sankey Diagram	Flujo de capital, cadena de suministro / Capital flow, supply chain	![Sankey](./assets/sankey.png)
+🕸️	Radar UX	Usabilidad, accesibilidad, retención / Usability, accessibility, retention	![Radar UX](./assets/radar_ux.png)
+🌡️	Heatmap	Innovación por región/segmento / Innovation by region/segment	![Heatmap](./assets/heatmap.png)
+🚀	Innovación / Innovation	IA, AR/VR, energía limpia / AI, AR/VR, clean energy	![Timeline](./assets/timeline.png)
+🌱	Sostenibilidad / Sustainability	Emisiones de CO₂, renovable, reciclaje / CO₂ emissions, renewable, recycling	![Eco Banner](./assets/eco_banner.png)
+📁	Portfolio	Presentación visual / Visual summary	![Portfolio](./assets/portfolio.png)
+🧮 Metodología | Methodology
+📑 Fuentes de datos / Data sources:
+
 Apple Annual Reports (2024, 2023)
 Statista, Bloomberg, MSCI ESG Direct
-Benchmarks internacionales (ISO, NN/g, Gartner)
-🧠 Técnicas utilizadas:
-Análisis multivariado y clustering
-Visualización avanzada (Python, Plotly, Figma)
-Frameworks UX (ISO 9241)
-Modelado de KPIs financieros y ecológicos
-🎨 Paleta Visual Apple
+Benchmarks internacionales / International benchmarks (ISO, NN/g, Gartner)
+🧠 Técnicas / Techniques:
+
+Análisis multivariado y clustering / Multivariate analysis, clustering
+Visualización avanzada (Python, Plotly, Figma) / Advanced visualization (Python, Plotly, Figma)
+Evaluación UX/UI (ISO 9241, NN/g) / UX/UI evaluation (ISO 9241, NN/g)
+Modelado de KPIs financieros y ecológicos / Financial and ecological KPI modeling
+🎨 Paleta Visual Apple | Apple Visual Palette
 txt
-Gris Espacial:   #1D1D1F
-Blanco:          #FFFFFF
-Verde Sostenible:#4CD964
-Azul Innovador:  #007AFF
-Dorado:          #FFD700
-🗂️ Estructura del Repositorio
+Gris Espacial / Space Gray: #1D1D1F
+Blanco / White:            #FFFFFF
+Verde Sostenible / Green:  #4CD964
+Azul Innovador / Blue:     #007AFF
+Dorado / Gold:             #FFD700
+🗂️ Estructura del Repositorio | Repository Structure
 Code
-/presentation    # Portfolio y presentaciones visuales
-/scripts         # Scripts y notebooks
-/data            # Datasets originales
-/docs            # Metodología y referencias
-/assets          # Imágenes y visualizaciones
-🛠️ Tecnologías y Herramientas
-Herramienta	Uso Principal
-Python	Análisis y visualización
-Figma	Prototipado UX
-Plotly	Gráficos interactivos
-Markdown	Documentación
-Canva	Banners e infografías
-Excel	Manipulación de datos
-GitHub	Colaboración y control de versiones
-Power BI	Dashboards ejecutivos
-🌱 Sostenibilidad Apple 2030
-🌳 Reducción de emisiones CO₂: objetivo 0 MT para 2030
-⚡ 100% energía renovable en cadena de suministro
-♻️ Materiales reciclados: +40% en nuevos productos
-🌱 20+ alianzas globales en reciclaje y energía limpia
-📊 KPIs ecológicos: emisiones, materiales reciclados, huella hídrica
-🚀 Llamado a la Acción
-¿Te interesa la intersección entre UX, Data Science, innovación y sostenibilidad tecnológica?
-Conecta en LinkedIn, descarga el portfolio en /presentation y sumá tu perspectiva al benchmarking global.
+/presentation    # Portfolio y presentaciones / Portfolio & presentations
+/scripts         # Scripts y notebooks / Scripts & notebooks
+/data            # Datasets originales / Original datasets
+/docs            # Documentación / Documentation
+/assets          # Imágenes y visualizaciones / Images & visuals
+🛠️ Tecnologías y Herramientas | Technologies & Tools
+Herramienta	Uso / Use
+Python	Analítica de datos / Analytics
+Figma	Prototipado UX/UI / UX/UI prototyping
+Plotly	Gráficos interactivos / Interactive charts
+Markdown	Documentación / Documentation
+Canva	Banners e infografías / Banners & infographics
+Excel	Manipulación de datos / Data manipulation
+GitHub	Colaboración / Collaboration
+Power BI	Dashboards ejecutivos / Executive dashboards
+🌱 Sostenibilidad Apple 2030 | Apple 2030 Sustainability
+🌳 Emisiones: Objetivo 0 MT CO₂ / Goal: 0 MT CO₂ by 2030
+⚡ Energía renovable: 100% cadena de suministro / 100% supply chain
+♻️ Materiales reciclados: +40% productos nuevos / +40% in new products
+🌍 Alianzas verdes globales: 20+ / 20+ global green alliances
+📊 KPIs ecológicos: emisiones, reciclaje / Eco-KPIs: emissions, recycling
+🚀 Llamado a la Acción | Call to Action
+ES:
+¿Te interesa la convergencia entre UX, Data Science, innovación y sostenibilidad tecnológica?
+Conectá en LinkedIn, descargá el portfolio en /presentation y sumá tu perspectiva al benchmarking global.
+
+EN:
+Interested in the convergence of UX, Data Science, innovation, and tech sustainability?
+Connect on LinkedIn, download the portfolio from /presentation, and join the global benchmarking conversation.
 
 © 2025 | Proyecto profesional interdisciplinario | Apple Inc. | Benchmarking, Visual Storytelling & Consultoría Internacional
+© 2025 | Interdisciplinary Professional Project | Apple Inc. | Benchmarking, Visual Storytelling & International Consulting
 
 
 
