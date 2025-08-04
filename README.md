@@ -38,7 +38,7 @@ This section presents the core visual assets generated for this analysis, provid
 
 | Analysis Area | Description | Visual Asset |
 | :--- | :--- | :--- |
-| **Revenue Breakdown** | Sankey diagram illustrating revenue streams by product category for FY2025. | ![Sankey Revenue Breakdown](./assets/visuals/kpi_sankey_revenue.png) |
+| **Revenue Breakdown** | Sankey diagram illustrating revenue streams by product category for FY2025. | ![Sankey Revenue Breakdown](code/Sankey.py) |
 | **UX Benchmark** | Radar chart comparing Apple's UX performance against key competitors (Samsung, Google). | ![UX Radar Benchmark](./assets/visuals/ux_radar_benchmark.png) |
 | **Global Sales** | Treemap showcasing the relative weight of sales distribution across global regions. | ![Global Sales Treemap](./assets/visuals/global_sales_treemap.png) |
 | **Sustainability Path** | Timeline tracking Apple's progress towards its 2030 carbon neutrality commitment. | ![Sustainability Timeline](./assets/visuals/sustainability_timeline.png) |
