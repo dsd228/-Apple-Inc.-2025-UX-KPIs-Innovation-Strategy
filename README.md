@@ -1,59 +1,99 @@
 <p align="center">
-  <img src="./assets/visuals/github_banner.png" alt="Apple Inc. FY2025 Visual Banner: UX, KPIs, Innovation Strategy, Sustainability" style="max-width: 100%;">
+  <img src="./assets/visuals/github_banner.png" alt="Apple Inc. FY2025 Visual Banner" width="420">
 </p>
 
-# 📊 Apple Inc. Corporate Benchmarking FY24-25: A Strategic Deep Dive 🌐
-
-*Interdisciplinary analysis focused on **Innovation**, **UX Strategy**, **KPI Performance**, **Sustainability**, and **Data Storytelling**.*
-
----
-
-## 📚 Índice / Table of Contents
-
-- [Executive Summary / Resumen Ejecutivo](#executive-summary--resumen-ejecutivo)
-- [Author Profile / Perfil del Autor](#author-profile--perfil-del-autor)
-- [Visual Analytics & Source Code](#visual-analytics--source-code)
-- [Methodology / Metodología](#methodology--metodología)
-- [Apple's Visual Palette / Paleta Visual de Apple](#apples-visual-palette--paleta-visual-de-apple)
-- [Repository Structure / Estructura del Repositorio](#repository-structure--estructura-del-repositorio)
-- [Technologies & Tools / Tecnologías y Herramientas](#technologies--tools--tecnologías-y-herramientas)
-- [Apple’s 2030 Sustainability Commitment](#apples-2030-sustainability-commitment)
-- [Contact / Contacto](#connect--conectar)
-
----
-
-## Executive Summary / Resumen Ejecutivo
-
-This repository presents a comprehensive corporate benchmarking analysis of Apple Inc. for FY2024-2025. The project integrates financial data, UX research, sustainability metrics, and innovation trends, aiming to deconstruct Apple's strategy and operational excellence. Designed for consultants, recruiters, and strategists, this portfolio demonstrates advanced analytical skills and holistic understanding of the tech industry.
-
-> **ES:** Este repositorio contiene un análisis exhaustivo de benchmarking corporativo de Apple Inc. para los años fiscales 2024-2025, integrando datos financieros, investigación de UX, métricas de sostenibilidad y tendencias de innovación. Orientado a consultores, reclutadores y equipos de estrategia global.
+<div align="center">
+  
+  <a href="https://github.com/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/actions">
+    <img src="https://img.shields.io/github/workflow/status/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/CI?label=CI&logo=github&style=flat-square" alt="CI Status">
+  </a>
+  <a href="https://github.com/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy?style=flat-square" alt="License">
+  </a>
+  <a href="https://github.com/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/stargazers">
+    <img src="https://img.shields.io/github/stars/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy?style=flat-square" alt="Stars">
+  </a>
+  <a href="https://colab.research.google.com/github/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/blob/main/notebooks/apple_visuals_generator.ipynb">
+    <img src="https://img.shields.io/badge/Interact-Colab-F9AB00?logo=google-colab&logoColor=fff&style=flat-square" alt="Open in Colab">
+  </a>
+  
+</div>
 
 ---
 
-## Author Profile / Perfil del Autor
+# 🇬🇧 English
 
-| Category        | Details                                                                                     |
-| --------------- | ------------------------------------------------------------------------------------------- |
-| **Name**        | David S. Diaz                                                                               |
-| **Role**        | Senior Corporate Benchmarking Consultant                                                    |
-| **Expertise**   | Data Analysis, UX Strategy, Corporate Sustainability, Financial KPIs                        |
-| **Certifications** | 🏆 NN/g UX Certified <br>🔬 IBM Data Science <br>🎨 Google UX Design <br>📈 PMP®           |
-| **LinkedIn**    | [linkedin.com/in/dsd228](https://www.linkedin.com/in/dsd228)                               |
+## 📚 Table of Contents
+
+- [Executive Summary](#executive-summary)
+- [Author Profile](#author-profile)
+- [Visual Analytics & Interactive Notebooks](#visual-analytics--interactive-notebooks)
+- [Methodology](#methodology)
+- [Apple Visual Palette](#apple-visual-palette)
+- [Repository Structure](#repository-structure)
+- [Technologies & Tools](#technologies--tools)
+- [Sustainability Commitment](#sustainability-commitment)
+- [Contact](#contact)
 
 ---
 
-## Visual Analytics & Source Code
+## Executive Summary
 
-Visualizations are generated with Python scripts in `/code/` and exported to `/assets/visuals/`.
+This repository presents a strategic benchmarking analysis of Apple Inc. for FY2024-25, integrating financial, UX, sustainability, and innovation metrics. Designed for consultants, recruiters, and strategists, it highlights advanced analytics and a holistic industry view.
 
-| Área de Análisis      | Descripción                                         | Vista Previa                                                | Script Generador   |
-| --------------------- | --------------------------------------------------- | ----------------------------------------------------------- | ------------------ |
-| Revenue Breakdown     | Sankey: ingresos por categoría FY2025.              | ![Sankey](./assets/visuals/kpi_sankey_revenue.png)          | code/Sankey.py     |
-| UX Benchmark          | Radar: Apple vs Samsung y Google.                   | ![Radar](./assets/visuals/ux_radar_benchmark.png)           | code/RadarUX.py    |
-| Global Sales          | Treemap: ventas por región global.                  | ![Treemap](./assets/visuals/global_sales_treemap.png)       | code/Heatmap.py    |
-| Sustainability Path   | Timeline hacia neutralidad carbono 2030.            | ![Timeline](./assets/visuals/sustainability_timeline.png)   | code/ESG_Timeline.py |
+---
 
-Para regenerar todas las visualizaciones:
+## Author Profile
 
-```bash
-python notebooks/apple_visuals_generator.py
+| Name          | David S. Diaz                                              |
+| ------------- | ---------------------------------------------------------- |
+| Role          | Senior Corporate Benchmarking Consultant                   |
+| Certifications| UX Certified (NN/g), IBM Data Science, Google UX, PMP®     |
+| LinkedIn      | [linkedin.com/in/dsd228](https://www.linkedin.com/in/dsd228) |
+
+---
+
+## Visual Analytics & Interactive Notebooks
+
+All visualizations are Python-generated. Interactive version in [Google Colab](https://colab.research.google.com/github/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/blob/main/notebooks/apple_visuals_generator.ipynb).
+
+| Analysis Area         | Description                     | Preview                                            | Script             |
+|---------------------- | -------------------------------| -------------------------------------------------- | ------------------ |
+| Revenue Breakdown     | Sankey: Product category FY2025 | ![](./assets/visuals/kpi_sankey_revenue.png)       | code/Sankey.py     |
+| UX Benchmark          | Radar: Apple/Samsung/Google     | ![](./assets/visuals/ux_radar_benchmark.png)       | code/RadarUX.py    |
+| Global Sales          | Treemap: By region              | ![](./assets/visuals/global_sales_treemap.png)     | code/Heatmap.py    |
+| Sustainability Path   | Timeline: 2030 carbon neutral   | ![](./assets/visuals/sustainability_timeline.png)  | code/ESG_Timeline.py|
+
+---
+
+## Methodology
+
+- **Data Sources:** SEC Filings, ESG Reports, Gartner/Forrester, JSTOR, APIs
+- **Techniques:** Ratio/Regression/Forecasting, Heuristics, PESTLE, Content Analysis
+- **UX Standards:** WCAG 2.2, ISO 9241-210
+
+---
+
+## Apple Visual Palette
+
+| Name        | HEX      | Swatch    |
+| ----------- | -------- | --------- |
+| Space Gray  | #5f5f5f  | ⚫        |
+| Blue        | #007aff  | 🔵       |
+| Green       | #34c759  | 🟢       |
+| Gold        | #ffcc00  | 🟡       |
+| White       | #ffffff  | ⚪        |
+
+---
+
+## Repository Structure
+
+```markdown
+/
+├── assets/visuals/
+├── code/
+├── data/raw/
+├── data/processed/
+├── notebooks/apple_visuals_generator.ipynb
+├── presentation/Apple_Benchmarking_FY24-25_Executive_Deck.pdf
+└── README.md
