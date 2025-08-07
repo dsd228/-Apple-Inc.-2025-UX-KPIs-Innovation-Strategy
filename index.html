@@ -33,7 +33,8 @@
   <!-- Stylesheets -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <!-- SF Pro Display alternative: Inter for better iOS 16 compatibility -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
   
   <!-- Theme Color for Mobile Browsers -->
@@ -339,32 +340,35 @@
       toggle.title = 'Toggle dark mode';
       toggle.setAttribute('aria-label', 'Toggle dark mode');
       
-      // Styling
+      // iOS 16 Styling
       Object.assign(toggle.style, {
         position: 'fixed',
-        bottom: '22px',
+        bottom: '24px',
         right: '24px',
         zIndex: 9999,
-        fontSize: '1.3em',
-        borderRadius: '50%',
-        border: 'none',
-        width: '48px',
-        height: '48px',
-        background: '#222',
+        fontSize: '1.2em',
+        borderRadius: '20px',
+        border: '2px solid rgba(255, 255, 255, 0.2)',
+        width: '56px',
+        height: '56px',
+        background: 'rgba(0, 122, 255, 0.8)',
         color: '#fff',
-        boxShadow: '0 2px 18px rgba(0,0,0,0.2)',
+        boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
         cursor: 'pointer',
-        transition: 'background 0.2s, transform 0.2s'
+        transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        fontFamily: '-apple-system, BlinkMacSystemFont, system-ui, sans-serif'
       });
       
       // Hover effects
       toggle.addEventListener('mouseenter', () => {
-        toggle.style.background = '#007aff';
-        toggle.style.transform = 'scale(1.1)';
+        toggle.style.transform = 'scale(1.1) translateY(-2px)';
+        toggle.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.4)';
       });
       toggle.addEventListener('mouseleave', () => {
-        toggle.style.background = document.body.classList.contains('darkmode') ? '#111' : '#222';
-        toggle.style.transform = 'scale(1)';
+        toggle.style.transform = 'scale(1) translateY(0)';
+        toggle.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.3)';
       });
       
       // Click handler
@@ -381,7 +385,7 @@
         toggle.innerHTML = isDark ? '☀️' : '🌙';
         toggle.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
         toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-        toggle.style.background = isDark ? '#111' : '#222';
+        toggle.style.background = isDark ? 'rgba(255, 204, 0, 0.8)' : 'rgba(0, 122, 255, 0.8)';
       }
       
       // Save preference
@@ -396,7 +400,7 @@
         toggle.innerHTML = isDark ? '☀️' : '🌙';
         toggle.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
         toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-        toggle.style.background = isDark ? '#111' : '#222';
+        toggle.style.background = isDark ? 'rgba(255, 204, 0, 0.8)' : 'rgba(0, 122, 255, 0.8)';
       }
     }
     
