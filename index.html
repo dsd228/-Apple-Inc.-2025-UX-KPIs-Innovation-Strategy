@@ -33,12 +33,20 @@
   <!-- Stylesheets -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <!-- iOS System Fonts - SF Pro Display/Text -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
   
-  <!-- Theme Color for Mobile Browsers -->
-  <meta name="theme-color" content="#007aff">
-  <meta name="msapplication-TileColor" content="#007aff">
+  <!-- iOS Specific Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Apple Inc. Analysis">
+  <meta name="format-detection" content="telephone=no">
+  
+  <!-- Theme Color for Mobile Browsers - iOS Blue -->
+  <meta name="theme-color" content="#007AFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1C1C1E" media="(prefers-color-scheme: dark)">
+  <meta name="msapplication-TileColor" content="#007AFF">
 </head>
 <body>
   <!-- Skip Navigation Link for Accessibility -->
@@ -280,28 +288,45 @@
     const langBtns = document.querySelectorAll('.lang-btn');
     
     function setLanguage(lang) {
-      // Update button states
+      // Update button states with iOS style
       langBtns.forEach(btn => {
         const isActive = btn.dataset.lang === lang;
         btn.classList.toggle('active', isActive);
         btn.setAttribute('aria-pressed', isActive.toString());
       });
       
-      // Toggle content visibility
+      // Toggle content visibility with fade effect
       document.querySelectorAll('.lang-en').forEach(el => {
-        el.style.display = lang === 'en' ? 'block' : 'none';
+        if (lang === 'en') {
+          el.style.display = 'block';
+          el.style.opacity = '0';
+          setTimeout(() => el.style.opacity = '1', 10);
+        } else {
+          el.style.opacity = '0';
+          setTimeout(() => el.style.display = 'none', 200);
+        }
       });
       document.querySelectorAll('.lang-es').forEach(el => {
-        el.style.display = lang === 'es' ? 'block' : 'none';
+        if (lang === 'es') {
+          el.style.display = 'block';
+          el.style.opacity = '0';
+          setTimeout(() => el.style.opacity = '1', 10);
+        } else {
+          el.style.opacity = '0';
+          setTimeout(() => el.style.display = 'none', 200);
+        }
       });
       
       // Remember user preference
       localStorage.setItem('preferredLanguage', lang);
     }
     
-    // Language button event listeners
+    // Language button event listeners with haptic-like feedback
     langBtns.forEach(btn => {
       btn.addEventListener('click', function() {
+        // Add iOS-style press effect
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => this.style.transform = 'scale(1)', 100);
         setLanguage(this.dataset.lang);
       });
     });
@@ -310,7 +335,7 @@
     const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     setLanguage(savedLang);
     
-    // ===== Smooth Scrolling Navigation =====
+    // ===== Smooth Scrolling Navigation with iOS bounce =====
     document.querySelectorAll('nav a[href^="#"]').forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -318,57 +343,49 @@
         const targetElement = document.getElementById(targetId);
         
         if (targetElement) {
-          targetElement.scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'start' 
+          // iOS-style smooth scroll with offset for fixed header
+          const headerOffset = 220;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
           });
           
-          // Update focus for accessibility
-          targetElement.focus();
+          // Add focus with iOS-style highlight
+          setTimeout(() => {
+            targetElement.style.background = 'rgba(0, 122, 255, 0.1)';
+            targetElement.style.borderRadius = '12px';
+            targetElement.style.transition = 'all 0.3s ease';
+            setTimeout(() => {
+              targetElement.style.background = '';
+              targetElement.style.borderRadius = '';
+            }, 1000);
+          }, 500);
         }
       });
     });
     
-    // ===== Dark Mode Toggle =====
+    // ===== Dark Mode Toggle - Default Dark Mode as Requested =====
     function createDarkModeToggle() {
       if (document.getElementById('darkmode-btn')) return;
       
       const toggle = document.createElement('button');
       toggle.id = 'darkmode-btn';
-      toggle.innerHTML = '🌙';
-      toggle.title = 'Toggle dark mode';
-      toggle.setAttribute('aria-label', 'Toggle dark mode');
+      toggle.innerHTML = '☀️'; // Start with sun since dark mode is default
+      toggle.title = 'Switch to light mode';
+      toggle.setAttribute('aria-label', 'Switch to light mode');
       
-      // Styling
-      Object.assign(toggle.style, {
-        position: 'fixed',
-        bottom: '22px',
-        right: '24px',
-        zIndex: 9999,
-        fontSize: '1.3em',
-        borderRadius: '50%',
-        border: 'none',
-        width: '48px',
-        height: '48px',
-        background: '#222',
-        color: '#fff',
-        boxShadow: '0 2px 18px rgba(0,0,0,0.2)',
-        cursor: 'pointer',
-        transition: 'background 0.2s, transform 0.2s'
+      // Click handler with iOS-style animation
+      toggle.addEventListener('click', function() {
+        // iOS-style press animation
+        this.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+          this.style.transform = 'scale(1)';
+          toggleDarkMode();
+        }, 100);
       });
-      
-      // Hover effects
-      toggle.addEventListener('mouseenter', () => {
-        toggle.style.background = '#007aff';
-        toggle.style.transform = 'scale(1.1)';
-      });
-      toggle.addEventListener('mouseleave', () => {
-        toggle.style.background = document.body.classList.contains('darkmode') ? '#111' : '#222';
-        toggle.style.transform = 'scale(1)';
-      });
-      
-      // Click handler
-      toggle.addEventListener('click', toggleDarkMode);
       
       document.body.appendChild(toggle);
     }
@@ -378,14 +395,20 @@
       const toggle = document.getElementById('darkmode-btn');
       
       if (toggle) {
+        // iOS Control Center style icons
         toggle.innerHTML = isDark ? '☀️' : '🌙';
         toggle.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
         toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-        toggle.style.background = isDark ? '#111' : '#222';
       }
       
       // Save preference
       localStorage.setItem('darkMode', isDark ? '1' : '0');
+      
+      // Announce change for accessibility
+      const announcer = document.querySelector('[aria-live="polite"]');
+      if (announcer) {
+        announcer.textContent = `Switched to ${isDark ? 'dark' : 'light'} mode`;
+      }
     }
     
     function applyDarkMode(isDark) {
@@ -396,14 +419,24 @@
         toggle.innerHTML = isDark ? '☀️' : '🌙';
         toggle.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
         toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-        toggle.style.background = isDark ? '#111' : '#222';
       }
     }
     
-    // Initialize dark mode
+    // Initialize dark mode - DEFAULT TO DARK MODE as requested
     createDarkModeToggle();
-    const savedDarkMode = localStorage.getItem('darkMode') === '1';
-    applyDarkMode(savedDarkMode);
+    const savedDarkMode = localStorage.getItem('darkMode');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Default to dark mode unless user explicitly chose light mode
+    const shouldUseDarkMode = savedDarkMode === null ? true : savedDarkMode === '1';
+    applyDarkMode(shouldUseDarkMode);
+    
+    // Listen for system preference changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+      if (localStorage.getItem('darkMode') === null) {
+        applyDarkMode(true); // Always default to dark mode
+      }
+    });
     
     // ===== Accessibility Enhancements =====
     
@@ -418,19 +451,40 @@
       document.body.classList.remove('using-keyboard');
     });
     
-    // Announce page changes to screen readers
+    // Enhanced announcer for screen readers
     const announcer = document.createElement('div');
     announcer.setAttribute('aria-live', 'polite');
     announcer.setAttribute('aria-atomic', 'true');
     announcer.className = 'sr-only';
     document.body.appendChild(announcer);
     
-    // Update announcer when language changes
-    const originalSetLanguage = setLanguage;
-    setLanguage = function(lang) {
-      originalSetLanguage(lang);
-      announcer.textContent = `Language changed to ${lang === 'en' ? 'English' : 'Spanish'}`;
-    };
+    // iOS-style scroll behavior for fixed header
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const header = document.querySelector('header');
+      
+      if (scrollTop > lastScrollTop && scrollTop > 100) {
+        // Scrolling down - slightly hide header
+        header.style.transform = 'translateY(-10px)';
+        header.style.opacity = '0.95';
+      } else {
+        // Scrolling up - show header
+        header.style.transform = 'translateY(0)';
+        header.style.opacity = '1';
+      }
+      
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }, { passive: true });
+    
+    // Add loading animation
+    window.addEventListener('load', function() {
+      document.body.style.opacity = '0';
+      document.body.style.transition = 'opacity 0.3s ease';
+      setTimeout(() => {
+        document.body.style.opacity = '1';
+      }, 100);
+    });
   });
 </script>
 </script>
