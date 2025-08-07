@@ -517,6 +517,163 @@
     © 2025 David S. Diaz | Corporate Benchmarking Analysis | International Consulting Approach
   </div>
 </main>
+<!-- ... main content ... -->
+
+<!-- JS: Language Tabs, Smooth Scroll, Dark Mode -->
+<script>
+  // ==== Language Tabs (EN/ES) ====
+  document.addEventListener('DOMContentLoaded', function() {
+    // Language switch
+    const langBtns = document.querySelectorAll('.lang-btn');
+    function setLang(lang) {
+      langBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+      document.querySelectorAll('.lang-en').forEach(e => e.style.display = lang === 'en' ? 'block' : 'none');
+      document.querySelectorAll('.lang-es').forEach(e => e.style.display = lang === 'es' ? 'block' : 'none');
+      localStorage.setItem('lang', lang);
+    }
+    langBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        setLang(this.dataset.lang);
+      });
+    });
+    // Restore last language
+    setLang(localStorage.getItem('lang') || 'en');
+
+    // ==== Smooth Scroll for Nav ====
+    document.querySelectorAll('nav a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        if (this.hash) {
+          e.preventDefault();
+          const section = document.querySelector(this.hash);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
+    // ==== Dark Mode Toggle ====
+    // Add a floating button if not present
+    if (!document.getElementById('darkmode-btn')) {
+      const btn = document.createElement('button');
+      btn.id = 'darkmode-btn';
+      btn.innerHTML = '🌙';
+      btn.title = 'Toggle dark mode';
+      Object.assign(btn.style, {
+        position: 'fixed',
+        bottom: '22px',
+        right: '24px',
+        zIndex: 9999,
+        fontSize: '1.3em',
+        borderRadius: '50%',
+        border: 'none',
+        width: '48px',
+        height: '48px',
+        background: '#222',
+        color: '#fff',
+        boxShadow: '0 2px 18px #0003',
+        cursor: 'pointer',
+        transition: 'background 0.2s'
+      });
+      document.body.appendChild(btn);
+
+      btn.addEventListener('mouseenter', ()=>btn.style.background='#007aff');
+      btn.addEventListener('mouseleave', ()=>btn.style.background='#222');
+      btn.addEventListener('click', toggleDarkMode);
+    }
+
+    // Apply initial theme
+    function applyDarkMode(isDark) {
+      if(isDark) {
+        document.body.classList.add('darkmode');
+        document.getElementById('darkmode-btn').innerHTML = '☀️';
+      } else {
+        document.body.classList.remove('darkmode');
+        document.getElementById('darkmode-btn').innerHTML = '🌙';
+      }
+      localStorage.setItem('darkmode', isDark ? '1' : '');
+    }
+    function toggleDarkMode() {
+      applyDarkMode(!document.body.classList.contains('darkmode'));
+    }
+    // Initialize theme from localStorage
+    applyDarkMode(localStorage.getItem('darkmode') === '1');
+  });
+
+  // ==== Dark Mode Styles (inject if needed) ====
+  (function(){
+    const css = `
+body.darkmode {
+  background: #15181b;
+  color: #f2f2f2;
+}
+body.darkmode header {
+  background: linear-gradient(90deg, #27292d 60%, #2371c6 100%);
+  color: #fff;
+}
+body.darkmode nav a {
+  color: #7eb7ff;
+}
+body.darkmode nav a:hover,
+body.darkmode nav a.active {
+  color: #ffd952;
+  border-bottom-color: #ffd952;
+}
+body.darkmode main {
+  background: #23262b;
+  color: #f2f2f2;
+}
+body.darkmode h2 {
+  color: #7eb7ff;
+  background: linear-gradient(90deg, #23262b 80%, #1d2435 100%);
+  border-left-color: #7eb7ff;
+}
+body.darkmode .profile-table,
+body.darkmode .visual-table,
+body.darkmode .color-table,
+body.darkmode .tech-table {
+  background: #23262b;
+  color: #f2f2f2;
+  box-shadow: 0 1px 8px #0005;
+}
+body.darkmode .visual-table img {
+  box-shadow: 0 2px 12px #222b;
+}
+body.darkmode .notebook-link {
+  background: #222;
+  color: #f9ab00;
+  box-shadow: 0 2px 8px #222c;
+}
+body.darkmode .notebook-link:hover {
+  background: #333;
+  color: #ffc64a;
+}
+body.darkmode .lang-btn {
+  background: #23262b;
+  color: #7eb7ff;
+  border-color: #7eb7ff;
+}
+body.darkmode .lang-btn.active,
+body.darkmode .lang-btn:hover {
+  background: #7eb7ff;
+  color: #23262b;
+}
+body.darkmode .footer {
+  color: #888;
+}
+body.darkmode #darkmode-btn {
+  background: #111;
+  color: #ffd952;
+}
+`;
+    const style = document.createElement('style');
+    style.textContent = css;
+    document.head.appendChild(style);
+  })();
+</script>
+</body>
+</html>  
 </body>
 </html>
+
 
