@@ -1,143 +1,290 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Apple Inc. Benchmarking FY2024–2025</title>
+  <meta charset="UTF-8">
+  <title>Apple Inc. Corporate Benchmarking FY24-25</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interdisciplinary benchmarking of Apple Inc. 2024-2025: Innovation, UX, KPIs, Sustainability, Data Storytelling.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap">
+  <link rel="icon" href="./assets/visuals/github_banner.png">
   <style>
     :root {
-      --bg-light: #f9f9f9;
-      --bg-dark: #1a1a1a;
-      --text-light: #1d1d1f;
-      --text-dark: #f5f5f5;
+      --space-gray: #5f5f5f;
+      --blue: #007aff;
+      --green: #34c759;
+      --gold: #ffcc00;
+      --white: #fff;
+      --max-width: 900px;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--white);
+      color: var(--space-gray);
       margin: 0;
       padding: 0;
-      background-color: var(--bg-light);
-      color: var(--text-light);
-      transition: background-color 0.3s, color 0.3s;
-    }
-    body.dark-mode {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
     }
     header {
+      background: linear-gradient(90deg, var(--space-gray) 60%, var(--blue) 100%);
+      color: var(--white);
       text-align: center;
-      padding: 2rem 1rem 1rem;
-      background-color: var(--bg-light);
-      border-bottom: 1px solid #e0e0e0;
+      padding: 2rem 1rem 1.5rem 1rem;
     }
     header img {
-      width: 100%;
-      max-width: 800px;
+      max-width: 340px;
       border-radius: 12px;
       margin-bottom: 1rem;
     }
     h1 {
-      font-size: 2rem;
-      margin: 0.5rem 0;
+      font-size: 2.2rem;
+      margin: 0.4em 0 0.2em 0;
+      font-weight: 700;
+      letter-spacing: -1px;
     }
-    .controls {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
+    nav {
+      margin: 1.5em 0 1em 0;
+      text-align: center;
     }
-    .controls button {
-      padding: 0.5rem 1rem;
-      border: none;
-      background: #007aff;
-      color: #fff;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 500;
+    nav a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 700;
+      margin: 0 1.2em;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--gold);
     }
     main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2em 1em;
+      background: var(--white);
+      border-radius: 10px;
     }
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.6em;
     }
-    section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.25rem;
+    h2 {
+      color: var(--blue);
+      margin-bottom: 0.4em;
+      font-size: 1.45rem;
+      border-left: 4px solid var(--blue);
+      padding-left: 0.5em;
     }
-    .visual {
+    h3 { color: var(--space-gray); font-size: 1.13rem; }
+    .profile-table, .visual-table, .color-table, .tech-table {
       width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-bottom: 1rem;
+      border-collapse: collapse;
+      margin: 1em 0;
+      font-size: 0.97em;
     }
-    footer {
+    .profile-table td, .profile-table th,
+    .visual-table td, .visual-table th,
+    .color-table td, .color-table th,
+    .tech-table td, .tech-table th {
+      padding: 8px 10px;
+      border-bottom: 1px solid #e4e4e4;
+      vertical-align: middle;
+    }
+    .visual-table img {
+      max-width: 120px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px #cbd5e1;
+    }
+    .color-table td:last-child {
+      font-size: 1.5em;
       text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      border-top: 1px solid #e0e0e0;
+    }
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.6em 0 0 0;
+    }
+    .contact-list li {
+      margin-bottom: 0.5em;
+      font-size: 1.07em;
+    }
+    .footer {
+      text-align: center;
+      color: #9a9a9a;
+      font-size: 0.93em;
+      margin: 4em 0 1.1em 0;
+    }
+    @media (max-width: 700px) {
+      main { padding: 1em 0.4em; }
+      h1 { font-size: 1.3em; }
+      .visual-table img { max-width: 70px; }
+      nav a { margin: 0 0.5em; font-size: 0.98em; }
     }
   </style>
-</head>
-
-<body class="lang-es">
-  <header>
-    <img src="./assets/visuals/github_banner.png" alt="Banner Apple GitHub" />
-    <h1>
-      <span class="es">Apple Inc. Benchmarking FY2024–2025</span>
-      <span class="en">Apple Inc. Benchmarking FY2024–2025</span>
-    </h1>
-  </header>
-
-  <div class="controls">
-    <button onclick="toggleDarkMode()">🌙 <span class="es">Modo Oscuro</span><span class="en">Dark Mode</span></button>
-    <button onclick="toggleLanguage()">🌐 <span class="es">EN</span><span class="en">ES</span></button>
-    <button onclick="window.print()">📥 <span class="es">Exportar PDF</span><span class="en">Export PDF</span></button>
-  </div>
-
-  <main>
-    <section>
-      <h2><span class="es">Resumen Ejecutivo</span><span class="en">Executive Summary</span></h2>
-      <p><span class="es">Este análisis combina benchmarking corporativo, investigación UX, sostenibilidad, análisis financiero e innovación.</span><span class="en">This analysis blends corporate benchmarking, UX research, sustainability, financial analysis, and innovation.</span></p>
-    </section>
-
-    <section>
-      <h2><span class="es">Ventas Globales</span><span class="en">Global Sales</span></h2>
-      <img src="./assets/visuals/global_sales_treemap.png" alt="Global Sales Treemap" class="visual" />
-    </section>
-
-    <section>
-      <h2><span class="es">KPIs de Ingresos</span><span class="en">Revenue KPIs</span></h2>
-      <img src="./assets/visuals/kpi_sankey_revenue.png" alt="KPI Sankey Revenue" class="visual" />
-    </section>
-
-    <section>
-      <h2><span class="es">Estrategia de Sostenibilidad</span><span class="en">Sustainability Strategy</span></h2>
-      <img src="./assets/visuals/sustainability_timeline.png" alt="Sustainability Timeline" class="visual" />
-    </section>
-
-    <section>
-      <h2><span class="es">Benchmark UX</span><span class="en">UX Benchmark</span></h2>
-      <img src="./assets/visuals/ux_radar_benchmark.png" alt="UX Radar Benchmark" class="visual" />
-    </section>
-  </main>
-
-  <footer>
-    <span class="es">Proyecto por David Sebastián Díaz · 2025</span>
-    <span class="en">Project by David Sebastián Díaz · 2025</span>
-  </footer>
-
   <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-    function toggleLanguage() {
-      document.body.classList.toggle('lang-en');
-      document.body.classList.toggle('lang-es');
-    }
+    // Smooth scroll navigation
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('nav a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          if (this.hash) {
+            e.preventDefault();
+            const section = document.querySelector(this.hash);
+            if (section) {
+              section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+    });
   </script>
+</head>
+<body>
+  <header>
+    <img src="./assets/visuals/github_banner.png" alt="Apple Inc. FY2025 Visual Banner">
+    <h1>Apple Inc. Corporate Benchmarking FY24-25</h1>
+    <p style="font-size:1.1em;max-width:600px;margin:auto;">
+      Interdisciplinary analysis focused on <b>Innovation</b>, <b>UX Strategy</b>, <b>KPI Performance</b>, <b>Sustainability</b>, and <b>Data Storytelling</b>.
+    </p>
+    <nav>
+      <a href="#summary">Executive Summary</a>
+      <a href="#profile">Author</a>
+      <a href="#visuals">Visual Analytics</a>
+      <a href="#methodology">Methodology</a>
+      <a href="#palette">Palette</a>
+      <a href="#structure">Structure</a>
+      <a href="#tools">Tools</a>
+      <a href="#sustainability">2030</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="summary">
+      <h2>Executive Summary / Resumen Ejecutivo</h2>
+      <p>
+        This repository presents a comprehensive corporate benchmarking analysis of Apple Inc. for FY2024-2025, integrating financial data, UX research, sustainability metrics, and innovation trends to deconstruct Apple’s strategy and operational excellence.
+        <br><br>
+        <b>ES:</b> Análisis exhaustivo y consultivo de Apple Inc. para 2024-2025, integrando finanzas, UX, sostenibilidad e innovación.
+      </p>
+    </section>
+
+    <section id="profile">
+      <h2>Author Profile / Perfil del Autor</h2>
+      <table class="profile-table">
+        <tr><td><b>Name</b></td><td>David S. Diaz</td></tr>
+        <tr><td><b>Role</b></td><td>Senior Corporate Benchmarking Consultant</td></tr>
+        <tr><td><b>Expertise</b></td><td>Data Analysis, UX Strategy, Sustainability, Financial KPIs</td></tr>
+        <tr><td><b>Certifications</b></td>
+          <td>🏆 NN/g UX Certified, 🔬 IBM Data Science, 🎨 Google UX Design, 📈 PMP®</td>
+        </tr>
+        <tr><td><b>LinkedIn</b></td>
+          <td><a href="https://www.linkedin.com/in/dsd228" target="_blank">linkedin.com/in/dsd228</a></td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="visuals">
+      <h2>Visual Analytics & Source Code</h2>
+      <table class="visual-table">
+        <tr>
+          <th>Área</th><th>Descripción</th><th>Vista Previa</th><th>Script</th>
+        </tr>
+        <tr>
+          <td>Revenue Breakdown</td>
+          <td>Sankey: ingresos por categoría FY2025.</td>
+          <td><img src="./assets/visuals/kpi_sankey_revenue.png" alt="Sankey"></td>
+          <td>code/Sankey.py</td>
+        </tr>
+        <tr>
+          <td>UX Benchmark</td>
+          <td>Radar: Apple vs Samsung y Google.</td>
+          <td><img src="./assets/visuals/ux_radar_benchmark.png" alt="Radar"></td>
+          <td>code/RadarUX.py</td>
+        </tr>
+        <tr>
+          <td>Global Sales</td>
+          <td>Treemap: ventas por región global.</td>
+          <td><img src="./assets/visuals/global_sales_treemap.png" alt="Treemap"></td>
+          <td>code/Heatmap.py</td>
+        </tr>
+        <tr>
+          <td>Sustainability Path</td>
+          <td>Timeline hacia neutralidad carbono 2030.</td>
+          <td><img src="./assets/visuals/sustainability_timeline.png" alt="Timeline"></td>
+          <td>code/ESG_Timeline.py</td>
+        </tr>
+      </table>
+      <p><b>To regenerate all visualizations:</b> <code>python notebooks/apple_visuals_generator.py</code></p>
+    </section>
+
+    <section id="methodology">
+      <h2>Methodology / Metodología</h2>
+      <ul>
+        <li><b>Data Sources:</b> SEC Filings, ESG Reports, Gartner, Forrester, JSTOR, Financial APIs</li>
+        <li><b>Techniques:</b> Ratio Analysis, Regression, Forecasting, Heuristic Evaluation, PESTLE, Content Analysis</li>
+        <li><b>UX Standards:</b> WCAG 2.2, ISO 9241-210</li>
+      </ul>
+    </section>
+
+    <section id="palette">
+      <h2>Apple's Visual Palette / Paleta Visual de Apple</h2>
+      <table class="color-table">
+        <tr><th>Color Name</th><th>HEX</th><th>Swatch</th></tr>
+        <tr><td>Space Gray</td><td>#5f5f5f</td><td style="color:#5f5f5f;">&#11044;</td></tr>
+        <tr><td>Blue</td><td>#007aff</td><td style="color:#007aff;">&#11044;</td></tr>
+        <tr><td>Green</td><td>#34c759</td><td style="color:#34c759;">&#11044;</td></tr>
+        <tr><td>Gold</td><td>#ffcc00</td><td style="color:#ffcc00;">&#11044;</td></tr>
+        <tr><td>White</td><td>#ffffff</td><td style="color:#ccc;">&#9899;</td></tr>
+      </table>
+    </section>
+
+    <section id="structure">
+      <h2>Repository Structure / Estructura del Repositorio</h2>
+      <pre><code>
+/
+├── assets/
+│   └── visuals/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── notebooks/
+│   └── apple_visuals_generator.py
+├── presentation/
+│   └── Apple_Benchmarking_FY24-25_Executive_Deck.pdf
+└── README.md
+      </code></pre>
+    </section>
+
+    <section id="tools">
+      <h2>Technologies & Tools / Tecnologías y Herramientas</h2>
+      <table class="tech-table">
+        <tr><th>Technology / Tool</th><th>Purpose</th></tr>
+        <tr><td>Python (Plotly, etc)</td><td>Data wrangling & visualization</td></tr>
+        <tr><td>Pandas & NumPy</td><td>Data manipulation</td></tr>
+        <tr><td>Pillow</td><td>Image generation</td></tr>
+        <tr><td>Jupyter Notebook</td><td>Prototyping & reproducibility</td></tr>
+        <tr><td>Markdown</td><td>Documentation</td></tr>
+      </table>
+    </section>
+
+    <section id="sustainability">
+      <h2>Apple's 2030 Sustainability Commitment</h2>
+      <ul>
+        <li><b>Goal:</b> Carbon neutral across business and supply chain by 2030</li>
+        <li><b>100% renewable energy</b> for operations (achieved)</li>
+        <li><b>75% emission reduction</b> by 2030 (2015 baseline)</li>
+        <li><b>Carbon removal</b> for remaining 25%</li>
+        <li>Tracked: Scope 1/2/3, recycled materials, water & energy efficiency</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Connect / Conectar</h2>
+      <ul class="contact-list">
+        <li><b>Email:</b> <a href="mailto:david.s.diaz.consulting@email.com">david.s.diaz.consulting@email.com</a></li>
+        <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/dsd228" target="_blank">linkedin.com/in/dsd228</a></li>
+        <li><b>Executive Deck:</b> <a href="./presentation/Apple_Benchmarking_FY24-25_Executive_Deck.pdf" target="_blank">Ver PDF</a></li>
+      </ul>
+    </section>
+
+    <div class="footer">
+      © 2025 David S. Diaz | Corporate Benchmarking Analysis | International Consulting Approach
+    </div>
+  </main>
 </body>
 </html>
