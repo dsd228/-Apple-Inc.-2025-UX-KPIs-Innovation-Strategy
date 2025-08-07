@@ -2,136 +2,139 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Apple Inc. FY2025 · UX · KPIs · Innovation Strategy</title>
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-
-  <!-- Tipografía Roboto -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
-
-  <!-- Estilos -->
   <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --bg-dark: #1a1a1a;
+      --text-light: #1d1d1f;
+      --text-dark: #f5f5f5;
+    }
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f5f7fa;
-      color: #1c1c1e;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
     }
-
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
     header {
       text-align: center;
-      background: #fff;
       padding: 2rem 1rem 1rem;
-      border-bottom: 2px solid #e0e0e0;
+      background-color: var(--bg-light);
+      border-bottom: 1px solid #e0e0e0;
     }
-
     header img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 800px;
+      border-radius: 12px;
+      margin-bottom: 1rem;
     }
-
     h1 {
       font-size: 2rem;
-      margin-top: 1rem;
+      margin: 0.5rem 0;
     }
-
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .controls button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #007aff;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+    }
     main {
-      padding: 2rem;
       max-width: 960px;
-      margin: auto;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
-
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
-
-    h2 {
+    section h2 {
       font-size: 1.5rem;
-      color: #333;
       margin-bottom: 1rem;
       border-bottom: 2px solid #ddd;
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.25rem;
     }
-
-    p {
-      font-size: 1rem;
+    .visual {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       margin-bottom: 1rem;
     }
-
-    img.visual {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin: 1rem 0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
     footer {
       text-align: center;
-      padding: 1rem;
-      background: #fff;
-      border-top: 2px solid #e0e0e0;
+      padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #555;
+      border-top: 1px solid #e0e0e0;
     }
   </style>
 </head>
 
-<body>
+<body class="lang-es">
   <header>
     <img src="./assets/visuals/github_banner.png" alt="Banner Apple GitHub" />
-    <h1>Apple Inc. Corporate Benchmarking FY24-25</h1>
-    <p><em>Una investigación interdisciplinaria sobre <strong>Innovación</strong>, <strong>UX Strategy</strong>, <strong>Performance KPIs</strong> y <strong>Sostenibilidad</strong></em></p>
+    <h1><span class="es">Apple Inc. Benchmarking FY2024 – 2025</span><span class="en">Apple Inc. Benchmarking FY2024–2025</span></h1>
   </header>
+
+  <div class="controls">
+    <button onclick="toggleDarkMode()">🌙 <span class="es">Modo Oscuro</span><span class="en">Dark Mode</span></button>
+    <button onclick="toggleLanguage()">🌐 <span class="es">EN</span><span class="en">ES</span></button>
+    <button onclick="window.print()">📥 <span class="es">Exportar PDF</span><span class="en">Export PDF</span></button>
+  </div>
 
   <main>
     <section>
-      <h2>🔍 Visión General del Proyecto</h2>
-      <p>
-        Este proyecto ofrece un análisis profundo del enfoque de Apple Inc. en áreas clave como experiencia de usuario, métricas clave de rendimiento (KPIs), innovación empresarial y estrategias de sostenibilidad durante el año fiscal 2024-2025.
-      </p>
+      <h2><span class="es">Resumen Ejecutivo</span><span class="en">Executive Summary</span></h2>
+      <p><span class="es">Este análisis combina benchmarking corporativo, investigación UX, sostenibilidad, análisis financiero e innovación.</span><span class="en">This analysis blends corporate benchmarking, UX research, sustainability, financial analysis, and innovation.</span></p>
     </section>
 
     <section>
-      <h2>📈 Mapa de Ventas Globales</h2>
-      <img src="./assets/visuals/global_sales_treemap.png" alt="Mapa de ventas globales" class="visual" />
-      <p>
-        Representación visual de las ventas globales de Apple en sus diferentes líneas de productos y regiones, utilizando un diagrama de árbol.
-      </p>
+      <h2><span class="es">Ventas Globales</span><span class="en">Global Sales</span></h2>
+      <img src="./assets/visuals/global_sales_treemap.png" alt="Global Sales Treemap" class="visual" />
     </section>
 
     <section>
-      <h2>⚙️ KPIs Corporativos (Sankey)</h2>
-      <img src="./assets/visuals/kpi_sankey_revenue.png" alt="KPIs Sankey Revenue Flow" class="visual" />
-      <p>
-        Visualización tipo Sankey de los flujos de ingresos relacionados con los principales indicadores clave de desempeño utilizados por Apple para la toma de decisiones estratégicas.
-      </p>
+      <h2><span class="es">KPIs de Ingresos</span><span class="en">Revenue KPIs</span></h2>
+      <img src="./assets/visuals/kpi_sankey_revenue.png" alt="KPI Sankey Revenue" class="visual" />
     </section>
 
     <section>
-      <h2>🌱 Estrategia de Sostenibilidad</h2>
-      <img src="./assets/visuals/sustainability_timeline.png" alt="Sustainability timeline" class="visual" />
-      <p>
-        Línea de tiempo que destaca los hitos en sostenibilidad y responsabilidad ambiental asumidos por Apple, incluyendo su plan de neutralidad de carbono para 2030.
-      </p>
+      <h2><span class="es">Estrategia de Sostenibilidad</span><span class="en">Sustainability Strategy</span></h2>
+      <img src="./assets/visuals/sustainability_timeline.png" alt="Sustainability Timeline" class="visual" />
     </section>
 
     <section>
-      <h2>🎯 UX Radar Benchmark</h2>
+      <h2><span class="es">Benchmark UX</span><span class="en">UX Benchmark</span></h2>
       <img src="./assets/visuals/ux_radar_benchmark.png" alt="UX Radar Benchmark" class="visual" />
-      <p>
-        Radar de benchmarking de experiencia de usuario que compara las capacidades UX de Apple frente a líderes del sector, basado en atributos como accesibilidad, usabilidad, feedback y diseño centrado en el usuario.
-      </p>
     </section>
   </main>
 
   <footer>
-    Proyecto académico desarrollado por David Sebastián Díaz · FY2025 · GitHub Pages · UX + Data + Strategy
+    <span class="es">Proyecto por David Sebastián Díaz · 2025</span><span class="en">Project by David Sebastián Díaz · 2025</span>
   </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+    function toggleLanguage() {
+      document.body.classList.toggle('lang-en');
+      document.body.classList.toggle('lang-es');
+    }
+  </script>
 </body>
 </html>
 
