@@ -1,0 +1,116 @@
+/* ===========================================
+   Optimized CSS for Performance
+   Non-critical styles loaded asynchronously
+   =========================================== */
+
+/* Enhanced animations and interactions */
+.glass:hover {
+  transform: translateY(-5px);
+}
+
+h4 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus states for accessibility */
+a:focus,
+button:focus,
+.glass:focus {
+  outline: 2px solid #007aff;
+  outline-offset: 2px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #007aff;
+  color: white;
+  padding: 8px;
+  z-index: 1000;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Keyboard navigation indicators */
+body.using-keyboard *:focus {
+  outline: 2px solid #007aff !important;
+  outline-offset: 2px !important;
+}
+
+/* Enhanced visual effects */
+.glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+  body {
+    padding: 20px 0;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .glass {
+    padding: 15px;
+  }
+  
+  h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Performance optimizations */
+img {
+  will-change: transform;
+}
+
+.glass {
+  will-change: transform;
+  contain: layout style paint;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .glass {
+    background: white !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+  
+  .skip-link {
+    display: none;
+  }
+}

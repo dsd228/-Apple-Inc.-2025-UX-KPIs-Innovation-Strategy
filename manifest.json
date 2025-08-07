@@ -1,0 +1,16 @@
+{
+  "name": "Panel de Estadísticas 2025",
+  "short_name": "Dashboard 2025",
+  "description": "Dashboard optimizado con métricas de usuarios, ventas y ROI",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1f1c2c",
+  "theme_color": "#007aff",
+  "icons": [
+    {
+      "src": "./assets/optimized/github_banner.webp",
+      "sizes": "1024x1024",
+      "type": "image/webp"
+    }
+  ]
+}
