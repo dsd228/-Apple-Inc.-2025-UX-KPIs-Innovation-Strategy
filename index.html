@@ -2,169 +2,136 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Apple Inc. FY2025 · UX · KPIs · Estrategia</title>
-
-  <!-- Favicon -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apple Inc. FY2025 · UX · KPIs · Innovation Strategy</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <!-- Tipografía Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
 
-  <!-- Estilos personalizados -->
+  <!-- Estilos -->
   <style>
-    :root {
-      --bg-light: #f5f5f5;
-      --bg-dark: #1a1a1a;
-      --text-light: #000;
-      --text-dark: #f0f0f0;
-    }
-
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-light);
+      background-color: #f5f7fa;
+      color: #1c1c1e;
       margin: 0;
-      padding: 2rem;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    body.dark {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
+      padding: 0;
+      line-height: 1.6;
     }
 
     header {
       text-align: center;
+      background: #fff;
+      padding: 2rem 1rem 1rem;
+      border-bottom: 2px solid #e0e0e0;
     }
 
-    .controls {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    button {
-      padding: 0.5rem 1rem;
-      border: none;
-      background: #007aff;
-      color: #fff;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background: #005bb5;
-    }
-
-    img {
+    header img {
       max-width: 100%;
-      border-radius: 8px;
-      margin: 1rem 0;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
     }
 
     section {
-      max-width: 960px;
-      margin: auto;
-      padding-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
-    .qr-code {
-      text-align: center;
-      margin-top: 2rem;
+    h2 {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
     }
 
-    .qr-code img {
-      width: 140px;
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    img.visual {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 1rem 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
 
     footer {
       text-align: center;
-      margin-top: 2rem;
+      padding: 1rem;
+      background: #fff;
+      border-top: 2px solid #e0e0e0;
       font-size: 0.9rem;
-      opacity: 0.6;
+      color: #555;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1 id="title">📊 Apple Inc. FY2025 · UX · KPIs · Estrategia</h1>
-    <p id="subtitle">Benchmarking estratégico: Innovación, diseño centrado en el usuario y sostenibilidad.</p>
+    <img src="./assets/visuals/github_banner.png" alt="Banner Apple GitHub" />
+    <h1>Apple Inc. Corporate Benchmarking FY24-25</h1>
+    <p><em>Una investigación interdisciplinaria sobre <strong>Innovación</strong>, <strong>UX Strategy</strong>, <strong>Performance KPIs</strong> y <strong>Sostenibilidad</strong></em></p>
   </header>
 
-  <div class="controls">
-    <button onclick="toggleDarkMode()">🌙 Modo Oscuro</button>
-    <button onclick="toggleLanguage()">🌐 English</button>
-    <button onclick="downloadPDF()">📥 Exportar PDF</button>
-  </div>
+  <main>
+    <section>
+      <h2>🔍 Visión General del Proyecto</h2>
+      <p>
+        Este proyecto ofrece un análisis profundo del enfoque de Apple Inc. en áreas clave como experiencia de usuario, métricas clave de rendimiento (KPIs), innovación empresarial y estrategias de sostenibilidad durante el año fiscal 2024-2025.
+      </p>
+    </section>
 
-  <section id="content">
-    <h2>📌 Descripción</h2>
-    <p id="desc">
-      Este análisis explora el rendimiento estratégico de Apple Inc. durante el año fiscal 2025, abarcando indicadores clave de desempeño (KPIs), experiencia de usuario (UX), innovación tecnológica y sostenibilidad empresarial.
-    </p>
+    <section>
+      <h2>📈 Mapa de Ventas Globales</h2>
+      <img src="./assets/visuals/global_sales_treemap.png" alt="Mapa de ventas globales" class="visual" />
+      <p>
+        Representación visual de las ventas globales de Apple en sus diferentes líneas de productos y regiones, utilizando un diagrama de árbol.
+      </p>
+    </section>
 
-    <h2>📈 Visualizaciones</h2>
+    <section>
+      <h2>⚙️ KPIs Corporativos (Sankey)</h2>
+      <img src="./assets/visuals/kpi_sankey_revenue.png" alt="KPIs Sankey Revenue Flow" class="visual" />
+      <p>
+        Visualización tipo Sankey de los flujos de ingresos relacionados con los principales indicadores clave de desempeño utilizados por Apple para la toma de decisiones estratégicas.
+      </p>
+    </section>
 
-    <img src="./assets/visuals/github_banner.png" alt="Banner Apple GitHub" />
-    <img src="./assets/visuals/kpi_sankey_revenue.png" alt="Sankey KPI Ingresos" />
-    <img src="./assets/visuals/ux_radar_benchmark.png" alt="UX Radar Benchmark" />
-    <img src="./assets/visuals/global_sales_treemap.png" alt="Mapa de ventas globales" />
-    <img src="./assets/visuals/sustainability_timeline.png" alt="Línea de tiempo de sostenibilidad" />
+    <section>
+      <h2>🌱 Estrategia de Sostenibilidad</h2>
+      <img src="./assets/visuals/sustainability_timeline.png" alt="Sustainability timeline" class="visual" />
+      <p>
+        Línea de tiempo que destaca los hitos en sostenibilidad y responsabilidad ambiental asumidos por Apple, incluyendo su plan de neutralidad de carbono para 2030.
+      </p>
+    </section>
 
-    <div class="qr-code">
-      <h3>🔗 Escaneá el QR para visitar</h3>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/" alt="QR Apple Project" />
-    </div>
-  </section>
+    <section>
+      <h2>🎯 UX Radar Benchmark</h2>
+      <img src="./assets/visuals/ux_radar_benchmark.png" alt="UX Radar Benchmark" class="visual" />
+      <p>
+        Radar de benchmarking de experiencia de usuario que compara las capacidades UX de Apple frente a líderes del sector, basado en atributos como accesibilidad, usabilidad, feedback y diseño centrado en el usuario.
+      </p>
+    </section>
+  </main>
 
   <footer>
-    <p>Hecho por David Sebastián Díaz · Proyecto académico · 2025</p>
+    Proyecto académico desarrollado por David Sebastián Díaz · FY2025 · GitHub Pages · UX + Data + Strategy
   </footer>
-
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark");
-    }
-
-    const translations = {
-      es: {
-        title: "📊 Apple Inc. FY2025 · UX · KPIs · Estrategia",
-        subtitle: "Benchmarking estratégico: Innovación, diseño centrado en el usuario y sostenibilidad.",
-        desc: "Este análisis explora el rendimiento estratégico de Apple Inc. durante el año fiscal 2025, abarcando indicadores clave de desempeño (KPIs), experiencia de usuario (UX), innovación tecnológica y sostenibilidad empresarial.",
-        export: "📥 Exportar PDF",
-        lang: "🌐 English"
-      },
-      en: {
-        title: "📊 Apple Inc. FY2025 · UX · KPIs · Strategy",
-        subtitle: "Strategic benchmarking: Innovation, user-centered design, and sustainability.",
-        desc: "This analysis explores Apple Inc.'s strategic performance in fiscal year 2025, covering key performance indicators (KPIs), user experience (UX), tech innovation, and corporate sustainability.",
-        export: "📥 Export PDF",
-        lang: "🌐 Español"
-      }
-    };
-
-    let currentLang = "es";
-
-    function toggleLanguage() {
-      currentLang = currentLang === "es" ? "en" : "es";
-      const t = translations[currentLang];
-      document.getElementById("title").innerText = t.title;
-      document.getElementById("subtitle").innerText = t.subtitle;
-      document.getElementById("desc").innerText = t.desc;
-      document.querySelector('button[onclick="toggleLanguage()"]').innerText = t.lang;
-      document.querySelector('button[onclick="downloadPDF()"]').innerText = t.export;
-    }
-
-    function downloadPDF() {
-      window.print();
-    }
-  </script>
 </body>
 </html>
-
 
