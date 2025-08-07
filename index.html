@@ -52,25 +52,78 @@
     .delay-3 {
       animation-delay: 0.8s;
     }
+
+    /* Enhanced Mobile Responsiveness */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 0;
+      }
+      
+      .container {
+        padding: 0 15px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+      }
+      
+      .glass {
+        padding: 15px;
+        margin-bottom: 1rem;
+      }
+      
+      .glass h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+      }
+      
+      .glass img {
+        max-width: 100%;
+        height: auto;
+        min-height: 120px;
+        object-fit: cover;
+      }
+      
+      .row.g-4 {
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .glass {
+        padding: 12px;
+      }
+      
+      .glass h4 {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1 class="text-center mb-5">Panel de Estadísticas 2025</h1>
     <div class="row g-4">
-      <div class="col-md-4">
+      <div class="col-12 col-sm-6 col-md-4">
         <div class="glass delay-1">
           <h4>Usuarios Nuevos</h4>
           <img src="https://via.placeholder.com/300x150.png?text=Usuarios" class="img-fluid rounded" alt="Usuarios nuevos">
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-12 col-sm-6 col-md-4">
         <div class="glass delay-2">
           <h4>Ventas Totales</h4>
           <img src="https://via.placeholder.com/300x150.png?text=Ventas" class="img-fluid rounded" alt="Ventas">
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-12 col-sm-6 col-md-4">
         <div class="glass delay-3">
           <h4>Retorno de Inversión</h4>
           <img src="https://via.placeholder.com/300x150.png?text=ROI" class="img-fluid rounded" alt="ROI">
