@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- SEO and Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Inc. 2025 UX KPIs Innovation Strategy Dashboard</title>
+    <meta name="description" content="Comprehensive strategic benchmarking analysis of Apple Inc. for FY2024-25, integrating financial, UX, sustainability, and innovation metrics with interactive visualizations and Apple-style design.">
+    <meta name="keywords" content="Apple, UX, KPIs, Innovation, Strategy, Dashboard, Analytics, Benchmarking, 2025">
+    <meta name="author" content="David S. Diaz - Senior Corporate Benchmarking Consultant">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/">
+    <meta property="og:title" content="Apple Inc. 2025 UX KPIs Innovation Strategy Dashboard">
+    <meta property="og:description" content="Strategic benchmarking analysis of Apple Inc. with interactive visualizations and metrics for FY2024-25">
+    <meta property="og:image" content="https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/assets/visuals/github_banner.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/">
+    <meta property="twitter:title" content="Apple Inc. 2025 UX KPIs Innovation Strategy Dashboard">
+    <meta property="twitter:description" content="Strategic benchmarking analysis of Apple Inc. with interactive visualizations and metrics for FY2024-25">
+    <meta property="twitter:image" content="https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/assets/visuals/github_banner.png">
+
+    <!-- Embedded Font Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    </style>
+    
+    <!-- Fallback font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23007aff' width='100' height='100' rx='20'/><text y='75' font-size='80' fill='white' font-family='system-ui'>📊</text></svg>">
+
+    <style>
+        /* CSS Variables - Apple Design System */
+        :root {
+            --apple-gray: #f5f5f7;
+            --apple-white: #ffffff;
+            --apple-black: #1d1d1f;
+            --apple-blue: #0071e3;
+            --apple-blue-hover: #0056b3;
+            --apple-text-dark: #1d1d1f;
+            --apple-text-gray: #86868b;
+            --apple-border: #d2d2d7;
+            --apple-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            --apple-radius: 18px;
+            --apple-radius-small: 12px;
+            --font-stack: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --max-width: 1200px;
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 32px;
+            --spacing-xl: 48px;
+            --spacing-xxl: 64px;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--apple-gray);
+            color: var(--apple-text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Skip Link for Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--apple-blue);
+            color: var(--apple-white);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            text-decoration: none;
+            border-radius: var(--apple-radius-small);
+            z-index: 1000;
+            font-weight: 500;
+            transition: top 0.3s ease;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Fixed Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            padding: var(--spacing-sm) 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--apple-border);
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--apple-text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            color: var(--apple-blue);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-md);
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--apple-text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--apple-radius);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover,
+        .nav-link:focus {
+            background: var(--apple-blue);
+            color: var(--apple-white);
+            transform: translateY(-2px);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--apple-text-dark);
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--apple-white) 0%, var(--apple-gray) 100%);
+            padding: var(--spacing-xxl) var(--spacing-md);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23f0f0f0" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            background: linear-gradient(135deg, var(--apple-text-dark) 0%, var(--apple-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--apple-text-gray);
+            margin-bottom: var(--spacing-xl);
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--apple-blue);
+            color: var(--apple-white);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            border-radius: var(--apple-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--apple-shadow);
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .cta-button:hover {
+            background: var(--apple-blue-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 113, 227, 0.3);
+        }
+
+        /* Container with Glassmorphism */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .glass-container {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--apple-radius);
+            padding: var(--spacing-xl);
+            margin: var(--spacing-xl) 0;
+            box-shadow: var(--apple-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .glass-container:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            gap: var(--spacing-xl);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        /* Cards */
+        .card {
+            background: var(--apple-white);
+            border-radius: var(--apple-radius);
+            padding: var(--spacing-lg);
+            box-shadow: var(--apple-shadow);
+            transition: all 0.3s ease;
+            border: 1px solid var(--apple-border);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            color: var(--apple-text-dark);
+        }
+
+        .card p {
+            color: var(--apple-text-gray);
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Chart Container */
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: var(--spacing-md) 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chart-container canvas {
+            border-radius: var(--apple-radius-small);
+        }
+
+        /* Fallback Chart Styles */
+        .chart-fallback {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--apple-gray) 0%, var(--apple-white) 100%);
+            border-radius: var(--apple-radius-small);
+            border: 1px solid var(--apple-border);
+        }
+
+        .chart-fallback.hidden {
+            display: none;
+        }
+
+        /* Donut Chart Fallback */
+        .donut-chart {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(
+                var(--apple-blue) 0deg 144deg,
+                var(--apple-green) 144deg 186deg,
+                #ffcc00 186deg 226deg,
+                #ff9500 226deg 284deg,
+                #5856d6 284deg 360deg
+            );
+            position: relative;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .donut-chart::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120px;
+            height: 120px;
+            background: var(--apple-white);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .chart-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            justify-content: center;
+            margin-top: var(--spacing-sm);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            font-size: 0.9rem;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        /* Bar Chart Fallback */
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            gap: var(--spacing-sm);
+            height: 200px;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .bar {
+            flex: 1;
+            background: linear-gradient(to top, var(--apple-blue), rgba(0, 113, 227, 0.7));
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            min-height: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .bar:hover {
+            transform: scale(1.05);
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: var(--apple-text-gray);
+            white-space: nowrap;
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: var(--apple-text-dark);
+            font-weight: 600;
+        }
+
+        /* Line Chart Fallback */
+        .line-chart {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .line-chart svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Radar Chart Fallback */
+        .radar-chart {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .radar-chart svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Statistics Cards */
+        .stat-card {
+            text-align: center;
+            background: var(--apple-white);
+            border-radius: var(--apple-radius);
+            padding: var(--spacing-lg);
+            box-shadow: var(--apple-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--apple-blue);
+            display: block;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            color: var(--apple-text-gray);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin: var(--spacing-xxl) 0 var(--spacing-xl) 0;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            color: var(--apple-text-dark);
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: var(--apple-text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--apple-text-dark);
+            color: var(--apple-white);
+            padding: var(--spacing-xxl) 0 var(--spacing-xl) 0;
+            margin-top: var(--spacing-xxl);
+        }
+
+        .footer-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+            text-align: center;
+        }
+
+        .footer-content p {
+            color: var(--apple-text-gray);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-links a {
+            color: var(--apple-white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--apple-blue);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(0, 113, 227, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--apple-blue);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 72px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 72px);
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: var(--spacing-xl);
+                transition: left 0.3s ease;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: var(--spacing-xl) var(--spacing-md);
+            }
+
+            .glass-container {
+                padding: var(--spacing-md);
+                margin: var(--spacing-md) 0;
+            }
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .chart-container {
+                height: 300px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+            }
+        }
+
+        /* Accessibility Improvements */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Focus States */
+        *:focus {
+            outline: 2px solid var(--apple-blue);
+            outline-offset: 2px;
+        }
+
+        /* High Contrast Mode */
+        @media (prefers-contrast: high) {
+            :root {
+                --apple-gray: #ffffff;
+                --apple-border: #000000;
+                --apple-text-gray: #000000;
+            }
+        }
+
+        /* Screen Reader Only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Print Styles */
+        @media print {
+            .navbar,
+            .nav-toggle,
+            .cta-button {
+                display: none;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .glass-container,
+            .card {
+                background: white;
+                box-shadow: none;
+                border: 1px solid black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Skip Link for Screen Readers -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Fixed Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Navegación principal">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Apple Dashboard Inicio">
+                📊 Apple Dashboard
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#overview" class="nav-link">Resumen</a></li>
+                <li><a href="#metrics" class="nav-link">Métricas</a></li>
+                <li><a href="#analytics" class="nav-link">Análisis</a></li>
+                <li><a href="#sustainability" class="nav-link">Sostenibilidad</a></li>
+                <li><a href="#innovation" class="nav-link">Innovación</a></li>
+            </ul>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                ☰
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="overview">
+            <div class="hero-content">
+                <h1>Apple Inc. 2025 UX KPIs Innovation Strategy</h1>
+                <p>Análisis estratégico integral de benchmarking para FY2024-25, integrando métricas financieras, UX, sostenibilidad e innovación con visualizaciones interactivas de última generación.</p>
+                <a href="#metrics" class="cta-button" role="button">Explorar Métricas</a>
+            </div>
+        </section>
+
+        <!-- Statistics Overview -->
+        <section class="container" id="metrics" aria-labelledby="metrics-heading">
+            <div class="section-header">
+                <h2 id="metrics-heading">Métricas Clave de Rendimiento</h2>
+                <p>Indicadores principales que definen el éxito de Apple en 2025</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="stat-card">
+                    <span class="stat-number" aria-label="383 mil millones de dólares">$383B</span>
+                    <span class="stat-label">Ingresos FY2024</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" aria-label="95 por ciento">95%</span>
+                    <span class="stat-label">Satisfacción UX</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" aria-label="2030">2030</span>
+                    <span class="stat-label">Carbono Neutral</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics Section -->
+        <section class="container" id="analytics" aria-labelledby="analytics-heading">
+            <div class="section-header">
+                <h2 id="analytics-heading">Análisis Interactivo</h2>
+                <p>Visualizaciones de datos en tiempo real para insights estratégicos</p>
+            </div>
+
+            <div class="grid grid-2">
+                <!-- Revenue Breakdown Chart -->
+                <div class="glass-container">
+                    <h3>Desglose de Ingresos por Producto</h3>
+                    <p>Distribución de ingresos de Apple por categoría de producto en FY2024</p>
+                    <div class="chart-container">
+                        <canvas id="revenueChart" role="img" aria-label="Gráfico circular que muestra el desglose de ingresos por producto de Apple"></canvas>
+                        <div id="revenueFallback" class="chart-fallback">
+                            <div class="donut-chart"></div>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: var(--apple-blue);"></div>
+                                    <span>iPhone $200.6B</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #34c759;"></div>
+                                    <span>Services $85.2B</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #ffcc00;"></div>
+                                    <span>Wearables $39.8B</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #ff9500;"></div>
+                                    <span>Mac $29.4B</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #5856d6;"></div>
+                                    <span>iPad $28.3B</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UX Metrics Comparison -->
+                <div class="glass-container">
+                    <h3>Benchmarking UX vs Competidores</h3>
+                    <p>Comparación de métricas de experiencia de usuario con Samsung y Google</p>
+                    <div class="chart-container">
+                        <canvas id="uxChart" role="img" aria-label="Gráfico de radar que compara las métricas UX de Apple con competidores"></canvas>
+                        <div id="uxFallback" class="chart-fallback">
+                            <div class="radar-chart">
+                                <svg viewBox="0 0 200 200">
+                                    <!-- Background grid -->
+                                    <polygon points="100,20 171,50 171,150 100,180 29,150 29,50" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+                                    <polygon points="100,40 151,60 151,140 100,160 49,140 49,60" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+                                    <polygon points="100,60 131,70 131,130 100,140 69,130 69,70" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+                                    
+                                    <!-- Axis lines -->
+                                    <line x1="100" y1="100" x2="100" y2="20" stroke="#e0e0e0" stroke-width="1"/>
+                                    <line x1="100" y1="100" x2="171" y2="50" stroke="#e0e0e0" stroke-width="1"/>
+                                    <line x1="100" y1="100" x2="171" y2="150" stroke="#e0e0e0" stroke-width="1"/>
+                                    <line x1="100" y1="100" x2="100" y2="180" stroke="#e0e0e0" stroke-width="1"/>
+                                    <line x1="100" y1="100" x2="29" y2="150" stroke="#e0e0e0" stroke-width="1"/>
+                                    <line x1="100" y1="100" x2="29" y2="50" stroke="#e0e0e0" stroke-width="1"/>
+                                    
+                                    <!-- Apple data -->
+                                    <polygon points="100,25 166,52 166,142 100,162 34,142 34,58" fill="rgba(0, 122, 255, 0.2)" stroke="var(--apple-blue)" stroke-width="2"/>
+                                    
+                                    <!-- Labels -->
+                                    <text x="100" y="15" text-anchor="middle" font-size="10" fill="#666">Usabilidad</text>
+                                    <text x="176" y="45" text-anchor="start" font-size="10" fill="#666">Diseño</text>
+                                    <text x="176" y="155" text-anchor="start" font-size="10" fill="#666">Rendimiento</text>
+                                    <text x="100" y="190" text-anchor="middle" font-size="10" fill="#666">Innovación</text>
+                                    <text x="24" y="155" text-anchor="end" font-size="10" fill="#666">Satisfacción</text>
+                                    <text x="24" y="45" text-anchor="end" font-size="10" fill="#666">Accesibilidad</text>
+                                </svg>
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: var(--apple-blue);"></div>
+                                    <span>Apple 94%</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #34c759;"></div>
+                                    <span>Samsung 82%</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #ffcc00;"></div>
+                                    <span>Google 87%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Global Sales Trends -->
+                <div class="glass-container">
+                    <h3>Tendencias de Ventas Globales</h3>
+                    <p>Evolución de ventas por región geográfica en los últimos 5 años</p>
+                    <div class="chart-container">
+                        <canvas id="salesChart" role="img" aria-label="Gráfico de líneas que muestra las tendencias de ventas globales de Apple"></canvas>
+                        <div id="salesFallback" class="chart-fallback">
+                            <div class="line-chart">
+                                <svg viewBox="0 0 400 200">
+                                    <!-- Grid lines -->
+                                    <defs>
+                                        <pattern id="grid" width="40" height="20" patternUnits="userSpaceOnUse">
+                                            <path d="M 40 0 L 0 0 0 20" fill="none" stroke="#f0f0f0" stroke-width="1"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect width="400" height="200" fill="url(#grid)"/>
+                                    
+                                    <!-- América line -->
+                                    <polyline points="50,80 130,70 210,50 290,60 370,55" fill="none" stroke="var(--apple-blue)" stroke-width="3"/>
+                                    
+                                    <!-- Europa line -->
+                                    <polyline points="50,120 130,115 210,110 290,112 370,105" fill="none" stroke="#34c759" stroke-width="3"/>
+                                    
+                                    <!-- Asia-Pacífico line -->
+                                    <polyline points="50,130 130,125 210,120 290,125 370,118" fill="none" stroke="#ffcc00" stroke-width="3"/>
+                                    
+                                    <!-- Data points -->
+                                    <circle cx="50" cy="80" r="4" fill="var(--apple-blue)"/>
+                                    <circle cx="130" cy="70" r="4" fill="var(--apple-blue)"/>
+                                    <circle cx="210" cy="50" r="4" fill="var(--apple-blue)"/>
+                                    <circle cx="290" cy="60" r="4" fill="var(--apple-blue)"/>
+                                    <circle cx="370" cy="55" r="4" fill="var(--apple-blue)"/>
+                                    
+                                    <!-- Year labels -->
+                                    <text x="50" y="190" text-anchor="middle" font-size="12" fill="#666">2020</text>
+                                    <text x="130" y="190" text-anchor="middle" font-size="12" fill="#666">2021</text>
+                                    <text x="210" y="190" text-anchor="middle" font-size="12" fill="#666">2022</text>
+                                    <text x="290" y="190" text-anchor="middle" font-size="12" fill="#666">2023</text>
+                                    <text x="370" y="190" text-anchor="middle" font-size="12" fill="#666">2024</text>
+                                </svg>
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: var(--apple-blue);"></div>
+                                    <span>América $168B</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #34c759;"></div>
+                                    <span>Europa $78B</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #ffcc00;"></div>
+                                    <span>Asia-Pacífico $73B</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Innovation Index -->
+                <div class="glass-container">
+                    <h3>Índice de Innovación</h3>
+                    <p>Puntuación de innovación basada en patentes, I+D y lanzamientos de productos</p>
+                    <div class="chart-container">
+                        <canvas id="innovationChart" role="img" aria-label="Gráfico de barras que muestra el índice de innovación de Apple"></canvas>
+                        <div id="innovationFallback" class="chart-fallback">
+                            <div class="bar-chart">
+                                <div class="bar" style="height: 92%; background: var(--apple-blue);">
+                                    <div class="bar-value">92%</div>
+                                    <div class="bar-label">Patentes</div>
+                                </div>
+                                <div class="bar" style="height: 88%; background: #34c759;">
+                                    <div class="bar-value">88%</div>
+                                    <div class="bar-label">I+D</div>
+                                </div>
+                                <div class="bar" style="height: 95%; background: #ffcc00;">
+                                    <div class="bar-value">95%</div>
+                                    <div class="bar-label">Productos</div>
+                                </div>
+                                <div class="bar" style="height: 89%; background: #ff9500;">
+                                    <div class="bar-value">89%</div>
+                                    <div class="bar-label">Tech</div>
+                                </div>
+                                <div class="bar" style="height: 94%; background: #5856d6;">
+                                    <div class="bar-value">94%</div>
+                                    <div class="bar-label">UX</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainability Section -->
+        <section class="container" id="sustainability" aria-labelledby="sustainability-heading">
+            <div class="section-header">
+                <h2 id="sustainability-heading">Compromiso con la Sostenibilidad</h2>
+                <p>Progreso hacia el objetivo de carbono neutral para 2030</p>
+            </div>
+
+            <div class="glass-container">
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h3>🌱 Energía Renovable</h3>
+                        <p>100% de energía renovable en todas las operaciones globales desde 2018</p>
+                        <div class="stat-number" style="font-size: 2rem; color: #34c759;">100%</div>
+                    </div>
+                    <div class="card">
+                        <h3>♻️ Materiales Reciclados</h3>
+                        <p>Incremento del uso de materiales reciclados en productos</p>
+                        <div class="stat-number" style="font-size: 2rem; color: #34c759;">75%</div>
+                    </div>
+                    <div class="card">
+                        <h3>📦 Packaging Sostenible</h3>
+                        <p>Eliminación de plásticos en packaging para 2025</p>
+                        <div class="stat-number" style="font-size: 2rem; color: #34c759;">95%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Innovation Section -->
+        <section class="container" id="innovation" aria-labelledby="innovation-heading">
+            <div class="section-header">
+                <h2 id="innovation-heading">Innovación y Futuro</h2>
+                <p>Tecnologías emergentes y roadmap de producto para 2025-2030</p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>🤖 Inteligencia Artificial</h3>
+                    <p>Integración de IA en todos los productos con chips A-series y M-series, mejorando el rendimiento y la eficiencia energética.</p>
+                    <ul style="margin-top: 16px; padding-left: 20px; color: var(--apple-text-gray);">
+                        <li>Neural Engine optimizado</li>
+                        <li>Machine Learning en el dispositivo</li>
+                        <li>Procesamiento de lenguaje natural</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🥽 Realidad Mixta</h3>
+                    <p>Apple Vision Pro marca el inicio de la era de computación espacial, redefiniendo cómo interactuamos con el contenido digital.</p>
+                    <ul style="margin-top: 16px; padding-left: 20px; color: var(--apple-text-gray);">
+                        <li>Interfaces espaciales inmersivas</li>
+                        <li>Colaboración virtual avanzada</li>
+                        <li>Ecosistema de apps AR/VR</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🚗 Apple Car</h3>
+                    <p>Proyecto estratégico de movilidad autónoma con integración completa del ecosistema Apple.</p>
+                    <ul style="margin-top: 16px; padding-left: 20px; color: var(--apple-text-gray);">
+                        <li>Conducción autónoma nivel 5</li>
+                        <li>CarPlay nativo integrado</li>
+                        <li>Sostenibilidad y eficiencia</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>💊 Apple Health+</h3>
+                    <p>Expansión en el sector salud con dispositivos médicos y servicios de monitoreo avanzado.</p>
+                    <ul style="margin-top: 16px; padding-left: 20px; color: var(--apple-text-gray);">
+                        <li>Monitoreo glucosa no invasivo</li>
+                        <li>Análisis predictivo de salud</li>
+                        <li>Integración con profesionales médicos</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/dsd228" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de David S. Diaz">LinkedIn</a>
+                <a href="https://github.com/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy" target="_blank" rel="noopener noreferrer" aria-label="Repositorio en GitHub">GitHub</a>
+                <a href="https://colab.research.google.com/github/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/blob/main/notebooks/apple_visuals_generator.ipynb" target="_blank" rel="noopener noreferrer" aria-label="Notebook interactivo en Google Colab">Colab</a>
+            </div>
+            <p>&copy; 2025 David S. Diaz - Senior Corporate Benchmarking Consultant</p>
+            <p>UX Certified (NN/g) | IBM Data Science | Google UX | PMP®</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Embedded fallback for Chart.js - lightweight chart functionality
+        window.Chart = window.Chart || {
+            register: function() {},
+            defaults: {},
+            Chart: function() { return { destroy: function() {}, update: function() {} }; }
+        };
+
+        // Check if Chart.js is available and load it
+        let chartJsAvailable = false;
+        
+        // Try to load Chart.js from CDN
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js';
+        script.onload = function() {
+            chartJsAvailable = true;
+            console.log('Chart.js loaded successfully');
+            initializeCharts();
+        };
+        script.onerror = function() {
+            console.log('Chart.js CDN failed, using fallback visualizations');
+            showFallbackCharts();
+        };
+        document.head.appendChild(script);
+
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            const navbar = document.querySelector('.navbar');
+            
+            // Mobile menu toggle
+            navToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                const isExpanded = navMenu.classList.contains('active');
+                navToggle.setAttribute('aria-expanded', isExpanded);
+                navToggle.innerHTML = isExpanded ? '✕' : '☰';
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                    navToggle.innerHTML = '☰';
+                });
+            });
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const offsetTop = target.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all cards and containers
+            document.querySelectorAll('.card, .glass-container, .stat-card').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Fallback chart initialization after 3 seconds if Chart.js doesn't load
+            setTimeout(() => {
+                if (!chartJsAvailable) {
+                    showFallbackCharts();
+                }
+            }, 3000);
+        });
+
+        // Show fallback charts when Chart.js is not available
+        function showFallbackCharts() {
+            console.log('Showing fallback charts');
+            
+            // Hide canvas elements and show fallback charts
+            const canvasElements = ['revenueChart', 'uxChart', 'salesChart', 'innovationChart'];
+            const fallbackElements = ['revenueFallback', 'uxFallback', 'salesFallback', 'innovationFallback'];
+
+            canvasElements.forEach(id => {
+                const canvas = document.getElementById(id);
+                if (canvas) canvas.style.display = 'none';
+            });
+
+            fallbackElements.forEach(id => {
+                const fallback = document.getElementById(id);
+                if (fallback) {
+                    fallback.classList.remove('hidden');
+                    fallback.style.display = 'flex';
+                }
+            });
+        }
+
+        // Chart initialization (if Chart.js is available)
+        function initializeCharts() {
+            if (!window.Chart || typeof Chart !== 'function') {
+                console.log('Chart.js not available, using fallbacks');
+                showFallbackCharts();
+                return;
+            }
+
+            console.log('Initializing Chart.js charts');
+            
+            // Hide fallback charts and show canvas charts
+            const fallbackElements = ['revenueFallback', 'uxFallback', 'salesFallback', 'innovationFallback'];
+            fallbackElements.forEach(id => {
+                const fallback = document.getElementById(id);
+                if (fallback) fallback.style.display = 'none';
+            });
+
+            // Revenue Breakdown Chart
+            const revenueCtx = document.getElementById('revenueChart');
+            if (revenueCtx) {
+                new Chart(revenueCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['iPhone', 'Services', 'Wearables', 'Mac', 'iPad'],
+                        datasets: [{
+                            data: [200.6, 85.2, 39.8, 29.4, 28.3],
+                            backgroundColor: [
+                                '#007aff',
+                                '#34c759',
+                                '#ffcc00',
+                                '#ff9500',
+                                '#5856d6'
+                            ],
+                            borderWidth: 0,
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 20,
+                                    usePointStyle: true,
+                                    font: {
+                                        family: 'Inter, system-ui, sans-serif',
+                                        size: 12
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                titleColor: '#ffffff',
+                                bodyColor: '#ffffff',
+                                borderColor: '#007aff',
+                                borderWidth: 1,
+                                cornerRadius: 8,
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.label + ': $' + context.parsed + 'B';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // UX Metrics Radar Chart
+            const uxCtx = document.getElementById('uxChart');
+            if (uxCtx) {
+                new Chart(uxCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Usabilidad', 'Diseño', 'Rendimiento', 'Innovación', 'Satisfacción', 'Accesibilidad'],
+                        datasets: [{
+                            label: 'Apple',
+                            data: [95, 98, 92, 96, 94, 89],
+                            borderColor: '#007aff',
+                            backgroundColor: 'rgba(0, 122, 255, 0.1)',
+                            pointBackgroundColor: '#007aff',
+                            pointBorderColor: '#ffffff',
+                            pointBorderWidth: 2
+                        }, {
+                            label: 'Samsung',
+                            data: [85, 82, 88, 85, 80, 78],
+                            borderColor: '#34c759',
+                            backgroundColor: 'rgba(52, 199, 89, 0.1)',
+                            pointBackgroundColor: '#34c759',
+                            pointBorderColor: '#ffffff',
+                            pointBorderWidth: 2
+                        }, {
+                            label: 'Google',
+                            data: [88, 85, 90, 92, 86, 85],
+                            borderColor: '#ffcc00',
+                            backgroundColor: 'rgba(255, 204, 0, 0.1)',
+                            pointBackgroundColor: '#ffcc00',
+                            pointBorderColor: '#ffffff',
+                            pointBorderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            r: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: {
+                                    stepSize: 20,
+                                    font: {
+                                        size: 10
+                                    }
+                                },
+                                grid: {
+                                    color: '#e5e5e5'
+                                },
+                                angleLines: {
+                                    color: '#e5e5e5'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 20,
+                                    usePointStyle: true,
+                                    font: {
+                                        family: 'Inter, system-ui, sans-serif',
+                                        size: 12
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Global Sales Trends
+            const salesCtx = document.getElementById('salesChart');
+            if (salesCtx) {
+                new Chart(salesCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2020', '2021', '2022', '2023', '2024'],
+                        datasets: [{
+                            label: 'América',
+                            data: [146, 153, 169, 162, 168],
+                            borderColor: '#007aff',
+                            backgroundColor: 'rgba(0, 122, 255, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }, {
+                            label: 'Europa',
+                            data: [68, 72, 75, 74, 78],
+                            borderColor: '#34c759',
+                            backgroundColor: 'rgba(52, 199, 89, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }, {
+                            label: 'Asia-Pacífico',
+                            data: [64, 68, 71, 69, 73],
+                            borderColor: '#ffcc00',
+                            backgroundColor: 'rgba(255, 204, 0, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(value) {
+                                        return '$' + value + 'B';
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    padding: 20,
+                                    usePointStyle: true,
+                                    font: {
+                                        family: 'Inter, system-ui, sans-serif',
+                                        size: 12
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                titleColor: '#ffffff',
+                                bodyColor: '#ffffff',
+                                borderColor: '#007aff',
+                                borderWidth: 1,
+                                cornerRadius: 8,
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.dataset.label + ': $' + context.parsed.y + 'B';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Innovation Index
+            const innovationCtx = document.getElementById('innovationChart');
+            if (innovationCtx) {
+                new Chart(innovationCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Patentes', 'I+D Investment', 'Productos Nuevos', 'Breakthrough Tech', 'Satisfacción Usuario'],
+                        datasets: [{
+                            label: 'Puntuación de Innovación',
+                            data: [92, 88, 95, 89, 94],
+                            backgroundColor: [
+                                '#007aff',
+                                '#34c759',
+                                '#ffcc00',
+                                '#ff9500',
+                                '#5856d6'
+                            ],
+                            borderRadius: 8,
+                            borderSkipped: false
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: {
+                                    callback: function(value) {
+                                        return value + '%';
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                titleColor: '#ffffff',
+                                bodyColor: '#ffffff',
+                                borderColor: '#007aff',
+                                borderWidth: 1,
+                                cornerRadius: 8,
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.label + ': ' + context.parsed.y + '%';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Keyboard navigation support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                document.body.classList.add('using-keyboard');
+            }
+        });
+
+        document.addEventListener('mousedown', function() {
+            document.body.classList.remove('using-keyboard');
+        });
+
+        // Performance optimizations
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Apple Inc. 2025 UX KPIs Innovation Strategy Dashboard",
+        "description": "Comprehensive strategic benchmarking analysis of Apple Inc. for FY2024-25, integrating financial, UX, sustainability, and innovation metrics",
+        "url": "https://dsd228.github.io/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy/",
+        "author": {
+            "@type": "Person",
+            "name": "David S. Diaz",
+            "jobTitle": "Senior Corporate Benchmarking Consultant",
+            "url": "https://www.linkedin.com/in/dsd228"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "David S. Diaz Consulting"
+        }
+    }
+    </script>
+</body>
+</html>
