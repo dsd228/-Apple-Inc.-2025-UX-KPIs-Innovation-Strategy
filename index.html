@@ -426,6 +426,316 @@
   });
 
 </script>
+<!-- INSIGHTS CLAVE -->
+<section id="insights" class="insights-section">
+  <h2>🔍 Insights Clave - Apple FY2024</h2>
+  <p>Resumen visual de métricas estratégicas, innovación y desempeño financiero de Apple Inc.</p>
 
+  <div class="insights-grid">
+
+    <!-- iPhone -->
+    <div class="insight-card" role="region" aria-label="Ventas iPhone">
+      <div class="icon-container">
+        <lottie-player
+          src="https://assets10.lottiefiles.com/packages/lf20_i5n2s82j.json"
+          background="transparent"
+          speed="1"
+          style="width: 70px; height: 70px;"
+          loop autoplay>
+        </lottie-player>
+      </div>
+      <h3>Ventas iPhone</h3>
+      <p>$69.1B en FY2024</p>
+      <canvas id="chartIphone" aria-label="Gráfico de ventas de iPhone" role="img"></canvas>
+    </div>
+
+    <!-- Servicios -->
+    <div class="insight-card" role="region" aria-label="Ingresos por Servicios">
+      <div class="icon-container">
+        <lottie-player
+          src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"
+          background="transparent"
+          speed="1"
+          style="width: 70px; height: 70px;"
+          loop autoplay>
+        </lottie-player>
+      </div>
+      <h3>Servicios</h3>
+      <p>$26.3B en FY2024</p>
+      <canvas id="chartServicios" aria-label="Gráfico de ingresos por servicios" role="img"></canvas>
+    </div>
+
+    <!-- Mac -->
+    <div class="insight-card" role="region" aria-label="Ventas Mac">
+      <div class="icon-container">
+        <lottie-player
+          src="https://assets10.lottiefiles.com/packages/lf20_jfzrhkbi.json"
+          background="transparent"
+          speed="1"
+          style="width: 70px; height: 70px;"
+          loop autoplay>
+        </lottie-player>
+      </div>
+      <h3>Ventas Mac</h3>
+      <p>$9.0B en FY2024</p>
+      <canvas id="chartMac" aria-label="Gráfico de ventas de Mac" role="img"></canvas>
+    </div>
+
+    <!-- iPad -->
+    <div class="insight-card" role="region" aria-label="Ventas iPad">
+      <div class="icon-container">
+        <lottie-player
+          src="https://assets10.lottiefiles.com/packages/lf20_3ysn9kk9.json"
+          background="transparent"
+          speed="1"
+          style="width: 70px; height: 70px;"
+          loop autoplay>
+        </lottie-player>
+      </div>
+      <h3>Ventas iPad</h3>
+      <p>$8.1B en FY2024</p>
+      <canvas id="chartIPad" aria-label="Gráfico de ventas de iPad" role="img"></canvas>
+    </div>
+
+    <!-- Wearables -->
+    <div class="insight-card" role="region" aria-label="Ventas Wearables y Otros">
+      <div class="icon-container">
+        <lottie-player
+          src="https://assets10.lottiefiles.com/packages/lf20_8wk0x7gy.json"
+          background="transparent"
+          speed="1"
+          style="width: 70px; height: 70px;"
+          loop autoplay>
+        </lottie-player>
+      </div>
+      <h3>Wearables y Otros</h3>
+      <p>$11.7B en FY2024</p>
+      <canvas id="chartWearables" aria-label="Gráfico de ventas wearables y otros" role="img"></canvas>
+    </div>
+
+  </div>
+
+  <!-- Imágenes oficiales -->
+  <div class="products-gallery" aria-label="Galería de productos Apple">
+    <img src="https://www.apple.com/v/iphone/home/bn/images/meta/iphone__ky2k6x5u6vue_og.png" alt="iPhone 15 Pro" />
+    <img src="https://www.apple.com/v/mac/home/bs/images/meta/macbook_pro_16__d1x1nqvgmmuq_og.png" alt="MacBook Pro 16" />
+    <img src="https://www.apple.com/v/ipad/home/a/images/meta/ipad_pro__f7rj6v0w5kyq_og.png" alt="iPad Pro" />
+    <img src="https://www.apple.com/v/watch/home/c/images/meta/apple_watch_series_9__f4ky6i0h6qea_og.png" alt="Apple Watch Series 9" />
+  </div>
+</section>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap');
+
+  #insights {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 3rem 1.5rem 2rem;
+    background: rgba(255 255 255 / 0.75);
+    backdrop-filter: blur(16px);
+    border-radius: 18px;
+    margin: 2rem auto;
+    max-width: 1100px;
+    box-shadow: 0 12px 40px rgb(0 0 0 / 0.12);
+    color: #0a0a0a;
+    transition: background-color 0.4s ease;
+  }
+
+  #insights h2 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  #insights p {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 2rem;
+  }
+
+  .insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.4rem 2rem;
+  }
+
+  .insight-card {
+    background: rgba(255 255 255 / 0.45);
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgb(0 0 0 / 0.10);
+    padding: 1.7rem 1.4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+  }
+
+  .insight-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 50px rgb(0 0 0 / 0.18);
+  }
+
+  .icon-container {
+    margin-bottom: 12px;
+  }
+
+  .insight-card h3 {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #007aff;
+  }
+
+  .insight-card p {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    color: #222;
+  }
+
+  .insight-card canvas {
+    width: 100% !important;
+    max-width: 180px;
+    height: 120px !important;
+  }
+
+  /* Productos galería */
+  .products-gallery {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2.8rem;
+    flex-wrap: wrap;
+  }
+
+  .products-gallery img {
+    max-width: 160px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgb(0 0 0 / 0.15);
+    transition: transform 0.3s ease;
+  }
+
+  .products-gallery img:hover {
+    transform: scale(1.06) rotate(-2deg);
+    box-shadow: 0 12px 48px rgb(0 0 0 / 0.28);
+  }
+
+  /* Modo oscuro */
+  @media (prefers-color-scheme: dark) {
+    #insights {
+      background: rgba(20 20 25 / 0.6);
+      color: #e1e1e1;
+      box-shadow: 0 12px 40px rgb(0 0 0 / 0.75);
+    }
+    .insight-card {
+      background: rgba(40 40 50 / 0.5);
+      box-shadow: 0 8px 28px rgb(0 0 0 / 0.6);
+      color: #ddd;
+    }
+    .insight-card h3 {
+      color: #5ec3ff;
+    }
+    .insight-card p {
+      color: #ccc;
+    }
+    .products-gallery img {
+      box-shadow: 0 8px 32px rgb(255 255 255 / 0.1);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .insight-card canvas {
+      max-width: 140px;
+      height: 110px !important;
+    }
+    .products-gallery img {
+      max-width: 120px;
+    }
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script>
+  const dataIphone = {
+    labels: ['iPhone', 'Otros'],
+    datasets: [{
+      label: 'Ventas iPhone FY2024',
+      data: [69100, 30900],
+      backgroundColor: ['#007aff', '#d1d1d6'],
+      borderWidth: 0,
+    }]
+  };
+
+  const dataServicios = {
+    labels: ['Servicios', 'Otros'],
+    datasets: [{
+      label: 'Ingresos Servicios FY2024',
+      data: [26300, 73700],
+      backgroundColor: ['#34c759', '#d1d1d6'],
+      borderWidth: 0,
+    }]
+  };
+
+  const dataMac = {
+    labels: ['Mac', 'Otros'],
+    datasets: [{
+      label: 'Ventas Mac FY2024',
+      data: [9000, 31000],
+      backgroundColor: ['#5ac8fa', '#d1d1d6'],
+      borderWidth: 0,
+    }]
+  };
+
+  const dataIPad = {
+    labels: ['iPad', 'Otros'],
+    datasets: [{
+      label: 'Ventas iPad FY2024',
+      data: [8100, 31900],
+      backgroundColor: ['#ff9500', '#d1d1d6'],
+      borderWidth: 0,
+    }]
+  };
+
+  const dataWearables = {
+    labels: ['Wearables y Otros', 'Otros'],
+    datasets: [{
+      label: 'Ventas Wearables FY2024',
+      data: [11700, 28300],
+      backgroundColor: ['#ff2d55', '#d1d1d6'],
+      borderWidth: 0,
+    }]
+  };
+
+  function renderDoughnutChart(id, data) {
+    const ctx = document.getElementById(id).getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: data,
+      options: {
+        cutout: '75%',
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                return context.label + ': $' + context.parsed + 'M';
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  renderDoughnutChart('chartIphone', dataIphone);
+  renderDoughnutChart('chartServicios', dataServicios);
+  renderDoughnutChart('chartMac', dataMac);
+  renderDoughnutChart('chartIPad', dataIPad);
+  renderDoughnutChart('chartWearables', dataWearables);
+</script>
 </body>
 </html>
