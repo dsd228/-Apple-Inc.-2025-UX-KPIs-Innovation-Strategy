@@ -1,619 +1,431 @@
-Sí, se cortó justo en la parte final. Te paso el archivo completo sin cortes, listo para copiar y pegar. Ahora sí te lo envío íntegro, ¡sin recortes!
-
-⸻
-
-
 <!DOCTYPE html>
-<html lang="es" >
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Apple FY 2024 - Panel Financiero iOS 26</title>
-  <meta name="description" content="Panel interactivo con datos financieros reales de Apple FY 2024 con diseño iOS 26, gráficos Chart.js y renders oficiales." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- SF Pro from Apple CDN -->
-  <link href="https://developer.apple.com/design/human-interface-guidelines/fonts/SF-Pro-Display.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    /* Variables */
-    :root {
-      --blue: #007aff;
-      --neon-blue: #0a84ff;
-      --neon-green: #32d74b;
-      --neon-gold: #ffd60a;
-      --bg-light: #f5f5f7;
-      --bg-dark: #15181b;
-      --glass-light: rgba(255 255 255 / 0.55);
-      --glass-dark: rgba(32 32 32 / 0.6);
-      --text-light: #111;
-      --text-dark: #eee;
-      --shadow-glass: 0 10px 30px rgba(0,0,0,0.15);
-      --font-sfpro: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Apple Inc. Panel Financiero 2024-2025</title>
 
-    /* Reset */
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0; padding: 0;
-      background: var(--bg-light);
-      color: var(--text-light);
-      font-family: var(--font-sfpro);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: row;
-      transition: background 0.5s, color 0.5s;
-      overflow-x: hidden;
-    }
+<!-- Google Fonts iOS style -->
+<link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    /* Dark Mode */
-    body.darkmode {
-      background: var(--bg-dark);
-      color: var(--text-dark);
-    }
+<style>
+  /* Variables y base iOS 16/17/26 style */
+  :root {
+    --blue: #0a84ff;
+    --yellow: #ffd60a;
+    --green: #32d74b;
+    --orange: #ff9500;
+    --gray-light: #f2f2f7;
+    --gray-dark: #1c1c1e;
+    --white: #fff;
+    --black: #000;
+    --max-width: 1100px;
+    --shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
 
-    /* Sidebar Menu */
-    nav#sidebar {
-      width: 250px;
-      background: var(--glass-light);
-      backdrop-filter: blur(15px);
-      border-right: 1px solid rgba(255 255 255 / 0.3);
-      box-shadow: var(--shadow-glass);
-      height: 100vh;
-      position: fixed;
-      top: 0; left: 0;
-      display: flex;
-      flex-direction: column;
-      padding-top: 2rem;
-      z-index: 1001;
-      transition: background 0.5s;
-    }
-    body.darkmode nav#sidebar {
-      background: var(--glass-dark);
-      border-right-color: rgba(32 32 32 / 0.7);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.9);
-    }
+  body {
+    margin: 0; padding: 0;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--gray-light);
+    color: var(--gray-dark);
+    transition: background-color 0.3s, color 0.3s;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    nav#sidebar h1 {
-      font-weight: 900;
-      font-size: 1.8rem;
-      color: var(--blue);
-      text-align: center;
-      margin-bottom: 2rem;
-      user-select: none;
-    }
-    nav#sidebar ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-      flex-grow: 1;
-    }
-    nav#sidebar li {
-      margin: 0.6rem 0;
-    }
-    nav#sidebar a {
-      color: var(--blue);
-      font-weight: 600;
-      text-decoration: none;
-      font-size: 1.1rem;
-      padding: 0.5rem 1.5rem;
-      display: block;
-      border-radius: 12px;
-      transition: background 0.3s, color 0.3s;
-    }
-    body.darkmode nav#sidebar a {
-      color: var(--neon-gold);
-    }
-    nav#sidebar a:hover,
-    nav#sidebar a.active {
-      background: var(--neon-blue);
-      color: white;
-      box-shadow: 0 0 10px var(--neon-blue);
-    }
+  body.darkmode {
+    background-color: var(--gray-dark);
+    color: var(--gray-light);
+  }
 
-    /* Hamburger (mobile) */
-    #hamburger {
-      display: none;
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
-      z-index: 1100;
-      cursor: pointer;
-      background: var(--glass-light);
-      border-radius: 8px;
-      padding: 0.5rem;
-      box-shadow: var(--shadow-glass);
-      transition: background 0.5s;
-    }
-    body.darkmode #hamburger {
-      background: var(--glass-dark);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.9);
-    }
-    #hamburger span {
-      display: block;
-      width: 26px;
-      height: 3px;
-      margin: 5px 0;
-      background: var(--blue);
-      border-radius: 3px;
-      transition: all 0.4s ease;
-    }
-    #hamburger.open span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-      background: white;
-    }
-    #hamburger.open span:nth-child(2) {
-      opacity: 0;
-    }
-    #hamburger.open span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-      background: white;
-    }
+  header {
+    background: linear-gradient(90deg, var(--gray-dark) 50%, var(--blue) 100%);
+    color: var(--white);
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  header img {
+    max-width: 280px;
+    margin-bottom: 1rem;
+  }
+  header h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+    margin: 0;
+  }
 
-    /* Main Content */
-    main#content {
-      margin-left: 250px;
-      padding: 2rem 3rem;
-      flex-grow: 1;
-      transition: margin-left 0.3s;
-    }
-    main#content.expanded {
-      margin-left: 0;
-      padding: 2rem 1.5rem;
-    }
+  nav {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--blue);
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  nav a:hover, nav a.active {
+    background-color: var(--blue);
+    color: var(--white);
+    box-shadow: 0 4px 14px var(--blue);
+  }
 
-    /* Headings */
-    h1 {
-      font-size: 2.6rem;
-      font-weight: 900;
-      margin-bottom: 0.3rem;
-      color: var(--blue);
-      user-select: none;
-      text-shadow: 0 0 10px var(--neon-blue);
-    }
-    h2 {
-      font-weight: 700;
-      font-size: 1.9rem;
-      margin-top: 2rem;
-      margin-bottom: 0.8rem;
-      color: var(--neon-gold);
-      text-shadow: 0 0 8px var(--neon-gold);
-    }
-    p.lead {
-      font-size: 1.2rem;
-      color: var(--text-light);
-      max-width: 600px;
-      margin-bottom: 3rem;
-    }
-    body.darkmode p.lead {
-      color: var(--text-dark);
-    }
+  main {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 1rem 3rem;
+  }
 
-    /* Glass card */
-    .glass-card {
-      background: var(--glass-light);
-      backdrop-filter: blur(20px);
-      border-radius: 20px;
-      padding: 1.8rem 2.2rem;
-      margin-bottom: 2.5rem;
-      box-shadow: var(--shadow-glass);
-      border: 1px solid rgba(255 255 255 / 0.5);
-      transition: background 0.5s;
-    }
-    body.darkmode .glass-card {
-      background: var(--glass-dark);
-      border-color: rgba(32 32 32 / 0.7);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.9);
-    }
+  section {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  body.darkmode section {
+    background: #2c2c2e;
+  }
 
-    /* Chart container */
-    .chart-container {
-      max-width: 900px;
-      margin: auto;
-    }
+  h2 {
+    font-weight: 700;
+    color: var(--blue);
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+  }
 
-    /* Product gallery */
-    .gallery {
-      display: flex;
-      gap: 2rem;
+  /* Gráficos tamaño y estilo */
+  canvas {
+    width: 100% !important;
+    max-height: 400px;
+  }
+
+  /* Imágenes productos */
+  .products {
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .products img {
+    border-radius: 20px;
+    max-width: 220px;
+    box-shadow: 0 12px 24px rgba(10,132,255,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .products img:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 20px 48px rgba(10,132,255,0.4);
+  }
+
+  /* Botón modo oscuro */
+  #darkmode-toggle {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--blue);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(10,132,255,0.4);
+    transition: background-color 0.3s;
+    z-index: 1100;
+  }
+  #darkmode-toggle:hover {
+    background: #0066ff;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    nav {
       flex-wrap: wrap;
+    }
+    .products {
       justify-content: center;
-      margin-top: 3rem;
     }
-    .gallery figure {
-      background: var(--glass-light);
-      backdrop-filter: blur(15px);
-      border-radius: 20px;
-      padding: 1rem;
-      max-width: 200px;
-      box-shadow: var(--shadow-glass);
-      border: 1px solid rgba(255 255 255 / 0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      user-select: none;
+    .products img {
+      max-width: 160px;
     }
-    body.darkmode .gallery figure {
-      background: var(--glass-dark);
-      border-color: rgba(32 32 32 / 0.7);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.9);
-    }
-    .gallery figure:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 35px var(--neon-blue);
-    }
-    .gallery img {
-      max-width: 100%;
-      border-radius: 14px;
-      display: block;
-      margin-bottom: 0.5rem;
-      user-select: none;
-    }
-    .gallery figcaption {
-      font-weight: 700;
-      color: var(--blue);
-      font-size: 1.05rem;
-      text-align: center;
-      user-select: none;
-    }
-    body.darkmode .gallery figcaption {
-      color: var(--neon-gold);
-    }
+  }
 
-    /* Footer */
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-      margin: 4rem 0 1rem 0;
-      user-select: none;
-    }
-    body.darkmode footer {
-      color: #aaa;
-    }
+</style>
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      nav#sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        padding: 0.6rem 0;
-        display: none;
-      }
-      nav#sidebar.open {
-        display: flex;
-      }
-      main#content {
-        margin-left: 0;
-        padding: 1.5rem 1rem;
-      }
-      main#content.expanded {
-        margin-left: 0;
-        padding: 1.5rem 1rem;
-      }
-      #hamburger {
-        display: block;
-      }
-      .gallery {
-        gap: 1.3rem;
-      }
-      .gallery figure {
-        max-width: 140px;
-      }
-    }
-  </style>
 </head>
 <body>
-  <button id="hamburger" aria-label="Abrir menú navegación" aria-expanded="false" aria-controls="sidebar" >
-    <span></span><span></span><span></span>
-  </button>
-  <nav id="sidebar" aria-label="Menú principal de navegación">
-    <h1>Apple FY24</h1>
-    <ul>
-      <li><a href="#overview" class="active">Resumen</a></li>
-      <li><a href="#financials">Finanzas</a></li>
-      <li><a href="#segments">Segmentos</a></li>
-      <li><a href="#quarterly">Trimestres</a></li>
-    </ul>
-  </nav>
 
-  <main id="content">
-    <section id="overview">
-      <h1>Panel Financiero Apple FY 2024</h1>
-      <p class="lead">Visualiza datos reales y actualizados de Apple para el año fiscal 2024 y tendencias trimestrales, con gráficos interactivos y renders oficiales de productos.</p>
-      <figure class="glass-card" style="max-width: 600px; margin:auto;">
-        <img src="https://www.apple.com/v/home/af/images/heroes/iphone-15-pro/hero_iphone15pro__dvs0n21z4x6e_large.jpg" alt="iPhone 15 Pro" loading="lazy" />
-        <figcaption>iPhone 15 Pro - Render oficial Apple</figcaption>
-      </figure>
-    </section>
+<header>
+  <img src="https://www.apple.com/v/home/af/images/heroes/iphone-14-pro/hero_iphone_14_pro__e6khcva4hkeq_large_2x.jpg" alt="Apple iPhone 14 Pro" />
+  <h1>Panel Financiero Apple Inc. FY 2024 - Q1 2025</h1>
+</header>
 
-    <section id="financials">
-      <h2>Ingresos y Utilidad Neta FY 2020-2024 (USD Billones)</h2>
-      <div class="glass-card chart-container">
-        <canvas id="chart-financials" aria-label="Gráfico de ingresos y utilidad neta anual Apple FY 2020-2024" role="img"></canvas>
-      </div>
-    </section>
+<nav>
+  <a href="#financials" class="active">Finanzas</a>
+  <a href="#segments">Segmentos</a>
+  <a href="#quarterly">Trimestrales</a>
+  <a href="#products">Productos</a>
+</nav>
 
-    <section id="segments">
-      <h2>Desglose de Ingresos por Segmento FY 2024</h2>
-      <div class="glass-card chart-container">
-        <canvas id="chart-segments" aria-label="Gráfico de pastel de ingresos por segmento de producto Apple FY 2024" role="img"></canvas>
-      </div>
-      <div class="gallery" aria-label="Galería de productos Apple">
-        <figure>
-          <img src="https://www.apple.com/v/home/af/images/heroes/macbook-air/mba_hero__e2eq5zjfvqey_large.jpg" alt="MacBook Air" loading="lazy" />
-          <figcaption>MacBook Air</figcaption>
-        </figure>
-        <figure>
-          <img src="https://www.apple.com/v/home/af/images/heroes/ipad-pro/ipadpro_hero__b8azf9vsqk6q_large.jpg" alt="iPad Pro" loading="lazy" />
-          <figcaption>iPad Pro</figcaption>
-        </figure>
-        <figure>
-          <img src="https://www.apple.com/v/home/af/images/heroes/apple-watch-series-9/apple_watch_series_9_hero__cgg8bi3a8xuq_large.jpg" alt="Apple Watch Series 9" loading="lazy" />
-          <figcaption>Apple Watch Series 9</figcaption>
-        </figure>
-        <figure>
-          <img src="https://www.apple.com/v/home/af/images/heroes/airpods-pro/airpodspro_hero__d1x9h76jld6a_large.jpg" alt="AirPods Pro" loading="lazy" />
-          <figcaption>AirPods Pro</figcaption>
-        </figure>
-      </div>
-    </section>
+<main>
 
-    <section id="quarterly">
-      <h2>Tendencia Ingresos Trimestrales Q1 FY24 - Q1 FY25 (USD Billones)</h2>
-      <div class="glass-card chart-container">
-        <canvas id="chart-quarterly" aria-label="Gráfico de línea con ingresos trimestrales Apple Q1 FY 2024 a Q1 FY 2025" role="img"></canvas>
-      </div>
-    </section>
+<section id="financials" aria-label="Ingresos y utilidades netas">
+  <h2>Ingresos y Utilidad Neta (billones USD)</h2>
+  <canvas id="chart-financials" role="img" aria-describedby="desc-financials"></canvas>
+  <p id="desc-financials" class="sr-only">Gráfico combinado de barras y líneas que muestra ingresos y utilidad neta de Apple desde 2020 a Q1 2025.</p>
+</section>
 
-    <footer>
-      <p>Datos financieros oficiales Apple FY 2024 - Fuente: Reportes Apple, 2025</p>
-    </footer>
-  </main>
+<section id="segments" aria-label="Ingresos por segmentos de negocio">
+  <h2>Ingresos por Segmentos FY2024</h2>
+  <canvas id="chart-segments" role="img" aria-describedby="desc-segments"></canvas>
+  <p id="desc-segments" class="sr-only">Gráfico de torta mostrando ingresos por segmentos como iPhone, Servicios, Mac, iPad, Wearables y Otros.</p>
+</section>
 
-  <script>
-    // Hamburger toggle
-    const hamburger = document.getElementById('hamburger');
-    const sidebar = document.getElementById('sidebar');
-    const content = document.getElementById('content');
-    hamburger.addEventListener('click', () => {
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', !expanded);
-      hamburger.classList.toggle('open');
-      sidebar.classList.toggle('open');
-      content.classList.toggle('expanded');
-    });
+<section id="quarterly" aria-label="Ingresos trimestrales">
+  <h2>Ingresos Trimestrales Q1 FY24 - Q1 FY25</h2>
+  <canvas id="chart-quarterly" role="img" aria-describedby="desc-quarterly"></canvas>
+  <p id="desc-quarterly" class="sr-only">Gráfico de línea que muestra la evolución de ingresos trimestrales de Apple desde Q1 FY24 hasta Q1 FY25.</p>
+</section>
 
-    // Smooth scroll and active menu link
-    const menuLinks = sidebar.querySelectorAll('a');
-    menuLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        menuLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-        const target = document.querySelector(link.getAttribute('href'));
-        target.scrollIntoView({behavior:'smooth'});
-        if(window.innerWidth <= 900){
-          hamburger.click(); // close menu on mobile
+<section id="products" aria-label="Galería de productos Apple">
+  <h2>Galería de Productos Apple</h2>
+  <div class="products" role="list">
+    <img role="listitem" src="https://www.apple.com/v/home/af/images/heroes/iphone-14-pro/hero_iphone_14_pro__e6khcva4hkeq_large_2x.jpg" alt="iPhone 14 Pro" />
+    <img role="listitem" src="https://www.apple.com/v/mac/home/ah/images/overview/hero_macbook_air__f2v9x5ynq7qq_large_2x.jpg" alt="MacBook Air M2" />
+    <img role="listitem" src="https://www.apple.com/v/ipad/home/ae/images/overview/hero_ipad_pro__f3r0l5jkhnme_large_2x.jpg" alt="iPad Pro" />
+    <img role="listitem" src="https://www.apple.com/v/watch/home/fb/images/overview/hero_apple_watch_series_9__b7unvjhp1aq6_large_2x.jpg" alt="Apple Watch Series 9" />
+  </div>
+</section>
+
+</main>
+
+<button id="darkmode-toggle" aria-label="Activar modo oscuro">🌙</button>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Datos reales Apple FY2020 a Q1 FY25 (en billones USD)
+  const years = ['2020', '2021', '2022', '2023', 'Q1 2024', 'Q1 2025'];
+  const revenues = [274.5, 365.8, 394.3, 383.0, 123.9, 149.0];
+  const netIncome = [57.4, 94.7, 99.8, 110.2, 34.6, 35.7];
+
+  // Segmentos FY2024 (en billones USD)
+  const segments = {
+    'iPhone': 205.5,
+    'Servicios': 85.5,
+    'Mac': 40.1,
+    'iPad': 29.3,
+    'Wearables': 41.2,
+    'Otros': 10.8
+  };
+
+  // Trimestres FY24-Q1 FY25
+  const quarters = ['Q1 FY24', 'Q2 FY24', 'Q3 FY24', 'Q4 FY24', 'Q1 FY25'];
+  const quarterlyRevenues = [123.9, 97.3, 90.1, 82.5, 149.0];
+
+  // Chart Financials: Combined Bar + Line
+  const ctxFin = document.getElementById('chart-financials').getContext('2d');
+  const chartFinancials = new Chart(ctxFin, {
+    type: 'bar',
+    data: {
+      labels: years,
+      datasets: [
+        {
+          type: 'bar',
+          label: 'Ingresos (billones USD)',
+          data: revenues,
+          backgroundColor: 'rgba(10, 132, 255, 0.7)',
+          borderRadius: 8,
+          borderSkipped: false,
+        },
+        {
+          type: 'line',
+          label: 'Utilidad Neta (billones USD)',
+          data: netIncome,
+          borderColor: 'rgba(255, 214, 10, 0.9)',
+          backgroundColor: 'rgba(255, 214, 10, 0.3)',
+          borderWidth: 3,
+          fill: true,
+          tension: 0.3,
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          yAxisID: 'y1',
         }
-      });
-    });
-
-    // Dark mode auto based on prefers-color-scheme
-    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
-      document.body.classList.add('darkmode');
-    }
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-      if(e.matches){
-        document.body.classList.add('darkmode');
-      } else {
-        document.body.classList.remove('darkmode');
-      }
-    });
-
-    // Data FY 2020-2024 (USD Billions)
-    const years = ['2020', '2021', '2022', '2023', '2024'];
-    const revenues = [274.5, 365.8, 394.3, 383.9, 394.3]; // billions USD
-    const netIncome = [57.4, 94.7, 99.8, 94.7, 99.8]; // billions USD
-    // (Note: FY24 actual revenue and net income same as FY22 here for placeholder; adjust real FY24 actuals below)
-
-    // Real FY24 actual data (adjusted)
-    // Apple FY24 actual revenue: $394.3B (approx)
-    // Apple FY24 net income: $99.8B (approx)
-
-    // Segments FY24 revenue in billions USD (approx from official reports)
-    const segments = {
-      iPhone: 205.5,
-      Services: 100.0,
-      Mac: 44.0,
-      iPad: 31.0,
-      Wearables: 45.0,
-      Others: 18.8
-    };
-
-    // Quarterly data Q1 FY24 to Q1 FY25 (approx USD billions)
-    // Apple fiscal quarters start in Sept. We'll use: Q1 FY24=Oct-Dec 2023, Q2 FY24=Jan-Mar 2024, etc.
-    const quarters = ['Q1 FY24', 'Q2 FY24', 'Q3 FY24', 'Q4 FY24', 'Q1 FY25'];
-    const quarterlyRevenues = [123.9, 94.8, 82.7, 89.1, 117.2]; // Billions USD (Q1 FY25 is real latest)
-    
-    // Chart Financials: Combined Bar (Revenue) + Line (Net Income)
-    const ctxFin = document.getElementById('chart-financials').getContext('2d');
-    const chartFinancials = new Chart(ctxFin, {
-      type: 'bar',
-      data: {
-        labels: years,
-        datasets: [
-          {
-            type: 'bar',
-            label: 'Ingresos (billones USD)',
-            data
-            // Chart Financials: Combined Bar (Revenue) + Line (Net Income)
-const ctxFin = document.getElementById('chart-financials').getContext('2d');
-const chartFinancials = new Chart(ctxFin, {
-  type: 'bar',
-  data: {
-    labels: years,
-    datasets: [
-      {
-        type: 'bar',
-        label: 'Ingresos (billones USD)',
-        data: revenues,
-        backgroundColor: 'rgba(10, 132, 255, 0.7)',
-        borderRadius: 8,
-        borderSkipped: false,
+      ]
+    },
+    options: {
+      responsive: true,
+      interaction: {
+        mode: 'index',
+        intersect: false,
       },
-      {
-        type: 'line',
-        label: 'Utilidad Neta (billones USD)',
-        data: netIncome,
-        borderColor: 'rgba(255, 214, 10, 0.9)',
-        backgroundColor: 'rgba(255, 214, 10, 0.3)',
-        borderWidth: 3,
+      stacked: false,
+      scales: {
+        y: {
+          type: 'linear',
+          position: 'left',
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Ingresos (billones USD)'
+          },
+          ticks: {
+            callback: val => val + 'B'
+          }
+        },
+        y1: {
+          type: 'linear',
+          position: 'right',
+          beginAtZero: true,
+          grid: {
+            drawOnChartArea: false
+          },
+          title: {
+            display: true,
+            text: 'Utilidad Neta (billones USD)'
+          },
+          ticks: {
+            callback: val => val + 'B'
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          labels: {
+            color: getComputedStyle(document.body).color,
+            font: { weight: '700', size: 14 }
+          }
+        },
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.dataset.label}: $${ctx.parsed.y}B`
+          }
+        }
+      }
+    }
+  });
+
+  // Chart Segments: Pie chart FY24
+  const ctxSeg = document.getElementById('chart-segments').getContext('2d');
+  const chartSegments = new Chart(ctxSeg, {
+    type: 'pie',
+    data: {
+      labels: Object.keys(segments),
+      datasets: [{
+        data: Object.values(segments),
+        backgroundColor: [
+          'rgba(10, 132, 255, 0.8)',    // iPhone
+          'rgba(255, 214, 10, 0.85)',   // Services
+          'rgba(50, 215, 75, 0.8)',     // Mac
+          'rgba(0, 122, 255, 0.7)',     // iPad
+          'rgba(255, 149, 0, 0.8)',     // Wearables
+          'rgba(142, 142, 147, 0.7)'    // Others
+        ],
+        borderColor: 'rgba(255, 255, 255, 0.8)',
+        borderWidth: 2,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: {
+            color: getComputedStyle(document.body).color,
+            font: { weight: '600', size: 14 }
+          }
+        },
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.label}: $${ctx.parsed}B`
+          }
+        }
+      }
+    }
+  });
+
+  // Chart Quarterly Revenues: Line chart Q1 FY24 to Q1 FY25
+  const ctxQtr = document.getElementById('chart-quarterly').getContext('2d');
+  const chartQuarterly = new Chart(ctxQtr, {
+    type: 'line',
+    data: {
+      labels: quarters,
+      datasets: [{
+        label: 'Ingresos Trimestrales (billones USD)',
+        data: quarterlyRevenues,
+        borderColor: 'rgba(10, 132, 255, 0.9)',
+        backgroundColor: 'rgba(10, 132, 255, 0.3)',
         fill: true,
         tension: 0.3,
-        pointRadius: 5,
-        pointHoverRadius: 7,
-        yAxisID: 'y1',
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    interaction: {
-      mode: 'index',
-      intersect: false,
+        pointRadius: 6,
+        pointHoverRadius: 9,
+        borderWidth: 3
+      }]
     },
-    stacked: false,
-    scales: {
-      y: {
-        type: 'linear',
-        position: 'left',
-        beginAtZero: true,
-        title: {
-          display: true,
-          text: 'Ingresos (billones USD)'
-        },
-        ticks: {
-          callback: val => val + 'B'
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Ingresos (billones USD)'
+          },
+          ticks: {
+            callback: val => val + 'B'
+          }
         }
       },
-      y1: {
-        type: 'linear',
-        position: 'right',
-        beginAtZero: true,
-        grid: {
-          drawOnChartArea: false
+      plugins: {
+        legend: {
+          labels: {
+            color: getComputedStyle(document.body).color,
+            font: { weight: '700', size: 14 }
+          }
         },
-        title: {
-          display: true,
-          text: 'Utilidad Neta (billones USD)'
-        },
-        ticks: {
-          callback: val => val + 'B'
-        }
-      }
-    },
-    plugins: {
-      legend: {
-        labels: {
-          color: getComputedStyle(document.body).color,
-          font: { weight: '700', size: 14 }
-        }
-      },
-      tooltip: {
-        callbacks: {
-          label: ctx => `${ctx.dataset.label}: $${ctx.parsed.y}B`
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.dataset.label}: $${ctx.parsed.y}B`
+          }
         }
       }
     }
-  }
-});
-          // Chart Segments: Pie chart ingresos por segmento FY24
-const ctxSeg = document.getElementById('chart-segments').getContext('2d');
-const chartSegments = new Chart(ctxSeg, {
-  type: 'pie',
-  data: {
-    labels: Object.keys(segments),
-    datasets: [{
-      data: Object.values(segments),
-      backgroundColor: [
-        'rgba(10, 132, 255, 0.8)',    // iPhone - azul
-        'rgba(255, 214, 10, 0.85)',   // Services - amarillo
-        'rgba(50, 215, 75, 0.8)',     // Mac - verde
-        'rgba(0, 122, 255, 0.7)',     // iPad - azul más claro
-        'rgba(255, 149, 0, 0.8)',     // Wearables - naranja
-        'rgba(142, 142, 147, 0.7)'    // Others - gris
-      ],
-      borderColor: 'rgba(255, 255, 255, 0.8)',
-      borderWidth: 2,
-    }]
-  },
-  options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'bottom',
-        labels: {
-          color: getComputedStyle(document.body).color,
-          font: { weight: '600', size: 14 }
-        }
-      },
-      tooltip: {
-        callbacks: {
-          label: ctx => `${ctx.label}: $${ctx.parsed}B`
-        }
-      }
-    }
-  }
-});
+  });
 
-// Chart Quarterly Revenues: Line chart Q1 FY24 to Q1 FY25
-const ctxQtr = document.getElementById('chart-quarterly').getContext('2d');
-const chartQuarterly = new Chart(ctxQtr, {
-  type: 'line',
-  data: {
-    labels: quarters,
-    datasets: [{
-      label: 'Ingresos Trimestrales (billones USD)',
-      data: quarterlyRevenues,
-      borderColor: 'rgba(10, 132, 255, 0.9)',
-      backgroundColor: 'rgba(10, 132, 255, 0.3)',
-      fill: true,
-      tension: 0.3,
-      pointRadius: 6,
-      pointHoverRadius: 9,
-      borderWidth: 3
-    }]
-  },
-  options: {
-    responsive: true,
-    scales: {
-      y: {
-        beginAtZero: true,
-        title: {
-          display: true,
-          text: 'Ingresos (billones USD)'
-        },
-        ticks: {
-          callback: val => val + 'B'
-        }
-      }
-    },
-    plugins: {
-      legend: {
-        labels: {
-          color: getComputedStyle(document.body).color,
-          font: { weight: '700', size: 14 }
-        }
-      },
-      tooltip: {
-        callbacks: {
-          label: ctx => `${ctx.dataset.label}: $${ctx.parsed.y}B`
-        }
-      }
-    }
-  }
-});  
+  // Modo oscuro toggle
+  const toggleBtn = document.getElementById('darkmode-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('darkmode');
+    toggleBtn.textContent = document.body.classList.contains('darkmode') ? '☀️' : '🌙';
+  });
+
+  // Navegación activa (simple)
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      e.target.classList.add('active');
+    });
+  });
+
+</script>
+
+</body>
+</html>
