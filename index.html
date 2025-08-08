@@ -5,96 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Panel de Estadísticas Apple 2025</title>
   <meta name="description" content="Panel interactivo de estadísticas con diseño optimizado estilo Apple">
-  <meta property="og:title" content="Panel de Estadísticas Apple 2025">
-  <meta property="og:description" content="Panel interactivo de estadísticas con diseño optimizado estilo Apple">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Panel de Estadísticas Apple 2025">
-  <meta name="twitter:description" content="Panel interactivo de estadísticas con diseño optimizado estilo Apple">
-  <meta name="twitter:image" content="https://via.placeholder.com/1200x630.png">
+  <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f5f5f7;
-      font-family: 'SF Pro Display', 'Inter', 'Roboto', sans-serif;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      padding: 1rem;
-    }
-
-    .navbar a {
-      color: #0071e3;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .container {
-      padding: 100px 20px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .glass {
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 15px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      padding: 20px;
-      margin: 20px 0;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .glass:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    }
-
-    canvas {
-      max-width: 100%;
-    }
-
-    @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <nav class="navbar">
-    <a href="#">Inicio</a>
-    <a href="#estadisticas">Estadísticas</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <!-- Barra de navegación -->
+  <header>
+    <div class="logo"> Apple Insights</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li class="submenu">
+          <a href="#estadisticas">Estadísticas ▾</a>
+          <ul>
+            <li><a href="#usuarios">Usuarios Nuevos</a></li>
+            <li><a href="#ventas">Ventas Anuales</a></li>
+            <li><a href="#comparativa">Comparativa Global</a></li>
+          </ul>
+        </li>
+        <li class="submenu">
+          <a href="#innovacion">Innovación ▾</a>
+          <ul>
+            <li><a href="#visionpro">Apple Vision Pro</a></li>
+            <li><a href="#ia">Inteligencia Artificial</a></li>
+          </ul>
+        </li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button id="darkmode-btn">🌙</button>
+  </header>
 
-  <div class="container">
-    <h1>Panel de Estadísticas Apple 2025</h1>
-    <div class="glass">
-      <canvas id="chart1"></canvas>
-    </div>
-    <div class="glass">
-      <canvas id="chart2"></canvas>
-    </div>
-  </div>
+  <!-- Secciones -->
+  <main>
+    <section id="inicio">
+      <h1>Panel de Estadísticas Apple 2025</h1>
+      <p>Visualiza datos clave, métricas UX y tendencias de innovación de Apple Inc. con un diseño optimizado y responsivo.</p>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <section id="usuarios">
+      <h2>Usuarios Nuevos</h2>
+      <div class="glass">
+        <canvas id="chart1"></canvas>
+      </div>
+    </section>
+
+    <section id="ventas">
+      <h2>Ventas Anuales</h2>
+      <div class="glass">
+        <canvas id="chart2"></canvas>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form>
+        <label>Nombre</label>
+        <input type="text" required>
+        <label>Email</label>
+        <input type="email" required>
+        <label>Mensaje</label>
+        <textarea required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Apple Insights - Proyecto de análisis UX & KPIs</p>
+  </footer>
+
   <script>
-    const ctx1 = document.getElementById('chart1').getContext('2d');
-    const chart1 = new Chart(ctx1, {
+    // Chart 1
+    new Chart(document.getElementById('chart1').getContext('2d'), {
       type: 'bar',
       data: {
         labels: ['Enero', 'Febrero', 'Marzo', 'Abril'],
@@ -104,22 +88,11 @@
           backgroundColor: '#0071e3',
         }]
       },
-      options: {
-        responsive: true,
-        plugins: {
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return `${context.label}: ${context.raw} usuarios`;
-              }
-            }
-          }
-        }
-      }
+      options: { responsive: true }
     });
 
-    const ctx2 = document.getElementById('chart2').getContext('2d');
-    const chart2 = new Chart(ctx2, {
+    // Chart 2
+    new Chart(document.getElementById('chart2').getContext('2d'), {
       type: 'line',
       data: {
         labels: ['Q1', 'Q2', 'Q3', 'Q4'],
@@ -127,21 +100,15 @@
           label: 'Ventas',
           data: [5000, 10000, 15000, 20000],
           borderColor: '#0071e3',
-          fill: false,
+          fill: false
         }]
       },
-      options: {
-        responsive: true,
-        plugins: {
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return `${context.label}: $${context.raw}`;
-              }
-            }
-          }
-        }
-      }
+      options: { responsive: true }
+    });
+
+    // Modo oscuro
+    document.getElementById('darkmode-btn').addEventListener('click', () => {
+      document.body.classList.toggle('darkmode');
     });
   </script>
 </body>
