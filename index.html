@@ -1,567 +1,91 @@
 <!DOCTYPE html>
-<html lang="es" >
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Apple 2025 - Panel UX/UI + Insights Clave</title>
-
-  <!-- SF Pro Display font -->
-  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- Lottie Player -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" defer></script>
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <title>Panel Estadísticas Apple 2025</title>
+  <meta name="description" content="Panel interactivo estilo iOS 26 con datos reales FY2024-25" />
+  <link href="styles.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- Hamburger mobile button -->
-  <div class="hamburger" aria-label="Abrir menú" role="button" tabindex="0" aria-expanded="false" aria-controls="sidebarMenu">
+  <button id="darkmode-btn" aria-label="Toggle modo oscuro" class="darkmode-toggle">Modo Oscuro</button>
+  <div class="hamburger" aria-label="Abrir menú" role="button" tabindex="0" aria-expanded="false">
     <div></div><div></div><div></div>
   </div>
-
-  <!-- Sidebar Navigation -->
-  <nav class="sidebar" id="sidebarMenu" aria-label="Navegación principal">
+  <nav class="sidebar" role="navigation" aria-label="Menú principal">
     <h1>Apple 2025</h1>
     <ul>
-      <li><a href="#" class="active" tabindex="0" aria-current="page">
-        <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22" fill="#007aff"><path d="M3 13h2v-2H3v2zm4 4h2v-2H7v2zm-4-8h2V7H3v2zm8 4h2v-2h-2v2zm4 4h2v-2h-2v2zm-4-8h2V7z"/></svg>
-        Inicio
-      </a></li>
-      <li><a href="#insights" tabindex="0">
-        <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22" fill="#007aff"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-        Insights Clave
-      </a></li>
-      <li><a href="#estadisticas" tabindex="0">
-        <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22" fill="#007aff"><path d="M4 17h3v-7H4v7zm6 0h3v-11h-3v11zm6 0h3v-4h-3v4z"/></svg>
-        Estadísticas
-      </a></li>
-      <li><a href="#productos" tabindex="0">
-        <svg viewBox="0 0 24 24" aria-hidden="true" width="22" height="22" fill="#007aff"><path d="M20 6h-2v-2h-4v2H8v2H6v12h12V6z"/></svg>
-        Productos
-      </a></li>
-      <li><button id="darkmode-btn" aria-label="Alternar modo oscuro" type="button" style="margin-top: 2rem; background:#007aff; color:#fff; border:none; padding:0.6rem 1rem; border-radius:14px; cursor:pointer; font-weight:600;">Modo Oscuro</button></li>
+      <li><a href="#inicio" class="active" tabindex="0">Inicio</a></li>
+      <li><a href="#insights" tabindex="0">Insights Clave</a></li>
+      <li><a href="#productos" tabindex="0">Productos</a></li>
+      <li><a href="#estadisticas" tabindex="0">Estadísticas</a></li>
+      <li><a href="#contacto" tabindex="0">Contacto</a></li>
     </ul>
   </nav>
+  <main class="content" tabindex="-1">
+    <section id="inicio">
+      <h1>Panel de Estadísticas Apple FY2024-25 Q1</h1>
+      <p class="lead">Datos financieros y de usuarios reales con diseño iOS 26.</p>
+    </section>
 
-  <!-- Main Content -->
-  <main class="content">
-    <h1>Apple 2025 - Panel de Control</h1>
-    <p class="lead">Análisis UX/UI y métricas financieras con datos reales y diseño estilo iOS 26.</p>
-
-    <!-- Insights clave -->
-    <section id="insights" tabindex="0" aria-label="Sección de insights clave">
-      <h2>Insights Clave</h2>
-      <p>Resumen de indicadores y tendencias destacadas en el último trimestre fiscal.</p>
+    <section id="insights" aria-label="Insights clave de Apple">
+      <h2>Insights clave</h2>
+      <p>Visión rápida de los KPIs más importantes.</p>
       <div class="insights-grid">
-        <article class="insight-card" aria-labelledby="insight1-title">
-          <div class="icon-container">
-            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_jcikwtux.json" background="transparent" speed="1" style="width:70px; height:70px;" loop autoplay aria-hidden="true"></lottie-player>
+        <article class="insight-card" role="region" aria-labelledby="insight1-title">
+          <div class="icon-container" aria-hidden="true">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="" width="48" height="48" />
           </div>
-          <h3 id="insight1-title">Crecimiento de Usuarios</h3>
-          <p>Incremento del 18% en usuarios nuevos Q1 FY25</p>
-          <canvas id="insightChart1" aria-label="Gráfico de crecimiento de usuarios" role="img"></canvas>
+          <h3 id="insight1-title">Usuarios Nuevos</h3>
+          <p>Más de 13.6M de usuarios nuevos en Enero 2025.</p>
+          <canvas id="insightChart1" aria-label="Gráfico de usuarios nuevos" role="img"></canvas>
         </article>
 
-        <article class="insight-card" aria-labelledby="insight2-title">
-          <div class="icon-container">
-            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_dgjKkL.json" background="transparent" speed="1" style="width:70px; height:70px;" loop autoplay aria-hidden="true"></lottie-player>
+        <article class="insight-card" role="region" aria-labelledby="insight2-title">
+          <div class="icon-container" aria-hidden="true">
+            <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="" width="48" height="48" />
           </div>
-          <h3 id="insight2-title">Ventas Totales</h3>
-          <p>Ventas Q1 FY25 alcanzan $123B USD</p>
-          <canvas id="insightChart2" aria-label="Gráfico de ventas totales" role="img"></canvas>
+          <h3 id="insight2-title">Ventas</h3>
+          <p>Ingresos trimestrales en billones USD crecientes.</p>
+          <canvas id="insightChart2" aria-label="Gráfico de ventas trimestrales" role="img"></canvas>
         </article>
 
-        <article class="insight-card" aria-labelledby="insight3-title">
-          <div class="icon-container">
-            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_i0u9kd06.json" background="transparent" speed="1" style="width:70px; height:70px;" loop autoplay aria-hidden="true"></lottie-player>
+        <article class="insight-card" role="region" aria-labelledby="insight3-title">
+          <div class="icon-container" aria-hidden="true">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="" width="48" height="48" />
           </div>
           <h3 id="insight3-title">Satisfacción Cliente</h3>
-          <p>Calificación promedio 4.7/5 en soporte técnico</p>
-          <canvas id="insightChart3" aria-label="Gráfico de satisfacción del cliente" role="img"></canvas>
+          <p>75% de soporte positivo y alta fidelidad.</p>
+          <canvas id="insightChart3" aria-label="Gráfico de satisfacción de clientes" role="img"></canvas>
         </article>
       </div>
     </section>
 
-    <!-- Estadísticas -->
-    <section id="estadisticas" tabindex="0" aria-label="Sección de estadísticas financieras">
-      <h2>Estadísticas Financieras Q1 FY25</h2>
-      <div class="estadisticas-grids">
-        <canvas id="financialChart" aria-label="Gráfico financiero Q1 FY25" role="img" style="max-width: 700px; margin-top: 1rem;"></canvas>
-      </div>
-    </section>
-
-    <!-- Productos -->
-    <section id="productos" tabindex="0" aria-label="Galería de productos Apple">
+    <section id="productos" aria-label="Galería de productos Apple">
       <h2>Productos Destacados</h2>
       <div class="products-gallery" role="list">
-        <img src="https://www.apple.com/v/iphone-15/h/images/overview/hero/hero_iphone_15_pro__e2fjz8z7q5ea_large_2x.jpg" alt="iPhone 15 Pro" role="listitem" />
-        <img src="https://www.apple.com/v/macbook-pro-14-and-16/a/images/overview/hero_endframe__b5beq3l2x82q_large_2x.jpg" alt="MacBook Pro 14" role="listitem" />
-        <img src="https://www.apple.com/v/watch-series-9/h/images/overview/hero/hero_watch__cau7h8nsuv6i_large_2x.jpg" alt="Apple Watch Series 9" role="listitem" />
-        <img src="https://www.apple.com/v/ipad-air/j/images/overview/hero/hero_ipad_air__el8v20vn8hyq_large_2x.jpg" alt="iPad Air" role="listitem" />
+        <img src="https://www.apple.com/v/iphone/home/af/images/overview/compare/iphone_14_pro_deep_purple__bx08nd4pi9m6_large.jpg" alt="iPhone 14 Pro" role="listitem" loading="lazy" />
+        <img src="https://www.apple.com/v/macbook-air/m/images/overview/hero/hero__dvsx9z7smoi6_large_2x.jpg" alt="MacBook Air M2" role="listitem" loading="lazy" />
+        <img src="https://www.apple.com/v/apple-watch-series-9/a/images/overview/hero/hero_static__bsza6x4e4ceq_large.jpg" alt="Apple Watch Series 9" role="listitem" loading="lazy" />
       </div>
     </section>
+
+    <section id="estadisticas" aria-label="Estadísticas financieras">
+      <h2>Estadísticas financieras</h2>
+      <canvas id="financialChart" aria-label="Gráfico financiero ingresos y beneficios" role="img"></canvas>
+    </section>
+
+    <section id="contacto" aria-label="Información de contacto">
+      <h2>Contacto</h2>
+      <ul class="contact-list">
+        <li>Correo: contacto@apple2025.com</li>
+        <li>Teléfono: +1 800 555 1234</li>
+        <li>Dirección: 1 Infinite Loop, Cupertino, CA</li>
+      </ul>
+    </section>
   </main>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
-/* Reset y base */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin: 0;
-  background: #f5f5f7;
-  color: #0a0a0a;
-  transition: background-color 0.4s ease, color 0.4s ease;
-  display: flex;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* Sidebar */
-nav.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 260px;
-  background: rgba(255 255 255 / 0.75);
-  backdrop-filter: saturate(180%) blur(14px);
-  box-shadow: 2px 0 10px rgb(0 0 0 / 0.07);
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 1.4rem;
-  gap: 2rem;
-  transition: transform 0.3s ease;
-  z-index: 2000;
-}
-
-nav.sidebar h1 {
-  font-weight: 700;
-  font-size: 1.7rem;
-  color: #007aff;
-  user-select: none;
-  text-align: center;
-}
-
-nav.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-grow: 1;
-}
-
-nav.sidebar ul li {
-  margin-bottom: 1.8rem;
-}
-
-nav.sidebar ul li a {
-  font-weight: 600;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #007aff;
-  padding: 0.3rem 0.5rem;
-  border-radius: 12px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  user-select: none;
-}
-
-nav.sidebar ul li a svg {
-  width: 22px;
-  height: 22px;
-  fill: #007aff;
-  transition: fill 0.3s ease;
-}
-
-nav.sidebar ul li a:hover,
-nav.sidebar ul li a.active {
-  background-color: #007aff;
-  color: #fff;
-}
-
-nav.sidebar ul li a:hover svg,
-nav.sidebar ul li a.active svg {
-  fill: #fff;
-}
-
-/* Hamburger mobile */
-.hamburger {
-  display: none;
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  width: 30px;
-  height: 24px;
-  z-index: 2100;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hamburger div {
-  width: 100%;
-  height: 4px;
-  background-color: #007aff;
-  border-radius: 4px;
-  transition: all 0.4s ease;
-}
-
-.hamburger.active div:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
-}
-
-.hamburger.active div:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active div:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
-}
-
-/* Main content */
-main.content {
-  margin-left: 260px;
-  padding: 2rem 2.5rem;
-  flex-grow: 1;
-  max-width: calc(100vw - 260px);
-  background: #f5f5f7;
-  overflow-y: auto;
-  min-height: 100vh;
-}
-
-main.content h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-  color: #007aff;
-}
-
-main.content p.lead {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #444;
-}
-
-/* Insights Clave */
-section#insights {
-  background: rgba(255 255 255 / 0.75);
-  backdrop-filter: blur(16px);
-  border-radius: 18px;
-  padding: 3rem 2rem 2rem;
-  box-shadow: 0 12px 40px rgb(0 0 0 / 0.12);
-  margin-bottom: 3rem;
-  color: #0a0a0a;
-}
-
-section#insights h2 {
-  font-weight: 600;
-  font-size: 2.2rem;
-  margin-bottom: 0.3rem;
-}
-
-section#insights p {
-  font-weight: 400;
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 2rem;
-}
-
-.insights-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2.4rem 2rem;
-}
-
-.insight-card {
-  background: rgba(255 255 255 / 0.45);
-  border-radius: 14px;
-  box-shadow: 0 8px 28px rgb(0 0 0 / 0.10);
-  padding: 1.7rem 1.4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
-}
-
-.insight-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 50px rgb(0 0 0 / 0.18);
-}
-
-.icon-container {
-  margin-bottom: 12px;
-}
-
-.insight-card h3 {
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #007aff;
-}
-
-.insight-card p {
-  font-weight: 500;
-  font-size: 1rem;
-  margin-bottom: 18px;
-  color: #222;
-  user-select: none;
-}
-
-.insight-card canvas {
-  width: 100% !important;
-  max-width: 180px;
-  height: 120px !important;
-}
-
-/* Productos */
-.products-gallery {
-  margin-top: 3.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 2.8rem;
-  flex-wrap: wrap;
-  user-select: none;
-}
-
-.products-gallery img {
-  max-width: 160px;
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgb(0 0 0 / 0.15);
-  transition: transform 0.3s ease;
-}
-
-.products-gallery img:hover {
-  transform: scale(1.06) rotate(-2deg);
-  box-shadow: 0 12px 48px rgb(0 0 0 / 0.28);
-}
-
-/* Estadísticas */
-.estadisticas-grids {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-}
-
-/* Modo oscuro */
-body.darkmode {
-  background: #15181b;
-  color: #e1e1e1;
-}
-
-body.darkmode nav.sidebar {
-  background: rgba(30 30 35 / 0.85);
-  box-shadow: 2px 0 14px rgb(0 0 0 / 0.9);
-}
-
-body.darkmode nav.sidebar h1,
-body.darkmode nav.sidebar ul li a {
-  color: #5ec3ff;
-}
-
-body.darkmode nav.sidebar ul li a:hover,
-body.darkmode nav.sidebar ul li a.active {
-  background-color: #5ec3ff;
-  color: #15181b;
-}
-
-body.darkmode main.content {
-  background: #1b1d22;
-  color: #e1e1e1;
-}
-
-body.darkmode section#insights {
-  background: rgba(20 20 25 / 0.6);
-  color: #e1e1e1;
-  box-shadow: 0 12px 40px rgb(0 0 0 / 0.75);
-}
-
-body.darkmode .insight-card {
-  background: rgba(40 40 50 / 0.5);
-  box-shadow: 0 8px 28px rgb(0 0 0 / 0.6);
-  color: #ddd;
-}
-
-body.darkmode .insight-card h3 {
-  color: #5ec3ff;
-}
-
-body.darkmode .insight-card p {
-  color: #ccc;
-}
-
-body.darkmode .products-gallery img {
-  box-shadow: 0 8px 32px rgb(255 255 255 / 0.1);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  nav.sidebar {
-    transform: translateX(-280px);
-  }
-  nav.sidebar.open {
-    transform: translateX(0);
-  }
-  main.content {
-    margin-left: 0;
-    max-width: 100vw;
-    padding: 1.5rem 1.5rem 2.5rem;
-  }
-  .hamburger {
-    display: flex;
-  }
-}
-document.addEventListener('DOMContentLoaded', () => {
-  // Variables
-  const sidebar = document.querySelector('nav.sidebar');
-  const hamburger = document.querySelector('.hamburger');
-  const darkModeBtn = document.getElementById('darkmode-btn');
-  const body = document.body;
-
-  // Hamburger toggle menu
-  hamburger.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-    hamburger.classList.toggle('active');
-    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-    hamburger.setAttribute('aria-expanded', String(!expanded));
-  });
-
-  // Close sidebar on link click (mobile)
-  sidebar.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 900) {
-        sidebar.classList.remove('open');
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-    });
-  });
-
-  // Dark mode toggle with localStorage
-  const savedMode = localStorage.getItem('darkmode');
-  if (savedMode === 'enabled') {
-    body.classList.add('darkmode');
-    darkModeBtn.textContent = 'Modo Claro';
-  }
-
-  darkModeBtn.addEventListener('click', () => {
-    body.classList.toggle('darkmode');
-    if (body.classList.contains('darkmode')) {
-      darkModeBtn.textContent = 'Modo Claro';
-      localStorage.setItem('darkmode', 'enabled');
-    } else {
-      darkModeBtn.textContent = 'Modo Oscuro';
-      localStorage.setItem('darkmode', 'disabled');
-    }
-  });
-
-  // Chart.js data and config
-  const createChart = (ctx, type, data, options) => new Chart(ctx, { type, data, options });
-
-  // Insight Charts
-  const insightChart1 = createChart(document.getElementById('insightChart1').getContext('2d'), 'line', {
-    labels: ['Oct', 'Nov', 'Dic', 'Ene'],
-    datasets: [{
-      label: 'Usuarios Nuevos',
-      data: [9800000, 10300000, 11500000, 13600000],
-      borderColor: '#007aff',
-      backgroundColor: 'rgba(0,122,255,0.3)',
-      fill: true,
-      tension: 0.3,
-      pointRadius: 3,
-      pointHoverRadius: 6,
-    }]
-  }, {
-    responsive: true,
-    plugins: { legend: { display: false } },
-    scales: {
-      y: { beginAtZero: true, ticks: { callback: v => (v / 1000000) + 'M' } }
-    }
-  });
-
-  const insightChart2 = createChart(document.getElementById('insightChart2').getContext('2d'), 'bar', {
-    labels: ['Oct', 'Nov', 'Dic', 'Ene'],
-    datasets: [{
-      label: 'Ventas en Billones USD',
-      data: [30.1, 31.5, 35.0, 37.9],
-      backgroundColor: '#34c759',
-      borderRadius: 8,
-      barPercentage: 0.6,
-    }]
-  }, {
-    responsive: true,
-    plugins: { legend: { display: false } },
-    scales: {
-      y: { beginAtZero: true, ticks: { callback: v => v + 'B' } }
-    }
-  });
-
-  const insightChart3 = createChart(document.getElementById('insightChart3').getContext('2d'), 'doughnut', {
-    labels: ['Soporte Positivo', 'Neutral', 'Negativo'],
-    datasets: [{
-      label: 'Satisfacción Cliente',
-      data: [75, 15, 10],
-      backgroundColor: ['#007aff', '#ffc107', '#ff3b30'],
-      hoverOffset: 10,
-    }]
-  }, {
-    responsive: true,
-    plugins: {
-      legend: { position: 'bottom', labels: { color: '#007aff', font: { weight: '600' } } }
-    }
-  });
-
-  // Financial Stats Chart
-  const financialChart = createChart(document.getElementById('financialChart').getContext('2d'), 'line', {
-    labels: ['Oct', 'Nov', 'Dic', 'Ene'],
-    datasets: [
-      {
-        label: 'Ingresos (Billones USD)',
-        data: [90.15, 92.55, 95.60, 98.85],
-        borderColor: '#007aff',
-        backgroundColor: 'rgba(0,122,255,0.15)',
-        fill: true,
-        tension: 0.3,
-        yAxisID: 'y',
-      },
-      {
-        label: 'Beneficio Neto (Billones USD)',
-        data: [23.25, 24.20, 24.90, 26.10],
-        borderColor: '#ff9500',
-        backgroundColor: 'rgba(255,149,0,0.15)',
-        fill: true,
-        tension: 0.3,
-        yAxisID: 'y1',
-      }
-    ]
-  }, {
-    responsive: true,
-    interaction: { mode: 'index', intersect: false },
-    stacked: false,
-    scales: {
-      y: {
-        type: 'linear',
-        position: 'left',
-        beginAtZero: false,
-        ticks: { callback: v => v + 'B' }
-      },
-      y1: {
-        type: 'linear',
-        position: 'right',
-        beginAtZero: false,
-        grid: { drawOnChartArea: false },
-        ticks: { callback: v => v + 'B' }
-      }
-    },
-    plugins: {
-      legend: {
-        labels: { font: { weight: '600' } }
-      }
-    }
-  });
-});
