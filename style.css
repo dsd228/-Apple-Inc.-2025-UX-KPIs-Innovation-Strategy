@@ -728,7 +728,11 @@ body.darkmode code {
 /* Mobile Responsiveness - iOS Style */
 @media (max-width: 768px) {
   body {
-    padding-top: 180px; /* Reduced for mobile */
+  :root {
+    --header-height-mobile: 180px;
+  }
+  body {
+    padding-top: var(--header-height-mobile);
   }
   
   header {
