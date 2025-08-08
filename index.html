@@ -1,90 +1,264 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Panel Estadísticas Apple 2025</title>
-  <meta name="description" content="Panel interactivo estilo iOS 26 con datos reales FY2024-25" />
+  <title>Apple Inc. FY2025 UX KPIs Innovation Strategy</title>
+  <meta name="description" content="Strategic benchmarking analysis of Apple Inc. for FY2024-25, integrating financial, UX, sustainability, and innovation metrics" />
   <link href="styles.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <button id="darkmode-btn" aria-label="Toggle modo oscuro" class="darkmode-toggle">Modo Oscuro</button>
-  <div class="hamburger" aria-label="Abrir menú" role="button" tabindex="0" aria-expanded="false">
+  <button id="darkmode-btn" aria-label="Toggle dark mode" class="darkmode-toggle">🌙</button>
+  <div class="hamburger" aria-label="Open menu" role="button" tabindex="0" aria-expanded="false">
     <div></div><div></div><div></div>
   </div>
-  <nav class="sidebar" role="navigation" aria-label="Menú principal">
-    <h1>Apple 2025</h1>
+  <nav class="sidebar" role="navigation" aria-label="Main navigation">
+    <div class="sidebar-header">
+      <img src="./assets/visuals/github_banner.png" alt="Apple Inc." class="logo" />
+      <h1>Apple Inc.</h1>
+      <p>FY2025 Strategy</p>
+    </div>
     <ul>
-      <li><a href="#inicio" class="active" tabindex="0">Inicio</a></li>
-      <li><a href="#insights" tabindex="0">Insights Clave</a></li>
-      <li><a href="#productos" tabindex="0">Productos</a></li>
-      <li><a href="#estadisticas" tabindex="0">Estadísticas</a></li>
-      <li><a href="#contacto" tabindex="0">Contacto</a></li>
+      <li><a href="#executive-summary" class="active" tabindex="0">Executive Summary</a></li>
+      <li><a href="#author-profile" tabindex="0">Author Profile</a></li>
+      <li><a href="#visual-analytics" tabindex="0">Visual Analytics</a></li>
+      <li><a href="#methodology" tabindex="0">Methodology</a></li>
+      <li><a href="#visual-palette" tabindex="0">Apple Visual Palette</a></li>
+      <li><a href="#repository-structure" tabindex="0">Repository Structure</a></li>
+      <li><a href="#technologies" tabindex="0">Technologies & Tools</a></li>
+      <li><a href="#sustainability" tabindex="0">Sustainability</a></li>
+      <li><a href="#contact" tabindex="0">Contact</a></li>
     </ul>
   </nav>
   <main class="content" tabindex="-1">
-    <section id="inicio">
-      <h1>Panel de Estadísticas Apple FY2024-25 Q1</h1>
-      <p class="lead">Datos financieros y de usuarios reales con diseño iOS 26.</p>
-    </section>
-
-    <section id="insights" aria-label="Insights clave de Apple">
-      <h2>Insights clave</h2>
-      <p>Visión rápida de los KPIs más importantes.</p>
-      <div class="insights-grid">
-        <article class="insight-card" role="region" aria-labelledby="insight1-title">
-          <div class="icon-container" aria-hidden="true">
-            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="" width="48" height="48" />
-          </div>
-          <h3 id="insight1-title">Usuarios Nuevos</h3>
-          <p>Más de 13.6M de usuarios nuevos en Enero 2025.</p>
-          <canvas id="insightChart1" aria-label="Gráfico de usuarios nuevos" role="img"></canvas>
-        </article>
-
-        <article class="insight-card" role="region" aria-labelledby="insight2-title">
-          <div class="icon-container" aria-hidden="true">
-            <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="" width="48" height="48" />
-          </div>
-          <h3 id="insight2-title">Ventas</h3>
-          <p>Ingresos trimestrales en billones USD crecientes.</p>
-          <canvas id="insightChart2" aria-label="Gráfico de ventas trimestrales" role="img"></canvas>
-        </article>
-
-        <article class="insight-card" role="region" aria-labelledby="insight3-title">
-          <div class="icon-container" aria-hidden="true">
-            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="" width="48" height="48" />
-          </div>
-          <h3 id="insight3-title">Satisfacción Cliente</h3>
-          <p>75% de soporte positivo y alta fidelidad.</p>
-          <canvas id="insightChart3" aria-label="Gráfico de satisfacción de clientes" role="img"></canvas>
-        </article>
+    <section id="executive-summary">
+      <div class="hero-section">
+        <h1>Strategic Benchmarking Analysis</h1>
+        <p class="lead">Apple Inc. FY2024-25 Integration of Financial, UX, Sustainability, and Innovation Metrics</p>
+        <div class="badge-container">
+          <span class="badge">🇬🇧 English</span>
+          <span class="badge">📊 Analytics</span>
+          <span class="badge">🔬 Strategy</span>
+        </div>
+      </div>
+      <div class="summary-content glass-card">
+        <p>This repository presents a strategic benchmarking analysis of Apple Inc. for FY2024-25, integrating financial, UX, sustainability, and innovation metrics. Designed for consultants, recruiters, and strategists, it highlights advanced analytics and a holistic industry view.</p>
       </div>
     </section>
 
-    <section id="productos" aria-label="Galería de productos Apple">
-      <h2>Productos Destacados</h2>
-      <div class="products-gallery" role="list">
-        <img src="https://www.apple.com/v/iphone/home/af/images/overview/compare/iphone_14_pro_deep_purple__bx08nd4pi9m6_large.jpg" alt="iPhone 14 Pro" role="listitem" loading="lazy" />
-        <img src="https://www.apple.com/v/macbook-air/m/images/overview/hero/hero__dvsx9z7smoi6_large_2x.jpg" alt="MacBook Air M2" role="listitem" loading="lazy" />
-        <img src="https://www.apple.com/v/apple-watch-series-9/a/images/overview/hero/hero_static__bsza6x4e4ceq_large.jpg" alt="Apple Watch Series 9" role="listitem" loading="lazy" />
+    <section id="author-profile" aria-label="Author profile information">
+      <h2>Author Profile</h2>
+      <div class="author-card glass-card">
+        <div class="author-info">
+          <div class="author-avatar">
+            <div class="avatar-placeholder">DS</div>
+          </div>
+          <div class="author-details">
+            <h3>David S. Diaz</h3>
+            <p class="role">Senior Corporate Benchmarking Consultant</p>
+            <div class="certifications">
+              <span class="cert">UX Certified (NN/g)</span>
+              <span class="cert">IBM Data Science</span>
+              <span class="cert">Google UX</span>
+              <span class="cert">PMP®</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="estadisticas" aria-label="Estadísticas financieras">
-      <h2>Estadísticas financieras</h2>
-      <canvas id="financialChart" aria-label="Gráfico financiero ingresos y beneficios" role="img"></canvas>
+    <section id="visual-analytics" aria-label="Visual analytics and interactive notebooks">
+      <h2>Visual Analytics & Interactive Notebooks</h2>
+      <p class="section-desc">All visualizations are Python-generated. Interactive version available in Google Colab.</p>
+      
+      <div class="analytics-grid">
+        <div class="analytics-card glass-card">
+          <img src="./assets/visuals/kpi_sankey_revenue.png" alt="Revenue Breakdown Sankey Diagram" class="chart-image" />
+          <div class="card-content">
+            <h3>Revenue Breakdown</h3>
+            <p>Sankey: Product category FY2025</p>
+            <code>code/Sankey.py</code>
+          </div>
+        </div>
+        
+        <div class="analytics-card glass-card">
+          <img src="./assets/visuals/ux_radar_benchmark.png" alt="UX Benchmark Radar Chart" class="chart-image" />
+          <div class="card-content">
+            <h3>UX Benchmark</h3>
+            <p>Radar: Apple/Samsung/Google</p>
+            <code>code/RadarUX.py</code>
+          </div>
+        </div>
+        
+        <div class="analytics-card glass-card">
+          <img src="./assets/visuals/global_sales_treemap.png" alt="Global Sales Treemap" class="chart-image" />
+          <div class="card-content">
+            <h3>Global Sales</h3>
+            <p>Treemap: By region</p>
+            <code>code/Heatmap.py</code>
+          </div>
+        </div>
+        
+        <div class="analytics-card glass-card">
+          <img src="./assets/visuals/sustainability_timeline.png" alt="Sustainability Timeline" class="chart-image" />
+          <div class="card-content">
+            <h3>Sustainability Path</h3>
+            <p>Timeline: 2030 carbon neutral</p>
+            <code>code/ESG_Timeline.py</code>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contacto" aria-label="Información de contacto">
-      <h2>Contacto</h2>
-      <ul class="contact-list">
-        <li>Correo: contacto@apple2025.com</li>
-        <li>Teléfono: +1 800 555 1234</li>
-        <li>Dirección: 1 Infinite Loop, Cupertino, CA</li>
-      </ul>
+    <section id="methodology" aria-label="Research methodology">
+      <h2>Methodology</h2>
+      <div class="methodology-grid">
+        <div class="method-card glass-card">
+          <div class="method-icon">📊</div>
+          <h3>Data Sources</h3>
+          <p>SEC Filings, ESG Reports, Gartner/Forrester, JSTOR, APIs</p>
+        </div>
+        <div class="method-card glass-card">
+          <div class="method-icon">🔬</div>
+          <h3>Techniques</h3>
+          <p>Ratio/Regression/Forecasting, Heuristics, PESTLE, Content Analysis</p>
+        </div>
+        <div class="method-card glass-card">
+          <div class="method-icon">✨</div>
+          <h3>UX Standards</h3>
+          <p>WCAG 2.2, ISO 9241-210</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="visual-palette" aria-label="Apple visual palette">
+      <h2>Apple Visual Palette</h2>
+      <div class="palette-grid">
+        <div class="color-swatch" style="background: #5f5f5f;">
+          <span class="color-name">Space Gray</span>
+          <span class="color-hex">#5f5f5f</span>
+        </div>
+        <div class="color-swatch" style="background: #007aff;">
+          <span class="color-name">Blue</span>
+          <span class="color-hex">#007aff</span>
+        </div>
+        <div class="color-swatch" style="background: #34c759;">
+          <span class="color-name">Green</span>
+          <span class="color-hex">#34c759</span>
+        </div>
+        <div class="color-swatch" style="background: #ffcc00;">
+          <span class="color-name">Gold</span>
+          <span class="color-hex">#ffcc00</span>
+        </div>
+        <div class="color-swatch" style="background: #ffffff; border: 1px solid #e5e5e7;">
+          <span class="color-name" style="color: #333;">White</span>
+          <span class="color-hex" style="color: #333;">#ffffff</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="repository-structure" aria-label="Repository structure">
+      <h2>Repository Structure</h2>
+      <div class="structure-card glass-card">
+        <pre><code>./
+├── assets/visuals/
+├── code/
+├── data/raw/
+├── data/processed/
+├── notebooks/apple_visuals_generator.ipynb
+├── presentation/Apple_Benchmarking_FY24-25_Executive_Deck.pdf
+└── README.md</code></pre>
+      </div>
+    </section>
+
+    <section id="technologies" aria-label="Technologies and tools">
+      <h2>Technologies & Tools</h2>
+      <div class="tech-grid">
+        <div class="tech-card glass-card">
+          <div class="tech-icon">🐍</div>
+          <h3>Python</h3>
+          <p>Data analysis and visualization</p>
+        </div>
+        <div class="tech-card glass-card">
+          <div class="tech-icon">📊</div>
+          <h3>Jupyter</h3>
+          <p>Interactive notebooks</p>
+        </div>
+        <div class="tech-card glass-card">
+          <div class="tech-icon">🎨</div>
+          <h3>Design</h3>
+          <p>iOS 26 inspired interface</p>
+        </div>
+        <div class="tech-card glass-card">
+          <div class="tech-icon">📈</div>
+          <h3>Analytics</h3>
+          <p>Advanced data visualization</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sustainability" aria-label="Sustainability commitment">
+      <h2>Sustainability Commitment</h2>
+      <div class="sustainability-card glass-card">
+        <div class="sustainability-content">
+          <h3>Apple's 2030 Carbon Neutral Goal</h3>
+          <p>Apple is committed to becoming carbon neutral across its entire business, manufacturing supply chain, and product life cycle by 2030.</p>
+          <div class="progress-indicators">
+            <div class="indicator">
+              <span class="indicator-value">2025</span>
+              <span class="indicator-label">Clean Energy</span>
+            </div>
+            <div class="indicator">
+              <span class="indicator-value">2030</span>
+              <span class="indicator-label">Carbon Neutral</span>
+            </div>
+            <div class="indicator">
+              <span class="indicator-value">100%</span>
+              <span class="indicator-label">Recycled Materials</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-label="Contact information">
+      <h2>Contact</h2>
+      <div class="contact-card glass-card">
+        <div class="contact-content">
+          <h3>Get in Touch</h3>
+          <p>Connect with the author for consulting, collaboration, or questions about this analysis.</p>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/dsd228" class="contact-link linkedin">
+              <span class="link-icon">💼</span>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/dsd228" class="contact-link github">
+              <span class="link-icon">🔗</span>
+              <span>GitHub</span>
+            </a>
+            <a href="https://kaggle.com/dsd228" class="contact-link kaggle">
+              <span class="link-icon">📊</span>
+              <span>Kaggle</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 David S. Diaz. All rights reserved.</p>
+      <p>Strategic benchmarking analysis for Apple Inc. FY2024-25</p>
+      <div class="footer-links">
+        <a href="./LICENSE">License</a>
+        <a href="https://github.com/dsd228/-Apple-Inc.-2025-UX-KPIs-Innovation-Strategy">Repository</a>
+      </div>
+    </div>
+  </footer>
 
   <script src="scripts.js"></script>
 </body>
