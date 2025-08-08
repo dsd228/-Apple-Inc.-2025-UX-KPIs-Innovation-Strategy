@@ -344,7 +344,7 @@
         
         if (targetElement) {
           // iOS-style smooth scroll with offset for fixed header
-          const headerOffset = 220;
+          const headerOffset = parseInt(getComputedStyle(document.body).getPropertyValue('--header-offset')) || 0;
           const elementPosition = targetElement.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
           
