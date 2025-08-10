@@ -1,166 +1,160 @@
-// Modo oscuro toggle y persistencia local
-const darkModeBtn = document.getElementById('darkmode-btn');
-const body = document.body;
+// Variables globales para charts
+let insightChart1, insightChart2, insightChart3, financialChart;
 
-function setDarkMode(enabled) {
-  if(enabled) {
-    body.classList.add('darkmode');
-    darkModeBtn.textContent = 'Modo Claro';
-    localStorage.setItem('darkmode', 'enabled');
-  } else {
-    body.classList.remove('darkmode');
-    darkModeBtn.textContent = 'Modo Oscuro';
-    localStorage.setItem('darkmode', 'disabled');
-  }
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const darkmodeBtn = document.getElementById('darkmode-btn');
+  const body = document.body;
+  const hamburger = document.querySelector('.hamburger');
+  const sidebar = document.querySelector('.sidebar');
 
-// Cargar estado previo modo oscuro
-const savedMode = localStorage.getItem('darkmode');
-if(savedMode === 'enabled') setDarkMode(true);
-else setDarkMode(false);
-
-darkModeBtn.addEventListener('click', () => {
-  setDarkMode(!body.classList.contains('darkmode'));
-});
-
-// Sidebar toggle en móvil
-const hamburger = document.querySelector('.hamburger');
-const sidebar = document.getElementById('sidebar');
-
-hamburger.addEventListener('click', () => {
-  sidebar.classList.toggle('open');
-  hamburger.classList.toggle('open');
-  const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-  hamburger.setAttribute('aria-expanded', !expanded);
-});
-
-// Cerrar menú al click en enlace
-sidebar.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    if(window.innerWidth <= 768) {
-      sidebar.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', false);
+  // Toggle modo oscuro
+  darkmodeBtn.addEventListener('click', () => {
+    body.classList.toggle('darkmode');
+    if(body.classList.contains('darkmode')){
+      darkmodeBtn.textContent = 'Modo Claro';
+    } else {
+      darkmodeBtn.textContent = 'Modo Oscuro';
     }
   });
+
+  // Toggle sidebar en mobile
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', !expanded);
+  });
+
+  // Inicializar charts vacíos
+  initCharts();
+
+  // Cargar data.json y actualizar charts y contenidos
+  fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+      updateCharts(data);
+      updateProducts(data.products);
+      updateContact(data.contact);
+    })
+    .catch(err => console.error('Error cargando data.json:', err));
 });
 
-// Gráficos Chart.js ejemplos simples
-
-// Usuarios nuevos
-const ctx1 = document.getElementById('insightChart1').getContext('2d');
-const insightChart1 = new Chart(ctx1, {
-  type: 'line',
-  data: {
-    labels: ['Oct', 'Nov', 'Dic', 'Ene'],
-    datasets: [{
-      label: 'Usuarios Nuevos (M)',
-      data: [12, 13, 13.2, 13.6],
-      borderColor: '#007aff',
-      backgroundColor: 'rgba(0, 122, 255, 0.2)',
-      fill: true,
-      tension: 0.3,
-      pointRadius: 4,
-      pointBackgroundColor: '#007aff'
-    }]
-  },
-  options: {
-    responsive: true,
-    plugins: {legend: {display: false}},
-    scales: {
-      y: {beginAtZero: true}
-    }
-  }
-});
-
-// Ventas trimestrales
-const ctx2 = document.getElementById('insightChart2').getContext('2d');
-const insightChart2 = new Chart(ctx2, {
-  type: 'bar',
-  data: {
-    labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-    datasets: [{
-      label: 'Ingresos (Billones USD)',
-      data: [0.9, 1.1, 1.3, 1.5],
-      backgroundColor: '#34c759'
-    }]
-  },
-  options: {
-    responsive: true,
-    plugins: {legend: {display: false}},
-    scales: {
-      y: {beginAtZero: true}
-    }
-  }
-});
-
-// Satisfacción cliente
-const ctx3 = document.getElementById('insightChart3').getContext('2d');
-const insightChart3 = new Chart(ctx3, {
-  type: 'doughnut',
-  data: {
-    labels: ['Positivo', 'Negativo'],
-    datasets: [{
-      label: 'Satisfacción',
-      data: [75, 25],
-      backgroundColor: ['#007aff', '#d1d1d6']
-    }]
-  },
-  options: {
-    responsive: true,
-    cutout: '70%',
-    plugins: {legend: {position: 'bottom'}}
-  }
-});
-
-// Estadísticas financieras (más simple)
-const ctx4 = document.getElementById('financialChart').getContext('2d');
-const financialChart = new Chart(ctx4, {
-  type: 'line',
-  data: {
-    labels: ['2019', '2020', '2021', '2022', '2023', '2024'],
-    datasets: [
-      {
-        label: 'Ingresos (Billones USD)',
-        data: [2.7, 3.1, 3.6, 4.0, 4.4, 4.9],
-        borderColor: '#007aff',
-        backgroundColor: 'rgba(0, 122, 255, 0.15)',
-        fill: true,
+function initCharts() {
+  const ctx1 = document.getElementById('insightChart1').getContext('2d');
+  insightChart1 = new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels: [],
+      datasets: [{
+        label: 'Usuarios Nuevos (millones)',
+        data: [],
+        borderColor: '#0071e3',
+        backgroundColor: 'rgba(0, 113, 227, 0.15)',
         tension: 0.3,
-        yAxisID: 'y'
-      },
-      {
-        label: 'Beneficio Neto (Billones USD)',
-        data: [0.6, 0.7, 0.9, 1.1, 1.2, 1.3],
-        borderColor: '#34c759',
-        backgroundColor: 'rgba(52, 199, 89, 0.15)',
         fill: true,
-        tension: 0.3,
-        yAxisID: 'y1'
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    interaction: {
-      mode: 'index',
-      intersect: false
+        pointRadius: 4,
+        pointHoverRadius: 6
+      }]
     },
-    stacked: false,
-    scales: {
-      y: {
-        type: 'linear',
-        position: 'left',
-        beginAtZero: true,
-        title: {display: true, text: 'Ingresos (Billones USD)'}
-      },
-      y1: {
-        type: 'linear',
-        position: 'right',
-        beginAtZero: true,
-        grid: {drawOnChartArea: false},
-        title: {display: true, text: 'Beneficio Neto (Billones USD)'}
+    options: {
+      responsive: true,
+      plugins: { legend: { display: true } },
+      scales: {
+        y: { beginAtZero: true }
       }
     }
-  }
-});
+  });
+
+  const ctx2 = document.getElementById('insightChart2').getContext('2d');
+  insightChart2 = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: [],
+      datasets: [{
+        label: 'Ventas Trimestrales (billones USD)',
+        data: [],
+        backgroundColor: '#34c759'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: true } },
+      scales: {
+        y: { beginAtZero: true }
+      }
+    }
+  });
+
+  const ctx3 = document.getElementById('insightChart3').getContext('2d');
+  insightChart3 = new Chart(ctx3, {
+    type: 'doughnut',
+    data: {
+      labels: [],
+      datasets: [{
+        label: 'Satisfacción del Cliente',
+        data: [],
+        backgroundColor: ['#0071e3', '#d1d1d6']
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'bottom' } }
+    }
+  });
+
+  const ctx4 = document.getElementById('financialChart').getContext('2d');
+  financialChart = new Chart(ctx4, {
+    type: 'line',
+    data: {
+      labels: [],
+      datasets: [
+        {
+          label: 'Ingresos (billones USD)',
+          data: [],
+          borderColor: '#0071e3',
+          backgroundColor: 'rgba(0, 113, 227, 0.15)',
+          tension: 0.3,
+          fill: true,
+          yAxisID: 'y'
+        },
+        {
+          label: 'Beneficio Neto (billones USD)',
+          data: [],
+          borderColor: '#34c759',
+          backgroundColor: 'rgba(52, 199, 89, 0.15)',
+          tension: 0.3,
+          fill: true,
+          yAxisID: 'y1'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      stacked: false,
+      scales: {
+        y: {
+          type: 'linear',
+          display: true,
+          position: 'left'
+        },
+        y1: {
+          type: 'linear',
+          display: true,
+          position: 'right',
+          grid: { drawOnChartArea: false }
+        }
+      }
+    }
+  });
+}
+
+function updateCharts(data) {
+  // Usuarios nuevos
+  insightChart1.data.labels = data.userGrowth.labels;
+  insightChart1.data.datasets[0].data = data.userGrowth.data;
+  insightChart1.update();
+
+  // Ventas trimestrales
+  insightChart2.data.labels = data.quarterlySales.labels;
+  insightChart2.data.datasets[0].data = data.quarterlySales.data;
+  insightChart2.update
