@@ -16,6 +16,21 @@ hamburger.addEventListener('click', () => {
   sidebar.classList.toggle('open');
   hamburger.setAttribute('aria-expanded', sidebar.classList.contains('open'));
 });
+function renderProductosTabla(productos) {
+  const tbody = document.querySelector('#productosTable tbody');
+  tbody.innerHTML = ''; // limpiar tabla
+
+  productos.forEach(({nombre, precio, disponibilidad}) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${nombre}</td>
+      <td>${precio}</td>
+      <td>${disponibilidad}</td>
+    `;
+    tbody.appendChild(row);
+  });
+}
+
 
 // Configuración básica Chart.js para los gráficos
 
