@@ -20,5 +20,10 @@
     "email": "contacto@apple2025.com",
     "telefono": "+1 800 555 1234",
     "direccion": "1 Infinite Loop, Cupertino, CA"
-  }
+  },
+  "tablaProductos": [
+    {"nombre": "iPhone 14 Pro", "precio": "$999", "disponibilidad": "En stock"},
+    {"nombre": "MacBook Air M2", "precio": "$1199", "disponibilidad": "En stock"},
+    {"nombre": "Apple Watch Series 9", "precio": "$399", "disponibilidad": "Próximamente"}
+  ]
 }
