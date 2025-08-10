@@ -39,3 +39,73 @@
     "address": "1 Infinite Loop, Cupertino, CA"
   }
 }
+{
+  "competencia": {
+    "trafico": { "Arcor": 1500000, "Nestle": 2200000, "Mondelez": 1800000 },
+    "seo": {
+      "keywords": [
+        {"keyword": "chocolates", "volumen": 50000, "dificultad": 30, "posicion": 3},
+        {"keyword": "golosinas", "volumen": 30000, "dificultad": 45, "posicion": 2}
+      ]
+    },
+    "social": {
+      "seguidores": {"Arcor": 3500000, "Nestle": 4000000, "Mondelez": 2500000},
+      "engagement": {"Arcor": 4.5, "Nestle": 5.1, "Mondelez": 3.9}
+    }
+  },
+  "usuarios": {
+    "demografia": {
+      "edades": {"18-25": 35, "26-35": 30, "36-50": 25, "51+": 10},
+      "regiones": {"Argentina": 45, "Brasil": 30, "Chile": 15, "Otros": 10}
+    },
+    "comportamiento": {
+      "paginasPopulares": ["Inicio", "Productos", "Promociones", "Contacto"],
+      "tiempoMedio": 3.5,
+      "tasaConversion": 2.8
+    }
+  },
+  "canalesMarketing": {
+    "ROI": {"digital": 150, "retail": 110, "promociones": 90},
+    "campanas": [
+      {"nombre": "Navidad 2024", "clics": 50000, "conversiones": 4500, "impresiones": 150000},
+      {"nombre": "Verano 2025", "clics": 45000, "conversiones": 4000, "impresiones": 130000}
+    ],
+    "costos": {"digital": 200000, "retail": 150000, "promociones": 100000}
+  },
+  "sostenibilidad": {
+    "productosCertificados": 75,
+    "emisionesCO2": 1200,
+    "materialReciclado": 40,
+    "campanasRSE": [
+      {"nombre": "Reforestación", "impacto": 3000},
+      {"nombre": "Reducción Plásticos", "impacto": 5000}
+    ]
+  },
+  "ux": {
+    "heatmaps": {
+      "clics": {"Inicio": 12000, "Productos": 9500, "Promociones": 7000, "Contacto": 3000},
+      "scroll": {"Promedio": 75}
+    },
+    "accesibilidad": 85,
+    "feedback": [
+      {"usuario": "Ana", "comentario": "Me encanta la nueva app, muy fácil de usar."},
+      {"usuario": "Carlos", "comentario": "Quisiera más opciones de búsqueda."}
+    ]
+  },
+  "tendencias": {
+    "predicciones": [
+      {"año": 2025, "tendencia": "Mayor consumo de productos veganos"},
+      {"año": 2026, "tendencia": "Empaques 100% biodegradables"}
+    ],
+    "innovaciones": [
+      {"producto": "Empaque compostable", "detalle": "Nuevo material PLA avanzado"},
+      {"producto": "Snack saludable", "detalle": "Bajo en azúcar, alto en fibra"}
+    ],
+    "swot": {
+      "fortalezas": ["Marca reconocida", "Amplia red de distribución"],
+      "oportunidades": ["Expansión internacional", "Crecimiento en productos saludables"],
+      "debilidades": ["Baja presencia digital", "Competencia fuerte en redes sociales"],
+      "amenazas": ["Cambios regulatorios", "Variabilidad en precio de materias primas"]
+    }
+  }
+}
