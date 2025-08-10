@@ -3,30 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Panel Estadísticas Apple 2025</title>
+  <title>Apple 2025 - Panel de Estadísticas</title>
   <meta name="description" content="Panel interactivo estilo iOS 26 con datos reales FY2024-25" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link href="styles.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- Loader animado -->
-  <div id="loader" role="status" aria-live="polite" aria-label="Cargando datos...">
-    <div class="spinner"></div>
-  </div>
-
   <button id="darkmode-btn" aria-label="Toggle modo oscuro" class="darkmode-toggle">Modo Oscuro</button>
 
-  <div class="hamburger" aria-label="Abrir menú" role="button" tabindex="0" aria-expanded="false">
-    <div></div><div></div><div></div>
+  <div class="hamburger" aria-label="Abrir menú" role="button" tabindex="0" aria-expanded="false" aria-controls="sidebar">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 
-  <nav class="sidebar" role="navigation" aria-label="Menú principal">
+  <nav id="sidebar" class="sidebar" role="navigation" aria-label="Menú principal">
     <h1>Apple 2025</h1>
     <ul>
       <li><a href="#inicio" class="active" tabindex="0">Inicio</a></li>
       <li><a href="#insights" tabindex="0">Insights Clave</a></li>
       <li><a href="#productos" tabindex="0">Productos</a></li>
-      <li><a href="#productos-dinamicos" tabindex="0">Productos Dinámicos</a></li>
       <li><a href="#estadisticas" tabindex="0">Estadísticas</a></li>
       <li><a href="#contacto" tabindex="0">Contacto</a></li>
     </ul>
@@ -78,17 +75,6 @@
         <img src="https://www.apple.com/v/macbook-air/m/images/overview/hero/hero__dvsx9z7smoi6_large_2x.jpg" alt="MacBook Air M2" role="listitem" loading="lazy" />
         <img src="https://www.apple.com/v/apple-watch-series-9/a/images/overview/hero/hero_static__bsza6x4e4ceq_large.jpg" alt="Apple Watch Series 9" role="listitem" loading="lazy" />
       </div>
-    </section>
-
-    <section id="productos-dinamicos" aria-label="Tabla de productos">
-      <h2>Productos Disponibles</h2>
-      <table id="productosTable" role="table" aria-describedby="productosDesc">
-        <caption id="productosDesc">Lista dinámica de productos con precios y disponibilidad</caption>
-        <thead>
-          <tr><th>Nombre</th><th>Precio</th><th>Disponibilidad</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
     </section>
 
     <section id="estadisticas" aria-label="Estadísticas financieras">
