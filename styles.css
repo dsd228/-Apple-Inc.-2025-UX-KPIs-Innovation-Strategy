@@ -1,189 +1,143 @@
-/* Reset y base */
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: #fff;
-  color: #000;
-  display: flex;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-a {
-  color: #007aff;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+const darkModeBtn = document.getElementById('darkmode-btn');
+const hamburger = document.querySelector('.hamburger');
+const sidebar = document.querySelector('.sidebar');
+
+darkModeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  darkModeBtn.textContent = document.body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Oscuro';
+});
+
+hamburger.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', sidebar.classList.contains('open'));
+});
+
+// Variables globales para charts
+let insightChart1, insightChart2, insightChart3, financialChart;
+
+// Función para inicializar gráficos vacíos o con datos dummy
+function initCharts() {
+  const ctx1 = document.getElementById('insightChart1').getContext('2d');
+  insightChart1 = new Chart(ctx1, { type: 'bar', data: {}, options: {} });
+
+  const ctx2 = document.getElementById('insightChart2').getContext('2d');
+  insightChart2 = new Chart(ctx2, { type: 'line', data: {}, options: {} });
+
+  const ctx3 = document.getElementById('insightChart3').getContext('2d');
+  insightChart3 = new Chart(ctx3, { type: 'radar', data: {}, options: {} });
+
+  const ctx4 = document.getElementById('financialChart').getContext('2d');
+  financialChart = new Chart(ctx4, { type: 'bar', data: {}, options: {} });
 }
 
-/* Sidebar */
-.sidebar {
-  background: #f5f5f7;
-  width: 220px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  height: 100vh;
-  overflow-y: auto;
-  border-right: 1px solid #ddd;
-}
-.sidebar h1 {
-  font-weight: 700;
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-}
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.sidebar li {
-  margin-bottom: 1rem;
-}
-.sidebar li a {
-  font-weight: 600;
-  font-size: 1rem;
-  display: block;
-  padding: 0.5rem 0;
-  border-radius: 5px;
-}
-.sidebar li a.active,
-.sidebar li a:hover {
-  background: #007aff;
-  color: white;
+// Función para actualizar los gráficos con datos
+function updateCharts(data) {
+  // Usuarios Nuevos
+  insightChart1.data = {
+    labels: data.usuariosNuevos.labels,
+    datasets: [{
+      label: 'Usuarios Nuevos (millones)',
+      data: data.usuariosNuevos.data,
+      backgroundColor: '#007aff',
+      borderRadius: 5,
+    }]
+  };
+  insightChart1.options = {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: { y: { beginAtZero: true } }
+  };
+  insightChart1.update();
+
+  // Ventas Trimestrales
+  insightChart2.data = {
+    labels: data.ventasTrimestrales.labels,
+    datasets: [{
+      label: 'Ingresos (billones USD)',
+      data: data.ventasTrimestrales.data,
+      borderColor: '#34c759',
+      fill: false,
+      tension: 0.3,
+      pointRadius: 5,
+      pointHoverRadius: 7,
+    }]
+  };
+  insightChart2.options = {
+    responsive: true,
+    plugins: { legend: { display: true } },
+    scales: { y: { beginAtZero: true } }
+  };
+  insightChart2.update();
+
+  // Satisfacción Cliente
+  insightChart3.data = {
+    labels: data.satisfaccionCliente.labels,
+    datasets: [{
+      label: 'Satisfacción',
+      data: data.satisfaccionCliente.data,
+      backgroundColor: 'rgba(255, 204, 0, 0.5)',
+      borderColor: '#ffcc00',
+      borderWidth: 2,
+      pointBackgroundColor: '#ffcc00',
+    }]
+  };
+  insightChart3.options = {
+    responsive: true,
+    scales: {
+      r: {
+        beginAtZero: true,
+        max: 100,
+        ticks: { stepSize: 20 }
+      }
+    },
+    plugins: { legend: { position: 'top' } }
+  };
+  insightChart3.update();
+
+  // Finanzas
+  financialChart.data = {
+    labels: data.finanzas.labels,
+    datasets: [
+      {
+        label: 'Ingresos (billones USD)',
+        data: data.finanzas.ingresos,
+        backgroundColor: '#007aff',
+        borderRadius: 5,
+      },
+      {
+        label: 'Beneficio Neto (billones USD)',
+        data: data.finanzas.beneficios,
+        backgroundColor: '#34c759',
+        borderRadius: 5,
+      }
+    ]
+  };
+  financialChart.options = {
+    responsive: true,
+    plugins: { legend: { position: 'top' } },
+    scales: { y: { beginAtZero: true } }
+  };
+  financialChart.update();
+
+  // Actualizar contacto
+  document.querySelector('.contact-list li:nth-child(1)').textContent = `Correo: ${data.contacto.email}`;
+  document.querySelector('.contact-list li:nth-child(2)').textContent = `Teléfono: ${data.contacto.telefono}`;
+  document.querySelector('.contact-list li:nth-child(3)').textContent = `Dirección: ${data.contacto.direccion}`;
 }
 
-/* Contenido principal */
-.content {
-  margin-left: 220px;
-  padding: 40px;
-  max-width: 900px;
-  flex-grow: 1;
-}
-.content h1,
-.content h2 {
-  font-weight: 700;
-}
-.content h1 {
-  font-size: 2.4rem;
-  margin-bottom: 0.5rem;
-}
-.content h2 {
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-.lead {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #555;
-}
-
-/* Insights grid */
-.insights-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap: 2rem;
-}
-.insight-card {
-  background: #fafafa;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.icon-container {
-  margin-bottom: 1rem;
-}
-
-/* Galería de productos */
-.products-gallery {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.products-gallery img {
-  max-width: 280px;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
-  transition: transform 0.3s ease;
-}
-.products-gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* Lista de contacto */
-.contact-list {
-  list-style: none;
-  padding: 0;
-  color: #333;
-}
-.contact-list li {
-  margin-bottom: 0.8rem;
-  font-weight: 500;
-}
-
-/* Botón modo oscuro */
-.darkmode-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: #007aff;
-  border: none;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
-  z-index: 9999;
-}
-
-/* Hamburger para móvil */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 26px;
-  height: 22px;
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  cursor: pointer;
-  z-index: 10000;
-}
-.hamburger div {
-  width: 100%;
-  height: 3px;
-  background: #007aff;
-  border-radius: 2px;
-}
-@media (max-width: 768px) {
-  .sidebar {
-    position: fixed;
-    left: -250px;
-    top: 0;
-    width: 220px;
-    height: 100vh;
-    transition: left 0.3s ease;
-    z-index: 9998;
-  }
-  .sidebar.open {
-    left: 0;
-  }
-  .content {
-    margin-left: 0;
-    padding: 20px;
-  }
-  .hamburger {
-    display: flex;
+// Función principal de carga
+async function loadDataAndRender() {
+  try {
+    const response = await fetch('./data.json');
+    if (!response.ok) throw new Error('No se pudo cargar data.json');
+    const data = await response.json();
+    updateCharts(data);
+  } catch (error) {
+    console.error('Error cargando datos:', error);
   }
 }
+
+window.onload = () => {
+  initCharts();
+  loadDataAndRender();
+};
