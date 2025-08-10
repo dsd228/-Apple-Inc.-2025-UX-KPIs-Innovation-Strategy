@@ -9,23 +9,28 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+  <!-- Loader animado -->
+  <div id="loader" role="status" aria-live="polite" aria-label="Cargando datos...">
+    <div class="spinner"></div>
+  </div>
+
   <button id="darkmode-btn" aria-label="Toggle modo oscuro" class="darkmode-toggle">Modo Oscuro</button>
+
   <div class="hamburger" aria-label="Abrir menú" role="button" tabindex="0" aria-expanded="false">
     <div></div><div></div><div></div>
   </div>
+
   <nav class="sidebar" role="navigation" aria-label="Menú principal">
     <h1>Apple 2025</h1>
     <ul>
       <li><a href="#inicio" class="active" tabindex="0">Inicio</a></li>
       <li><a href="#insights" tabindex="0">Insights Clave</a></li>
       <li><a href="#productos" tabindex="0">Productos</a></li>
+      <li><a href="#productos-dinamicos" tabindex="0">Productos Dinámicos</a></li>
       <li><a href="#estadisticas" tabindex="0">Estadísticas</a></li>
       <li><a href="#contacto" tabindex="0">Contacto</a></li>
     </ul>
   </nav>
-  <div id="loader" role="status" aria-live="polite" aria-label="Cargando datos...">
-  <div class="spinner"></div>
-</div>
 
   <main class="content" tabindex="-1">
     <section id="inicio">
@@ -74,17 +79,17 @@
         <img src="https://www.apple.com/v/apple-watch-series-9/a/images/overview/hero/hero_static__bsza6x4e4ceq_large.jpg" alt="Apple Watch Series 9" role="listitem" loading="lazy" />
       </div>
     </section>
-    <section id="productos-dinamicos" aria-label="Tabla de productos">
-  <h2>Productos Disponibles</h2>
-  <table id="productosTable" role="table" aria-describedby="productosDesc">
-    <caption id="productosDesc">Lista dinámica de productos con precios y disponibilidad</caption>
-    <thead>
-      <tr><th>Nombre</th><th>Precio</th><th>Disponibilidad</th></tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-</section>
 
+    <section id="productos-dinamicos" aria-label="Tabla de productos">
+      <h2>Productos Disponibles</h2>
+      <table id="productosTable" role="table" aria-describedby="productosDesc">
+        <caption id="productosDesc">Lista dinámica de productos con precios y disponibilidad</caption>
+        <thead>
+          <tr><th>Nombre</th><th>Precio</th><th>Disponibilidad</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
 
     <section id="estadisticas" aria-label="Estadísticas financieras">
       <h2>Estadísticas financieras</h2>
