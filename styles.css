@@ -147,6 +147,45 @@ function updateCharts(data) {
   document.querySelector('.contact-list li:nth-child(2)').textContent = `Teléfono: ${data.contacto.telefono}`;
   document.querySelector('.contact-list li:nth-child(3)').textContent = `Dirección: ${data.contacto.direccion}`;
 }
+/* Transición suave para modo oscuro */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Menú hamburguesa animado */
+.hamburger {
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.4s ease;
+}
+
+.hamburger div {
+  background: #007aff;
+  height: 4px;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.sidebar.open ~ .hamburger {
+  transform: rotate(90deg);
+}
+
+.sidebar.open .hamburger div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.sidebar.open .hamburger div:nth-child(2) {
+  opacity: 0;
+}
+
+.sidebar.open .hamburger div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 
 // Función principal de carga
 async function loadDataAndRender() {
