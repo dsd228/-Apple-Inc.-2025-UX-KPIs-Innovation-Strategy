@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arcor · Estrategia de Marketing y UX basada en Datos</title>
-  <meta name="description" content="Análisis estratégico y UX de Arcor con visualizaciones, benchmarking y propuestas sostenibles" />
+  <title>Panel Estadísticas Apple 2025</title>
+  <meta name="description" content="Panel interactivo estilo iOS 26 con datos reales FY2024-25" />
   <link href="styles.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -14,182 +14,74 @@
     <div></div><div></div><div></div>
   </div>
   <nav class="sidebar" role="navigation" aria-label="Menú principal">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Logo_Arcor.svg" alt="Logo Arcor" class="logo" />
-    <h1>Arcor 2025</h1>
+    <h1>Apple 2025</h1>
     <ul>
-      <li><a href="#introduccion" class="active" tabindex="0">Introducción / Introduction</a></li>
-      <li><a href="#objetivos" tabindex="0">Objetivos / Objectives</a></li>
-      <li><a href="#competencia" tabindex="0">Competencia / Competition</a></li>
-      <li><a href="#usuarios" tabindex="0">Usuarios / Users</a></li>
-      <li><a href="#canales" tabindex="0">Canales / Channels</a></li>
-      <li><a href="#sostenibilidad" tabindex="0">Sostenibilidad / Sustainability</a></li>
-      <li><a href="#ux" tabindex="0">UX / Usabilidad</a></li>
-      <li><a href="#tendencias" tabindex="0">Tendencias / Trends</a></li>
-      <li><a href="#conclusiones" tabindex="0">Conclusiones / Conclusions</a></li>
-      <li><a href="#contacto" tabindex="0">Contacto / Contact</a></li>
+      <li><a href="#inicio" class="active" tabindex="0">Inicio</a></li>
+      <li><a href="#insights" tabindex="0">Insights Clave</a></li>
+      <li><a href="#productos" tabindex="0">Productos</a></li>
+      <li><a href="#estadisticas" tabindex="0">Estadísticas</a></li>
+      <li><a href="#contacto" tabindex="0">Contacto</a></li>
     </ul>
   </nav>
   <main class="content" tabindex="-1">
-    <!-- Introducción -->
-    <section id="introduccion">
-      <h2>Introducción / Introduction</h2>
-      <p>Este proyecto explora el caso de <strong>Arcor</strong>, una de las marcas más icónicas de Latinoamérica, desde una perspectiva estratégica y técnica, combinando análisis de datos, experiencia de usuario (UX) y marketing digital.</p>
-      <p>This project explores the case of <strong>Arcor</strong>, one of Latin America's most iconic brands, from a strategic and technical perspective, combining data analysis, user experience (UX), and digital marketing.</p>
+    <section id="inicio">
+      <h1>Panel de Estadísticas Apple FY2024-25 Q1</h1>
+      <p class="lead">Datos financieros y de usuarios reales con diseño iOS 26.</p>
     </section>
 
-    <!-- Objetivos -->
-    <section id="objetivos">
-      <h2>Objetivos / Objectives</h2>
-      <ul>
-        <li>Analizar estrategias de marketing digital y tradicional.<br>Evaluate digital and traditional marketing strategies.</li>
-        <li>Evaluar presencia online, segmentación y experiencia de usuario.<br>Assess online presence, segmentation, and user experience.</li>
-        <li>Proponer mejoras basadas en datos, diseño y KPIs.<br>Propose improvements based on data, design, and KPIs.</li>
-        <li>Comparar desempeño con competidores globales.<br>Compare performance with global competitors.</li>
-        <li>Incorporar contexto de consumo y sostenibilidad.<br>Integrate consumption context and sustainability.</li>
-      </ul>
-    </section>
+    <section id="insights" aria-label="Insights clave de Apple">
+      <h2>Insights clave</h2>
+      <p>Visión rápida de los KPIs más importantes.</p>
+      <div class="insights-grid">
+        <article class="insight-card" role="region" aria-labelledby="insight1-title">
+          <div class="icon-container" aria-hidden="true">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="" width="48" height="48" />
+          </div>
+          <h3 id="insight1-title">Usuarios Nuevos</h3>
+          <p>Más de 13.6M de usuarios nuevos en Enero 2025.</p>
+          <canvas id="insightChart1" aria-label="Gráfico de usuarios nuevos" role="img"></canvas>
+        </article>
 
-    <!-- Competencia -->
-    <section id="competencia">
-      <h2>Competencia / Competition</h2>
-      <h3>Tráfico Web / Website Traffic</h3>
-      <canvas id="chartCompetenciaTrafico" aria-label="Gráfico de tráfico web de la competencia" role="img"></canvas>
+        <article class="insight-card" role="region" aria-labelledby="insight2-title">
+          <div class="icon-container" aria-hidden="true">
+            <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="" width="48" height="48" />
+          </div>
+          <h3 id="insight2-title">Ventas</h3>
+          <p>Ingresos trimestrales en billones USD crecientes.</p>
+          <canvas id="insightChart2" aria-label="Gráfico de ventas trimestrales" role="img"></canvas>
+        </article>
 
-      <h3>SEO Keywords</h3>
-      <table id="tableCompetenciaSEO" aria-label="Tabla de palabras clave SEO de la competencia">
-        <thead>
-          <tr><th>Palabra clave / Keyword</th><th>Volumen / Volume</th><th>Dificultad / Difficulty</th><th>Posición / Position</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-      <h3>Redes Sociales / Social Media</h3>
-      <table id="tableCompetenciaSocial" aria-label="Tabla de seguidores y engagement en redes sociales">
-        <thead>
-          <tr><th>Marca / Brand</th><th>Seguidores / Followers</th><th>Engagement (%)</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
-
-    <!-- Usuarios -->
-    <section id="usuarios">
-      <h2>Usuarios / Users</h2>
-      <h3>Demografía / Demographics</h3>
-      <canvas id="chartUsuariosEdades" aria-label="Gráfico de distribución de edades"></canvas>
-      <canvas id="chartUsuariosRegiones" aria-label="Gráfico de distribución geográfica"></canvas>
-
-      <h3>Comportamiento / Behavior</h3>
-      <ul id="listUsuariosComportamiento" aria-label="Listado de comportamiento de usuarios"></ul>
-    </section>
-
-    <!-- Canales -->
-    <section id="canales">
-      <h2>Canales de Marketing / Marketing Channels</h2>
-      <h3>ROI por canal / ROI by Channel</h3>
-      <canvas id="chartCanalesROI" aria-label="Gráfico de ROI por canal"></canvas>
-
-      <h3>Campañas / Campaigns</h3>
-      <table id="tableCanalesCampanas" aria-label="Tabla de campañas de marketing">
-        <thead>
-          <tr><th>Nombre / Name</th><th>Clics / Clicks</th><th>Conversiones / Conversions</th><th>Impresiones / Impressions</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-      <h3>Costos / Costs</h3>
-      <ul id="listCanalesCostos" aria-label="Listado de costos por canal"></ul>
-    </section>
-
-    <!-- Sostenibilidad -->
-    <section id="sostenibilidad">
-      <h2>Sostenibilidad / Sustainability</h2>
-      <ul>
-        <li>Productos certificados: <span id="productosCertificados"></span>% / Certified products</li>
-        <li>Emisiones CO₂ anuales: <span id="emisionesCO2"></span> toneladas / CO₂ emissions (tons)</li>
-        <li>Material reciclado usado: <span id="materialReciclado"></span>% / Recycled material used</li>
-      </ul>
-
-      <h3>Campañas de RSE / CSR Campaigns</h3>
-      <table id="tableCampanasRSE" aria-label="Tabla de campañas de responsabilidad social empresarial">
-        <thead>
-          <tr><th>Nombre / Name</th><th>Impacto</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
-
-    <!-- UX -->
-    <section id="ux">
-      <h2>UX / Usabilidad</h2>
-      <h3>Heatmaps de Clics / Click Heatmaps</h3>
-      <canvas id="chartUxHeatmapClicks" aria-label="Gráfico heatmap de clics"></canvas>
-      <h3>Scroll Promedio / Average Scroll</h3>
-      <p><strong><span id="scrollPromedio"></span>%</strong></p>
-
-      <h3>Accesibilidad / Accessibility Score</h3>
-      <p><strong><span id="accesibilidad"></span>/100</strong></p>
-
-      <h3>Feedback de Usuarios / User Feedback</h3>
-      <ul id="listFeedback" aria-label="Listado de feedback de usuarios"></ul>
-    </section>
-
-    <!-- Tendencias -->
-    <section id="tendencias">
-      <h2>Tendencias / Trends</h2>
-      <h3>Predicciones / Predictions</h3>
-      <ul id="listPredicciones"></ul>
-      <h3>Innovaciones / Innovations</h3>
-      <ul id="listInnovaciones"></ul>
-
-      <h3>Análisis SWOT</h3>
-      <div class="swot-container">
-        <div>
-          <h4>Fortalezas / Strengths</h4>
-          <ul id="swot-fortalezas"></ul>
-        </div>
-        <div>
-          <h4>Oportunidades / Opportunities</h4>
-          <ul id="swot-oportunidades"></ul>
-        </div>
-        <div>
-          <h4>Debilidades / Weaknesses</h4>
-          <ul id="swot-debilidades"></ul>
-        </div>
-        <div>
-          <h4>Amenazas / Threats</h4>
-          <ul id="swot-amenazas"></ul>
-        </div>
+        <article class="insight-card" role="region" aria-labelledby="insight3-title">
+          <div class="icon-container" aria-hidden="true">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="" width="48" height="48" />
+          </div>
+          <h3 id="insight3-title">Satisfacción Cliente</h3>
+          <p>75% de soporte positivo y alta fidelidad.</p>
+          <canvas id="insightChart3" aria-label="Gráfico de satisfacción de clientes" role="img"></canvas>
+        </article>
       </div>
     </section>
 
-    <!-- Conclusiones -->
-    <section id="conclusiones">
-      <h2>Conclusiones / Conclusions</h2>
-      <ul>
-        <li>Arcor tiene fuerte posicionamiento SEO, pero menor engagement social.<br>Arcor has strong SEO positioning, but lower social engagement.</li>
-        <li>El sitio presenta oportunidades de mejora UX.<br>Website shows UX improvement opportunities.</li>
-        <li>El canal digital muestra mayor ROI en segmentos jóvenes.<br>Digital channel shows higher ROI in younger segments.</li>
-        <li>Nestlé destaca en fidelización y diseño UX.<br>Nestlé excels in loyalty and UX design.</li>
-        <li>El enfoque ecológico puede reposicionar la marca.<br>Eco-friendly focus could reposition the brand.</li>
-      </ul>
+    <section id="productos" aria-label="Galería de productos Apple">
+      <h2>Productos Destacados</h2>
+      <div class="products-gallery" role="list">
+        <!-- Imágenes cargadas dinámicamente -->
+      </div>
     </section>
 
-    <!-- Contacto -->
-    <section id="contacto">
-      <h2>Contacto / Contact</h2>
+    <section id="estadisticas" aria-label="Estadísticas financieras">
+      <h2>Estadísticas financieras</h2>
+      <canvas id="financialChart" aria-label="Gráfico financiero ingresos y beneficios" role="img"></canvas>
+    </section>
+
+    <section id="contacto" aria-label="Información de contacto">
+      <h2>Contacto</h2>
       <ul class="contact-list">
-        <li>Email: contacto@arcor2025.com</li>
-        <li>Teléfono / Phone: +54 351 123 4567</li>
-        <li>Dirección / Address: Av. Colón 1234, Córdoba, Argentina</li>
+        <!-- Contacto cargado dinámicamente -->
       </ul>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 David Sebastián Díaz - Portfolio Técnico Interdisciplinario</p>
-  </footer>
-
-  <script src="scripts.js" defer></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
