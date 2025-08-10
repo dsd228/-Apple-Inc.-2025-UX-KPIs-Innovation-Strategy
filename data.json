@@ -1,29 +1,41 @@
 {
-  "usuariosNuevos": {
-    "labels": ["Ene", "Feb", "Mar", "Abr", "May"],
-    "data": [13.6, 14.2, 15, 16.4, 17.1]
+  "userGrowth": {
+    "labels": ["Oct", "Nov", "Dic", "Ene"],
+    "data": [12, 13, 13.2, 13.6]
   },
-  "ventasTrimestrales": {
+  "quarterlySales": {
     "labels": ["Q1", "Q2", "Q3", "Q4"],
-    "data": [123.4, 134.1, 140.2, 150.6]
+    "data": [0.9, 1.1, 1.3, 1.5]
   },
-  "satisfaccionCliente": {
-    "labels": ["Soporte", "Fidelidad", "Calidad", "Precio", "Innovación"],
-    "data": [75, 70, 80, 65, 85]
+  "customerSatisfaction": {
+    "labels": ["Positivo", "Negativo"],
+    "data": [75, 25]
   },
-  "finanzas": {
-    "labels": ["FY 2021", "FY 2022", "FY 2023", "FY 2024"],
-    "ingresos": [260, 275, 294, 320],
-    "beneficios": [55, 60, 65, 70]
+  "financialStats": {
+    "labels": ["2019", "2020", "2021", "2022", "2023", "2024"],
+    "revenue": [2.7, 3.1, 3.6, 4.0, 4.4, 4.9],
+    "netProfit": [0.6, 0.7, 0.9, 1.1, 1.2, 1.3]
   },
-  "contacto": {
+  "products": [
+    {
+      "name": "iPhone 14 Pro",
+      "img": "https://www.apple.com/v/iphone/home/af/images/overview/compare/iphone_14_pro_deep_purple__bx08nd4pi9m6_large.jpg",
+      "alt": "iPhone 14 Pro"
+    },
+    {
+      "name": "MacBook Air M2",
+      "img": "https://www.apple.com/v/macbook-air/m/images/overview/hero/hero__dvsx9z7smoi6_large_2x.jpg",
+      "alt": "MacBook Air M2"
+    },
+    {
+      "name": "Apple Watch Series 9",
+      "img": "https://www.apple.com/v/apple-watch-series-9/a/images/overview/hero/hero_static__bsza6x4e4ceq_large.jpg",
+      "alt": "Apple Watch Series 9"
+    }
+  ],
+  "contact": {
     "email": "contacto@apple2025.com",
-    "telefono": "+1 800 555 1234",
-    "direccion": "1 Infinite Loop, Cupertino, CA"
-  },
-  "tablaProductos": [
-    {"nombre": "iPhone 14 Pro", "precio": "$999", "disponibilidad": "En stock"},
-    {"nombre": "MacBook Air M2", "precio": "$1199", "disponibilidad": "En stock"},
-    {"nombre": "Apple Watch Series 9", "precio": "$399", "disponibilidad": "Próximamente"}
-  ]
+    "phone": "+1 800 555 1234",
+    "address": "1 Infinite Loop, Cupertino, CA"
+  }
 }
