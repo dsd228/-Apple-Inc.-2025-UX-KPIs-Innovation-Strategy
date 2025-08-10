@@ -17,6 +17,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Botón para modo oscuro */
 .darkmode-toggle {
   position: fixed;
   top: 1rem;
@@ -37,6 +38,7 @@ body {
   color: white;
 }
 
+/* Botón hamburguesa para móvil */
 .hamburger {
   position: fixed;
   top: 1rem;
@@ -58,6 +60,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
+/* Sidebar lateral */
 .sidebar {
   background-color: #fff;
   width: 280px;
@@ -96,6 +99,7 @@ body {
   color: white;
 }
 
+/* Contenido principal */
 .content {
   margin-left: 280px;
   padding: 2rem 3rem;
@@ -173,7 +177,7 @@ section {
   margin-bottom: 3rem;
 }
 
-/* Dark mode */
+/* Modo oscuro */
 body.darkmode {
   background-color: #1d1d1f;
   color: #f5f5f7;
@@ -207,7 +211,7 @@ body.darkmode .contact-list {
   color: #bbb;
 }
 
-/* Responsive */
+/* Responsive para móvil */
 @media (max-width: 900px) {
   .sidebar {
     position: fixed;
