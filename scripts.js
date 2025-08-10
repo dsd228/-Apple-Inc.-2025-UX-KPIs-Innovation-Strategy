@@ -158,3 +158,38 @@ function updateCharts(data) {
   insightChart2.data.labels = data.quarterlySales.labels;
   insightChart2.data.datasets[0].data = data.quarterlySales.data;
   insightChart2.update
+    insightChart2.update();
+
+  // Satisfacción del cliente
+  insightChart3.data.labels = data.customerSatisfaction.labels;
+  insightChart3.data.datasets[0].data = data.customerSatisfaction.data;
+  insightChart3.update();
+
+  // Estadísticas financieras
+  financialChart.data.labels = data.financialStats.labels;
+  financialChart.data.datasets[0].data = data.financialStats.revenue;
+  financialChart.data.datasets[1].data = data.financialStats.netProfit;
+  financialChart.update();
+}
+
+function updateProducts(products) {
+  const gallery = document.querySelector('.products-gallery');
+  gallery.innerHTML = '';
+  products.forEach(prod => {
+    const img = document.createElement('img');
+    img.src = prod.img;
+    img.alt = prod.alt;
+    img.loading = 'lazy';
+    img.title = prod.name;
+    gallery.appendChild(img);
+  });
+}
+
+function updateContact(contact) {
+  const list = document.querySelector('.contact-list');
+  list.innerHTML = `
+    <li>Correo: <a href="mailto:${contact.email}">${contact.email}</a></li>
+    <li>Teléfono: <a href="tel:${contact.phone}">${contact.phone}</a></li>
+    <li>Dirección: ${contact.address}</li>
+  `;
+}
