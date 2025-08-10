@@ -1,111 +1,40 @@
 {
-  "userGrowth": {
-    "labels": ["Oct", "Nov", "Dic", "Ene"],
-    "data": [12, 13, 13.2, 13.6]
-  },
-  "quarterlySales": {
-    "labels": ["Q1", "Q2", "Q3", "Q4"],
-    "data": [0.9, 1.1, 1.3, 1.5]
-  },
-  "customerSatisfaction": {
-    "labels": ["Positivo", "Negativo"],
-    "data": [75, 25]
-  },
-  "financialStats": {
-    "labels": ["2019", "2020", "2021", "2022", "2023", "2024"],
-    "revenue": [2.7, 3.1, 3.6, 4.0, 4.4, 4.9],
-    "netProfit": [0.6, 0.7, 0.9, 1.1, 1.2, 1.3]
-  },
   "products": [
     {
-      "name": "iPhone 14 Pro",
       "img": "https://www.apple.com/v/iphone/home/af/images/overview/compare/iphone_14_pro_deep_purple__bx08nd4pi9m6_large.jpg",
       "alt": "iPhone 14 Pro"
     },
     {
-      "name": "MacBook Air M2",
       "img": "https://www.apple.com/v/macbook-air/m/images/overview/hero/hero__dvsx9z7smoi6_large_2x.jpg",
       "alt": "MacBook Air M2"
     },
     {
-      "name": "Apple Watch Series 9",
       "img": "https://www.apple.com/v/apple-watch-series-9/a/images/overview/hero/hero_static__bsza6x4e4ceq_large.jpg",
       "alt": "Apple Watch Series 9"
     }
   ],
-  "contact": {
-    "email": "contacto@apple2025.com",
-    "phone": "+1 800 555 1234",
-    "address": "1 Infinite Loop, Cupertino, CA"
-  }
-}
-{
-  "competencia": {
-    "trafico": { "Arcor": 1500000, "Nestle": 2200000, "Mondelez": 1800000 },
-    "seo": {
-      "keywords": [
-        {"keyword": "chocolates", "volumen": 50000, "dificultad": 30, "posicion": 3},
-        {"keyword": "golosinas", "volumen": 30000, "dificultad": 45, "posicion": 2}
-      ]
+  "contact": [
+    "Correo: contacto@apple2025.com",
+    "Teléfono: +1 800 555 1234",
+    "Dirección: 1 Infinite Loop, Cupertino, CA"
+  ],
+  "insights": {
+    "newUsers": {
+      "labels": ["Oct 2024", "Nov 2024", "Dec 2024", "Jan 2025"],
+      "data": [9.8, 11.2, 12.5, 13.6]
     },
-    "social": {
-      "seguidores": {"Arcor": 3500000, "Nestle": 4000000, "Mondelez": 2500000},
-      "engagement": {"Arcor": 4.5, "Nestle": 5.1, "Mondelez": 3.9}
+    "sales": {
+      "labels": ["Q1", "Q2", "Q3", "Q4"],
+      "data": [90, 95, 102, 110]
+    },
+    "customerSatisfaction": {
+      "labels": ["Satisfacción Positiva", "Otros"],
+      "data": [75, 25]
     }
   },
-  "usuarios": {
-    "demografia": {
-      "edades": {"18-25": 35, "26-35": 30, "36-50": 25, "51+": 10},
-      "regiones": {"Argentina": 45, "Brasil": 30, "Chile": 15, "Otros": 10}
-    },
-    "comportamiento": {
-      "paginasPopulares": ["Inicio", "Productos", "Promociones", "Contacto"],
-      "tiempoMedio": 3.5,
-      "tasaConversion": 2.8
-    }
-  },
-  "canalesMarketing": {
-    "ROI": {"digital": 150, "retail": 110, "promociones": 90},
-    "campanas": [
-      {"nombre": "Navidad 2024", "clics": 50000, "conversiones": 4500, "impresiones": 150000},
-      {"nombre": "Verano 2025", "clics": 45000, "conversiones": 4000, "impresiones": 130000}
-    ],
-    "costos": {"digital": 200000, "retail": 150000, "promociones": 100000}
-  },
-  "sostenibilidad": {
-    "productosCertificados": 75,
-    "emisionesCO2": 1200,
-    "materialReciclado": 40,
-    "campanasRSE": [
-      {"nombre": "Reforestación", "impacto": 3000},
-      {"nombre": "Reducción Plásticos", "impacto": 5000}
-    ]
-  },
-  "ux": {
-    "heatmaps": {
-      "clics": {"Inicio": 12000, "Productos": 9500, "Promociones": 7000, "Contacto": 3000},
-      "scroll": {"Promedio": 75}
-    },
-    "accesibilidad": 85,
-    "feedback": [
-      {"usuario": "Ana", "comentario": "Me encanta la nueva app, muy fácil de usar."},
-      {"usuario": "Carlos", "comentario": "Quisiera más opciones de búsqueda."}
-    ]
-  },
-  "tendencias": {
-    "predicciones": [
-      {"año": 2025, "tendencia": "Mayor consumo de productos veganos"},
-      {"año": 2026, "tendencia": "Empaques 100% biodegradables"}
-    ],
-    "innovaciones": [
-      {"producto": "Empaque compostable", "detalle": "Nuevo material PLA avanzado"},
-      {"producto": "Snack saludable", "detalle": "Bajo en azúcar, alto en fibra"}
-    ],
-    "swot": {
-      "fortalezas": ["Marca reconocida", "Amplia red de distribución"],
-      "oportunidades": ["Expansión internacional", "Crecimiento en productos saludables"],
-      "debilidades": ["Baja presencia digital", "Competencia fuerte en redes sociales"],
-      "amenazas": ["Cambios regulatorios", "Variabilidad en precio de materias primas"]
-    }
+  "financials": {
+    "labels": ["2019", "2020", "2021", "2022", "2023", "2024"],
+    "revenues": [260, 274, 294, 315, 365, 400],
+    "profits": [55, 57, 65, 70, 90, 95]
   }
 }
