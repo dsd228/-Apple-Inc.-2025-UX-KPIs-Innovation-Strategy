@@ -1,469 +1,231 @@
-¡Claro, David! Aquí te paso los archivos completos con todo integrado, con las imágenes cargándose directamente desde la web y un diseño profesional, bilingüe, responsive, animado, y estilo Apple.
-
-⸻
-
-1. index.html
-
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Arcor · Estrategia de Marketing y UX basada en Datos</title>
-  <meta name="description" content="Análisis estratégico y UX de Arcor con visualizaciones, benchmarking y propuestas sostenibles" />
-  <link href="styles.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-  <button id="darkmode-btn" aria-label="Toggle modo oscuro" class="darkmode-toggle">Modo Oscuro</button>
-  <div class="hamburger" aria-label="Abrir menú" role="button" tabindex="0" aria-expanded="false">
-    <div></div><div></div><div></div>
-  </div>
-  <nav class="sidebar" role="navigation" aria-label="Menú principal">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Logo_Arcor.svg" alt="Logo Arcor" class="logo" />
-    <h1>Arcor 2025</h1>
-    <ul>
-      <li><a href="#introduccion" class="active" tabindex="0">Introducción / Introduction</a></li>
-      <li><a href="#objetivos" tabindex="0">Objetivos / Objectives</a></li>
-      <li><a href="#competencia" tabindex="0">Competencia / Competition</a></li>
-      <li><a href="#usuarios" tabindex="0">Usuarios / Users</a></li>
-      <li><a href="#canales" tabindex="0">Canales / Channels</a></li>
-      <li><a href="#sostenibilidad" tabindex="0">Sostenibilidad / Sustainability</a></li>
-      <li><a href="#ux" tabindex="0">UX / Usabilidad</a></li>
-      <li><a href="#tendencias" tabindex="0">Tendencias / Trends</a></li>
-      <li><a href="#conclusiones" tabindex="0">Conclusiones / Conclusions</a></li>
-      <li><a href="#contacto" tabindex="0">Contacto / Contact</a></li>
-    </ul>
-  </nav>
-  <main class="content" tabindex="-1">
-    <!-- Introducción -->
-    <section id="introduccion">
-      <h2>Introducción / Introduction</h2>
-      <p>Este proyecto explora el caso de <strong>Arcor</strong>, una de las marcas más icónicas de Latinoamérica, desde una perspectiva estratégica y técnica, combinando análisis de datos, experiencia de usuario (UX) y marketing digital.</p>
-      <p>This project explores the case of <strong>Arcor</strong>, one of Latin America's most iconic brands, from a strategic and technical perspective, combining data analysis, user experience (UX), and digital marketing.</p>
-    </section>
-
-    <!-- Objetivos -->
-    <section id="objetivos">
-      <h2>Objetivos / Objectives</h2>
-      <ul>
-        <li>Analizar estrategias de marketing digital y tradicional.<br>Evaluate digital and traditional marketing strategies.</li>
-        <li>Evaluar presencia online, segmentación y experiencia de usuario.<br>Assess online presence, segmentation, and user experience.</li>
-        <li>Proponer mejoras basadas en datos, diseño y KPIs.<br>Propose improvements based on data, design, and KPIs.</li>
-        <li>Comparar desempeño con competidores globales.<br>Compare performance with global competitors.</li>
-        <li>Incorporar contexto de consumo y sostenibilidad.<br>Integrate consumption context and sustainability.</li>
-      </ul>
-    </section>
-
-    <!-- Competencia -->
-    <section id="competencia">
-      <h2>Competencia / Competition</h2>
-      <h3>Tráfico Web / Website Traffic</h3>
-      <canvas id="chartCompetenciaTrafico" aria-label="Gráfico de tráfico web de la competencia" role="img"></canvas>
-
-      <h3>SEO Keywords</h3>
-      <table id="tableCompetenciaSEO" aria-label="Tabla de palabras clave SEO de la competencia">
-        <thead>
-          <tr><th>Palabra clave / Keyword</th><th>Volumen / Volume</th><th>Dificultad / Difficulty</th><th>Posición / Position</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-      <h3>Redes Sociales / Social Media</h3>
-      <table id="tableCompetenciaSocial" aria-label="Tabla de seguidores y engagement en redes sociales">
-        <thead>
-          <tr><th>Marca / Brand</th><th>Seguidores / Followers</th><th>Engagement (%)</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
-
-    <!-- Usuarios -->
-    <section id="usuarios">
-      <h2>Usuarios / Users</h2>
-      <h3>Demografía / Demographics</h3>
-      <canvas id="chartUsuariosEdades" aria-label="Gráfico de distribución de edades"></canvas>
-      <canvas id="chartUsuariosRegiones" aria-label="Gráfico de distribución geográfica"></canvas>
-
-      <h3>Comportamiento / Behavior</h3>
-      <ul id="listUsuariosComportamiento" aria-label="Listado de comportamiento de usuarios"></ul>
-    </section>
-
-    <!-- Canales -->
-    <section id="canales">
-      <h2>Canales de Marketing / Marketing Channels</h2>
-      <h3>ROI por canal / ROI by Channel</h3>
-      <canvas id="chartCanalesROI" aria-label="Gráfico de ROI por canal"></canvas>
-
-      <h3>Campañas / Campaigns</h3>
-      <table id="tableCanalesCampanas" aria-label="Tabla de campañas de marketing">
-        <thead>
-          <tr><th>Nombre / Name</th><th>Clics / Clicks</th><th>Conversiones / Conversions</th><th>Impresiones / Impressions</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-
-      <h3>Costos / Costs</h3>
-      <ul id="listCanalesCostos" aria-label="Listado de costos por canal"></ul>
-    </section>
-
-    <!-- Sostenibilidad -->
-    <section id="sostenibilidad">
-      <h2>Sostenibilidad / Sustainability</h2>
-      <ul>
-        <li>Productos certificados: <span id="productosCertificados"></span>% / Certified products</li>
-        <li>Emisiones CO₂ anuales: <span id="emisionesCO2"></span> toneladas / CO₂ emissions (tons)</li>
-        <li>Material reciclado usado: <span id="materialReciclado"></span>% / Recycled material used</li>
-      </ul>
-
-      <h3>Campañas de RSE / CSR Campaigns</h3>
-      <table id="tableCampanasRSE" aria-label="Tabla de campañas de responsabilidad social empresarial">
-        <thead>
-          <tr><th>Nombre / Name</th><th>Impacto</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
-
-    <!-- UX -->
-    <section id="ux">
-      <h2>UX / Usabilidad</h2>
-      <h3>Heatmaps de Clics / Click Heatmaps</h3>
-      <canvas id="chartUxHeatmapClicks" aria-label="Gráfico heatmap de clics"></canvas>
-      <h3>Scroll Promedio / Average Scroll</h3>
-      <p><strong><span id="scrollPromedio"></span>%</strong></p>
-
-      <h3>Accesibilidad / Accessibility Score</h3>
-      <p><strong><span id="accesibilidad"></span>/100</strong></p>
-
-      <h3>Feedback de Usuarios / User Feedback</h3>
-      <ul id="listFeedback" aria-label="Listado de feedback de usuarios"></ul>
-    </section>
-
-    <!-- Tendencias -->
-    <section id="tendencias">
-      <h2>Tendencias / Trends</h2>
-      <h3>Predicciones / Predictions</h3>
-      <ul id="listPredicciones"></ul>
-      <h3>Innovaciones / Innovations</h3>
-      <ul id="listInnovaciones"></ul>
-
-      <h3>Análisis SWOT</h3>
-      <div class="swot-container">
-        <div>
-          <h4>Fortalezas / Strengths</h4>
-          <ul id="swot-fortalezas"></ul>
-        </div>
-        <div>
-          <h4>Oportunidades / Opportunities</h4>
-          <ul id="swot-oportunidades"></ul>
-        </div>
-        <div>
-          <h4>Debilidades / Weaknesses</h4>
-          <ul id="swot-debilidades"></ul>
-        </div>
-        <div>
-          <h4>Amenazas / Threats</h4>
-          <ul id="swot-amenazas"></ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Conclusiones -->
-    <section id="conclusiones">
-      <h2>Conclusiones / Conclusions</h2>
-      <ul>
-        <li>Arcor tiene fuerte posicionamiento SEO, pero menor engagement social.<br>Arcor has strong SEO positioning, but lower social engagement.</li>
-        <li>El sitio presenta oportunidades de mejora UX.<br>Website shows UX improvement opportunities.</li>
-        <li>El canal digital muestra mayor ROI en segmentos jóvenes.<br>Digital channel shows higher ROI in younger segments.</li>
-        <li>Nestlé destaca en fidelización y diseño UX.<br>Nestlé excels in loyalty and UX design.</li>
-        <li>El enfoque ecológico puede reposicionar la marca.<br>Eco-friendly focus could reposition the brand.</li>
-      </ul>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto">
-      <h2>Contacto / Contact</h2>
-      <ul class="contact-list">
-        <li>Email: contacto@arcor2025.com</li>
-        <li>Teléfono / Phone: +54 351 123 4567</li>
-        <li>Dirección / Address: Av. Colón 1234, Córdoba, Argentina</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 David Sebastián Díaz - Portfolio Técnico Interdisciplinario</p>
-  </footer>
-
-  <script src="scripts.js" defer></script>
-</body>
-</html>
-
-
-⸻
-
-2. styles.css
-
 /* Reset y base */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html, body {
-  height: 100%;
+  margin: 0; padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: #fff;
-  color: #111;
   scroll-behavior: smooth;
-  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Modo oscuro */
-body.darkmode {
-  background: #121212;
-  color: #eee;
-}
-
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 280px;
-  height: 100vh;
-  background: #fafafa;
-  border-right: 1px solid #ddd;
-  padding: 20px 15px;
+body {
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  line-height: 1.6;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: auto;
-  transition: background-color 0.3s, color 0.3s;
-  z-index: 9999;
-}
-body.darkmode .sidebar {
-  background: #1e1e1e;
-  border-color: #444;
-}
-.sidebar .logo {
-  width: 140px;
-  margin-bottom: 15px;
-}
-.sidebar h1 {
-  font-weight: 700;
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-  color: #0071e3;
-}
-.sidebar ul {
-  list-style: none;
-  width: 100%;
-}
-.sidebar ul li {
-  margin-bottom: 10px;
-}
-.sidebar ul li a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 8px;
-  color: #111;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: background-color 0.25s ease, color 0.25s ease;
-}
-body.darkmode .sidebar ul li a {
-  color: #ddd;
-}
-.sidebar ul li a.active,
-.sidebar ul li a:hover,
-.sidebar ul li a:focus {
-  background-color: #0071e3;
-  color: #fff;
-  outline: none;
+  flex-direction: row;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Contenido principal */
-.content {
-  margin-left: 300px;
-  padding: 25px 40px;
-  max-width: 960px;
-  margin-right: auto;
-  margin-bottom: 80px;
-  transition: color 0.3s;
-}
-body.darkmode .content {
-  color: #ddd;
-}
-.content h2 {
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #0071e3;
-  padding-bottom: 5px;
-}
-.content h3 {
-  font-weight: 600;
-  font-size: 1.3rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #0071e3;
-}
-
-/* Listas */
-ul {
-  margin-left: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-  color: inherit;
-}
-li {
-  margin-bottom: 0.75rem;
-}
-
-/* Tablas */
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-}
-table th,
-table td {
-  border: 1px solid #ccc;
-  padding: 8px 12px;
-  text-align: center;
-  color: inherit;
-}
-body.darkmode table th,
-body.darkmode table td {
-  border-color: #555;
-}
-table thead th {
-  background-color: #0071e3;
-  color: white;
-}
-body.darkmode table thead th {
-  background-color: #005bb5;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.9rem;
-  color: #666;
-  border-top: 1px solid #ddd;
-}
-body.darkmode footer {
-  color: #aaa;
-  border-color: #444;
-}
-
-/* Botón modo oscuro */
 .darkmode-toggle {
   position: fixed;
-  top: 12px;
-  right: 15px;
-  background-color: #0071e3;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border
-  /* Botón modo oscuro */
-.darkmode-toggle {
-  position: fixed;
-  top: 12px;
-  right: 15px;
-  background-color: #0071e3;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 2px solid #0071e3;
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
   font-weight: 600;
+  color: #0071e3;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 113, 227, 0.4);
-  transition: background-color 0.3s ease;
-  z-index: 10000;
-}
-.darkmode-toggle:hover,
-.darkmode-toggle:focus {
-  background-color: #005bb5;
-  outline: none;
+  z-index: 1001;
+  transition: all 0.3s ease;
 }
 
-/* Hamburger para móvil */
+.darkmode-toggle:hover {
+  background-color: #0071e3;
+  color: white;
+}
+
 .hamburger {
-  display: none;
   position: fixed;
-  top: 15px;
-  left: 15px;
+  top: 1rem;
+  left: 1rem;
   width: 30px;
-  height: 24px;
+  height: 21px;
   cursor: pointer;
-  z-index: 10001;
+  z-index: 1001;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .hamburger div {
   width: 100%;
   height: 4px;
-  background-color: #0071e3;
+  background-color: #1d1d1f;
   border-radius: 2px;
-  transition: all 0.3s ease;
-}
-body.darkmode .hamburger div {
-  background-color: #a5c8ff;
+  transition: background-color 0.3s ease;
 }
 
-/* Animación hamburger abierta */
-.hamburger.open div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+.sidebar {
+  background-color: #fff;
+  width: 280px;
+  height: 100vh;
+  padding: 2rem 1rem;
+  position: fixed;
+  overflow-y: auto;
+  border-right: 1px solid #d2d2d7;
+  transition: transform 0.3s ease;
 }
-.hamburger.open div:nth-child(2) {
-  opacity: 0;
+
+.sidebar h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #1d1d1f;
 }
-.hamburger.open div:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 0.75rem 0.5rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background-color: #0071e3;
+  color: white;
+}
+
+.content {
+  margin-left: 280px;
+  padding: 2rem 3rem;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.lead {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #3c3c4399;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1d1d1f;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.insight-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 3px 15px rgb(0 0 0 / 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.insight-card:hover {
+  box-shadow: 0 6px 30px rgb(0 0 0 / 0.12);
+}
+
+.icon-container {
+  margin-bottom: 1rem;
+}
+
+.products-gallery {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.products-gallery img {
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.products-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.contact-list {
+  list-style: none;
+  font-weight: 600;
+  color: #3c3c4399;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+/* Dark mode */
+body.darkmode {
+  background-color: #1d1d1f;
+  color: #f5f5f7;
+}
+
+body.darkmode .sidebar {
+  background-color: #121212;
+  border-color: #333;
+}
+
+body.darkmode .sidebar ul li a {
+  color: #f5f5f7;
+}
+
+body.darkmode .sidebar ul li a:hover,
+body.darkmode .sidebar ul li a.active {
+  background-color: #0a84ff;
+  color: white;
+}
+
+body.darkmode .insight-card {
+  background: #222;
+  box-shadow: 0 3px 15px rgb(255 255 255 / 0.07);
+}
+
+body.darkmode .insight-card:hover {
+  box-shadow: 0 6px 30px rgb(255 255 255 / 0.12);
+}
+
+body.darkmode .contact-list {
+  color: #bbb;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
   .sidebar {
     position: fixed;
-    left: -320px;
-    transition: left 0.3s ease;
+    transform: translateX(-320px);
     width: 280px;
+    z-index: 1000;
   }
+
   .sidebar.open {
-    left: 0;
+    transform: translateX(0);
   }
+
   .content {
     margin-left: 0;
-    padding: 25px 15px;
+    padding: 1.5rem;
   }
+
   .hamburger {
     display: flex;
-  }
-}
-
-/* Animaciones suaves */
-section {
-  animation: fadeInUp 0.8s ease forwards;
-  opacity: 0;
-  transform: translateY(20px);
-  margin-bottom: 3rem;
-}
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
