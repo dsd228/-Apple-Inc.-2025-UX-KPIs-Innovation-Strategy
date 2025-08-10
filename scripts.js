@@ -1,137 +1,127 @@
-// Control menú hamburguesa
+// Modo oscuro toggle
+const darkModeBtn = document.getElementById('darkmode-btn');
+darkModeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  if(document.body.classList.contains('dark-mode')){
+    darkModeBtn.textContent = 'Modo Claro';
+  } else {
+    darkModeBtn.textContent = 'Modo Oscuro';
+  }
+});
+
+// Sidebar móvil toggle
 const hamburger = document.querySelector('.hamburger');
-const sidebar = document.querySelector('nav.sidebar');
+const sidebar = document.querySelector('.sidebar');
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
   sidebar.classList.toggle('open');
   hamburger.setAttribute('aria-expanded', sidebar.classList.contains('open'));
 });
-hamburger.addEventListener('keydown', e => {
-  if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault();
-    hamburger.click();
-  }
-});
 
-// Control modo oscuro
-const darkmodeBtn = document.getElementById('darkmode-btn');
-darkmodeBtn.addEventListener('click', () => {
-  document.body.classList.toggle('darkmode');
-  if (document.body.classList.contains('darkmode')) {
-    darkmodeBtn.textContent = 'Modo Claro';
-  } else {
-    darkmodeBtn.textContent = 'Modo Oscuro';
-  }
-});
+// Configuración básica Chart.js para los gráficos
 
-// Configuración de gráficos Chart.js
-function createInsightCharts() {
-  const ctx1 = document.getElementById('insightChart1').getContext('2d');
-  const chart1 = new Chart(ctx1, {
-    type: 'line',
-    data: {
-      labels: ['Oct 24', 'Nov 24', 'Dic 24', 'Ene 25'],
-      datasets: [{
-        label: 'Usuarios Nuevos (millones)',
-        data: [12.5, 13.1, 13.3, 13.6],
-        borderColor: '#007aff',
-        backgroundColor: 'rgba(0, 122, 255, 0.2)',
-        tension: 0.3,
-        fill: true,
-        pointRadius: 4,
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: { legend: { display: false } },
-      scales: {
-        y: { beginAtZero: false }
-      }
+// Usuarios Nuevos (barra)
+const ctx1 = document.getElementById('insightChart1').getContext('2d');
+const insightChart1 = new Chart(ctx1, {
+  type: 'bar',
+  data: {
+    labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May'],
+    datasets: [{
+      label: 'Usuarios Nuevos (millones)',
+      data: [13.6, 14.2, 15, 16.4, 17.1],
+      backgroundColor: '#007aff',
+      borderRadius: 5,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      y: { beginAtZero: true }
     }
-  });
+  }
+});
 
-  const ctx2 = document.getElementById('insightChart2').getContext('2d');
-  const chart2 = new Chart(ctx2, {
-    type: 'bar',
-    data: {
-      labels: ['Q3 FY24', 'Q4 FY24', 'Q1 FY25'],
-      datasets: [{
+// Ventas trimestrales (líneas)
+const ctx2 = document.getElementById('insightChart2').getContext('2d');
+const insightChart2 = new Chart(ctx2, {
+  type: 'line',
+  data: {
+    labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+    datasets: [{
+      label: 'Ingresos (billones USD)',
+      data: [123.4, 134.1, 140.2, 150.6],
+      borderColor: '#34c759',
+      fill: false,
+      tension: 0.3,
+      pointRadius: 5,
+      pointHoverRadius: 7,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { display: true } },
+    scales: {
+      y: { beginAtZero: true }
+    }
+  }
+});
+
+// Satisfacción cliente (radar)
+const ctx3 = document.getElementById('insightChart3').getContext('2d');
+const insightChart3 = new Chart(ctx3, {
+  type: 'radar',
+  data: {
+    labels: ['Soporte', 'Fidelidad', 'Calidad', 'Precio', 'Innovación'],
+    datasets: [{
+      label: 'Satisfacción',
+      data: [75, 70, 80, 65, 85],
+      backgroundColor: 'rgba(255, 204, 0, 0.5)',
+      borderColor: '#ffcc00',
+      borderWidth: 2,
+      pointBackgroundColor: '#ffcc00',
+    }]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      r: {
+        beginAtZero: true,
+        max: 100,
+        ticks: { stepSize: 20 }
+      }
+    },
+    plugins: {
+      legend: { position: 'top' }
+    }
+  }
+});
+
+// Gráfico financiero general
+const ctx4 = document.getElementById('financialChart').getContext('2d');
+const financialChart = new Chart(ctx4, {
+  type: 'bar',
+  data: {
+    labels: ['FY 2021', 'FY 2022', 'FY 2023', 'FY 2024'],
+    datasets: [
+      {
         label: 'Ingresos (billones USD)',
-        data: [83.4, 117.2, 94.8],
+        data: [260, 275, 294, 320],
+        backgroundColor: '#007aff',
+        borderRadius: 5,
+      },
+      {
+        label: 'Beneficio Neto (billones USD)',
+        data: [55, 60, 65, 70],
         backgroundColor: '#34c759',
-        borderRadius: 8,
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: { legend: { display: false } },
-      scales: {
-        y: {
-          beginAtZero: true,
-          ticks: { stepSize: 20 }
-        }
+        borderRadius: 5,
       }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: { legend: { position: 'top' } },
+    scales: {
+      y: { beginAtZero: true }
     }
-  });
-
-  const ctx3 = document.getElementById('insightChart3').getContext('2d');
-  const chart3 = new Chart(ctx3, {
-    type: 'doughnut',
-    data: {
-      labels: ['Positivos', 'Otros'],
-      datasets: [{
-        label: 'Satisfacción',
-        data: [75, 25],
-        backgroundColor: ['#ff9500', '#d1d1d6'],
-        hoverOffset: 30
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: { legend: { position: 'bottom' } },
-    }
-  });
-}
-
-function createFinancialChart() {
-  const ctx = document.getElementById('financialChart').getContext('2d');
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: ['Q3 FY24', 'Q4 FY24', 'Q1 FY25'],
-      datasets: [
-        {
-          label: 'Ingresos (billones USD)',
-          data: [83.4, 117.2, 94.8],
-          borderColor: '#007aff',
-          backgroundColor: 'rgba(0, 122, 255, 0.2)',
-          tension: 0.3,
-          fill: true,
-          pointRadius: 5,
-        },
-        {
-          label: 'Beneficio Neto (billones USD)',
-          data: [20.7, 34.6, 27.7],
-          borderColor: '#ff3b30',
-          backgroundColor: 'rgba(255, 59, 48, 0.2)',
-          tension: 0.3,
-          fill: true,
-          pointRadius: 5,
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      plugins: { legend: { position: 'top' } },
-      scales: {
-        y: { beginAtZero: false }
-      }
-    }
-  });
-}
-
-// Inicialización
-window.addEventListener('DOMContentLoaded', () => {
-  createInsightCharts();
-  createFinancialChart();
+  }
 });
